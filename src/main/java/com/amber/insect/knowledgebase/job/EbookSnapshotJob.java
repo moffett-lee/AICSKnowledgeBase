@@ -1,7 +1,7 @@
 package com.amber.insect.knowledgebase.job;
 
-import com.jiawa.wiki.service.EbookSnapshotService;
-import com.jiawa.wiki.util.SnowFlake;
+import com.amber.insect.knowledgebase.service.IEbookSnapshotService;
+import com.amber.insect.knowledgebase.util.SnowFlake;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
@@ -16,7 +16,7 @@ public class EbookSnapshotJob {
     private static final Logger LOG = LoggerFactory.getLogger(EbookSnapshotJob.class);
 
     @Resource
-    private EbookSnapshotService ebookSnapshotService;
+    private IEbookSnapshotService ebookSnapshotService;
 
     @Resource
     private SnowFlake snowFlake;

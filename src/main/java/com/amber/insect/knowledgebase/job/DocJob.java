@@ -1,6 +1,7 @@
 package com.amber.insect.knowledgebase.job;
 
 
+import com.amber.insect.knowledgebase.service.IDocService;
 import com.amber.insect.knowledgebase.util.SnowFlake;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +17,7 @@ public class DocJob {
     private static final Logger LOG = LoggerFactory.getLogger(DocJob.class);
 
     @Resource
-    private DocService docService;
+    private IDocService docService;
 
     @Resource
     private SnowFlake snowFlake;
