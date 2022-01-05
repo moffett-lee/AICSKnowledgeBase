@@ -1,4 +1,9 @@
 package com.amber.insect.knowledgebase.service.impl;
 
-public interface DocServiceImpl {
+
+import com.amber.insect.knowledgebase.service.IDocService;
+import org.springframework.stereotype.Service;
+
+@Service
+public class DocServiceImpl implements IDocService {
 }

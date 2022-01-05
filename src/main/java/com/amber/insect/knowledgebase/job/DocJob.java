@@ -31,7 +31,7 @@ public class DocJob {
         MDC.put("LOG_ID", String.valueOf(snowFlake.nextId()));
         LOG.info("更新电子书下的文档数据开始");
         long start = System.currentTimeMillis();
-        docService.updateEbookInfo();
+       // docService.updateEbookInfo();
         LOG.info("更新电子书下的文档数据结束，耗时：{}毫秒", System.currentTimeMillis() - start);
     }
 

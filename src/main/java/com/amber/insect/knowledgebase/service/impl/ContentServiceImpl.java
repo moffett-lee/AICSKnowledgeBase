@@ -1,4 +1,8 @@
 package com.amber.insect.knowledgebase.service.impl;
 
-public interface ContentServiceImpl {
+import com.amber.insect.knowledgebase.service.IContentService;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ContentServiceImpl implements IContentService {
 }

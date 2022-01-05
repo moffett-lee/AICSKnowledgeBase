@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `tb_category`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_category` (
-  `id` bigint NOT NULL,
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `parent_id` bigint DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `sort` int DEFAULT NULL,
@@ -35,7 +35,8 @@ CREATE TABLE `tb_category` (
   `c_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '创建者',
   `upt_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '更新人',
   `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
-  `version` int DEFAULT NULL COMMENT '锁版本'
+  `version` int DEFAULT NULL COMMENT '锁版本',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='分类表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -56,7 +57,7 @@ DROP TABLE IF EXISTS `tb_content`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_content` (
-  `id` bigint DEFAULT NULL,
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `content` mediumtext,
   `status` tinyint(1) DEFAULT '0' COMMENT '0-正常，9-锁定',
   `is_del` tinyint(1) DEFAULT '0' COMMENT '0-正常，1-删除',
@@ -66,7 +67,8 @@ CREATE TABLE `tb_content` (
   `c_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '创建者',
   `upt_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '更新人',
   `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
-  `version` int DEFAULT NULL COMMENT '锁版本'
+  `version` int DEFAULT NULL COMMENT '锁版本',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -87,7 +89,7 @@ DROP TABLE IF EXISTS `tb_doc`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_doc` (
-  `id` bigint DEFAULT NULL,
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `ebook_id` bigint DEFAULT NULL,
   `parent_id` bigint DEFAULT NULL,
   `name` varchar(100) DEFAULT NULL,
@@ -102,7 +104,8 @@ CREATE TABLE `tb_doc` (
   `c_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '创建者',
   `upt_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '更新人',
   `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
-  `version` int DEFAULT NULL COMMENT '锁版本'
+  `version` int DEFAULT NULL COMMENT '锁版本',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -123,7 +126,7 @@ DROP TABLE IF EXISTS `tb_ebook`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_ebook` (
-  `id` bigint DEFAULT NULL,
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `name` varchar(100) DEFAULT NULL,
   `category_one_id` bigint DEFAULT NULL,
   `category_two_id` bigint DEFAULT NULL,
@@ -140,7 +143,8 @@ CREATE TABLE `tb_ebook` (
   `c_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '创建者',
   `upt_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '更新人',
   `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
-  `version` int DEFAULT NULL COMMENT '锁版本'
+  `version` int DEFAULT NULL COMMENT '锁版本',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -161,7 +165,7 @@ DROP TABLE IF EXISTS `tb_ebook_snapshot`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_ebook_snapshot` (
-  `id` bigint NOT NULL,
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `ebook_id` bigint DEFAULT NULL,
   `date` datetime DEFAULT NULL,
   `view_count` int DEFAULT NULL,
@@ -176,7 +180,9 @@ CREATE TABLE `tb_ebook_snapshot` (
   `c_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '创建者',
   `upt_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '更新人',
   `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
-  `version` int DEFAULT NULL COMMENT '锁版本'
+  `version` int DEFAULT NULL COMMENT '锁版本',
+  `sort` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -197,7 +203,7 @@ DROP TABLE IF EXISTS `tb_user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_user` (
-  `id` bigint DEFAULT NULL,
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `user_code` varchar(100) DEFAULT NULL,
   `user_name` varchar(100) DEFAULT NULL,
   `pass_word` varchar(100) DEFAULT NULL,
@@ -209,7 +215,8 @@ CREATE TABLE `tb_user` (
   `c_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '创建者',
   `upt_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '更新人',
   `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
-  `version` int DEFAULT NULL COMMENT '锁版本'
+  `version` int DEFAULT NULL COMMENT '锁版本',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -235,4 +242,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-05 10:42:36
+-- Dump completed on 2022-01-05 14:15:08

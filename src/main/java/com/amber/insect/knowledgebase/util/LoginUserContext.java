@@ -1,7 +1,9 @@
 package com.amber.insect.knowledgebase.util;
 
 
-import com.jiawa.wiki.resp.UserLoginResp;
+
+
+import com.amber.insect.knowledgebase.common.UserLoginResp;
 
 import java.io.Serializable;
 

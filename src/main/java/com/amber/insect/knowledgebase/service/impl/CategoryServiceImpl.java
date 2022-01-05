@@ -44,6 +44,9 @@ public class CategoryServiceImpl implements ICategoryService {
 
     @Override
     public void delete(Long id) {
-        categoryRepository.updateIsDelById(id);
+        CategoryEntity categoryEntity = new CategoryEntity();
+        categoryEntity.setId(id);
+        categoryEntity.setIsDel(1);
+        categoryRepository.save(categoryEntity);
     }
 }

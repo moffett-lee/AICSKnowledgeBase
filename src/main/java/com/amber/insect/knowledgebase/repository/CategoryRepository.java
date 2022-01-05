@@ -21,5 +21,6 @@ public interface CategoryRepository extends PagingAndSortingRepository<CategoryE
     Page<CategoryEntity> findAll(Pageable pageable);
 
 
-    void updateIsDelById(Long id);
+    //void updateIsDelById(Long id);
+
 }

@@ -1,9 +1,10 @@
 package com.amber.insect.knowledgebase.interceptor;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jiawa.wiki.resp.CommonResp;
-import com.jiawa.wiki.resp.UserLoginResp;
-import com.jiawa.wiki.util.LoginUserContext;
+
+import com.amber.insect.knowledgebase.common.CommonResp;
+import com.amber.insect.knowledgebase.common.UserLoginResp;
+import com.amber.insect.knowledgebase.util.LoginUserContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
