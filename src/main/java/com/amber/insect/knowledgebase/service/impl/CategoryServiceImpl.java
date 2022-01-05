@@ -8,12 +8,15 @@ import com.amber.insect.knowledgebase.repository.CategoryRepository;
 import com.amber.insect.knowledgebase.service.ICategoryService;
 import com.amber.insect.knowledgebase.util.CopyUtil;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 @Service
 public class CategoryServiceImpl implements ICategoryService {
@@ -23,16 +26,21 @@ public class CategoryServiceImpl implements ICategoryService {
 
     @Override
     public List<CategoryDto> getCategoryList() {
-        List<CategoryEntity> all = categoryRepository.findAll();
-        List<CategoryDto> categoryDtos = CopyUtil.copyList(all, CategoryDto.class);
-        return categoryDtos;
+        List<CategoryDto> dtos = new ArrayList<>();
+        Iterable<CategoryEntity> all = categoryRepository.findAll();
+        all.forEach(obj -> {
+            dtos.add(CopyUtil.copy(obj,CategoryDto.class));
+        });
+        return dtos;
     }
 
     @Override
     public Page<CategoryDto> getCategoryListPage(CategoryQuery query) {
-
-        Page<CategoryEntity> all = categoryRepository.findAll(Pageable.ofSize(2));
-
+        //将参数传给这个方法就可以实现物理分页了，非常简单。
+        Sort sort = Sort.by(Sort.Order.desc("id"));
+        Pageable pageable =PageRequest.of(query.getPage(), query.getSize(), sort);
+        Page<CategoryEntity> all = categoryRepository.findAll(pageable);
+        Stream<CategoryEntity> categoryEntityStream = all.get();
         return null;
     }
 
