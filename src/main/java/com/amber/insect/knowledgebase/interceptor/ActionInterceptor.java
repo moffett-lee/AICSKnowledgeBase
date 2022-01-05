@@ -1,3 +1,4 @@
+/*
 package com.amber.insect.knowledgebase.interceptor;
 
 import com.alibaba.fastjson.JSONObject;
@@ -15,9 +16,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+*/
 /**
  * 拦截器：Spring框架特有的，常用于登录校验，权限校验，请求日志打印
- */
+ *//*
+
 @Component
 public class ActionInterceptor implements HandlerInterceptor {
 
@@ -45,7 +48,8 @@ public class ActionInterceptor implements HandlerInterceptor {
         response.setContentType("application/json;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.getWriter().print(JSONObject.toJSON(commonResp));
-        return false;
+        return true;
     }
 
 }
+*/

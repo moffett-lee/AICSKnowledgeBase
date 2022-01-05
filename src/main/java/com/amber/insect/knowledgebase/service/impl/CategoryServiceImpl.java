@@ -1,8 +1,10 @@
 package com.amber.insect.knowledgebase.service.impl;
 
 
+import com.amber.insect.knowledgebase.common.RPage;
 import com.amber.insect.knowledgebase.dto.CategoryDto;
 import com.amber.insect.knowledgebase.entity.CategoryEntity;
+import com.amber.insect.knowledgebase.enums.CommonConstants;
 import com.amber.insect.knowledgebase.query.CategoryQuery;
 import com.amber.insect.knowledgebase.repository.CategoryRepository;
 import com.amber.insect.knowledgebase.service.ICategoryService;
@@ -14,9 +16,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 @Service
 public class CategoryServiceImpl implements ICategoryService {
@@ -27,7 +29,7 @@ public class CategoryServiceImpl implements ICategoryService {
     @Override
     public List<CategoryDto> getCategoryList() {
         List<CategoryDto> dtos = new ArrayList<>();
-        Iterable<CategoryEntity> all = categoryRepository.findAll();
+        Iterable<CategoryEntity> all = categoryRepository.findAllByIsDelIs(CommonConstants.NORMAL);
         all.forEach(obj -> {
             dtos.add(CopyUtil.copy(obj,CategoryDto.class));
         });
@@ -35,26 +37,35 @@ public class CategoryServiceImpl implements ICategoryService {
     }
 
     @Override
-    public Page<CategoryDto> getCategoryListPage(CategoryQuery query) {
-        //将参数传给这个方法就可以实现物理分页了，非常简单。
-        Sort sort = Sort.by(Sort.Order.desc("id"));
+    public RPage<CategoryDto> getCategoryListPage(CategoryQuery query) {
+        RPage page = new RPage();
+        Sort sort = Sort.by(Sort.Order.asc("id"));
         Pageable pageable =PageRequest.of(query.getPage(), query.getSize(), sort);
-        Page<CategoryEntity> all = categoryRepository.findAll(pageable);
-        Stream<CategoryEntity> categoryEntityStream = all.get();
-        return null;
+        Page<CategoryEntity> categoryEntities = categoryRepository.findAllByIsDelIs(pageable,CommonConstants.NORMAL);
+        List<CategoryEntity> content = categoryEntities.getContent();
+        List<CategoryDto> categoryDtos = CopyUtil.copyList(content, CategoryDto.class);
+        page.setList(categoryDtos);
+        page.setTotal(categoryEntities.getTotalElements());
+        return page;
     }
 
     @Override
     public void save(CategoryDto dto) {
         CategoryEntity copy = CopyUtil.copy(dto, CategoryEntity.class);
-        CategoryEntity save = categoryRepository.save(copy);
+        copy.setCTime(LocalDateTime.now());
+        copy.setUptTime(LocalDateTime.now());
+        copy.setIsDel(CommonConstants.NORMAL);
+       CategoryEntity save = categoryRepository.save(copy);
+
+
     }
 
     @Override
     public void delete(Long id) {
         CategoryEntity categoryEntity = new CategoryEntity();
         categoryEntity.setId(id);
-        categoryEntity.setIsDel(1);
+        categoryEntity.setIsDel(CommonConstants.DEL);
+        categoryEntity.setUptTime(LocalDateTime.now());
         categoryRepository.save(categoryEntity);
     }
 }

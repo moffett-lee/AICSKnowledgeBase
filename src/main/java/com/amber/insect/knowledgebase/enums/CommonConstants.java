@@ -22,12 +22,12 @@ public interface CommonConstants {
 	/**
 	 * 删除
 	 */
-	String STATUS_DEL = "1";
+	int DEL = 1;
 
 	/**
 	 * 正常
 	 */
-	String STATUS_NORMAL = "0";
+	int NORMAL = 0;
 
 	/**
 	 * 锁定

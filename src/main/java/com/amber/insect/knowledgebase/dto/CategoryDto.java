@@ -9,6 +9,8 @@ import javax.persistence.Table;
 @Data
 public class CategoryDto {
 
+
+    private Long id;
     private Long parentId;
     private String name;
     private Integer sort;
