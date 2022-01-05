@@ -8,5 +8,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository("contentRepository")
-public interface ContentRepository extends PagingAndSortingRepository<ContentEntity, String>, JpaSpecificationExecutor<ContentEntity> {
+public interface ContentRepository extends PagingAndSortingRepository<ContentEntity, Long>, JpaSpecificationExecutor<ContentEntity> {
+
+    ContentEntity findOneById(Long id);
 }

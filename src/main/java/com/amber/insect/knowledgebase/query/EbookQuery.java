@@ -1,5 +1,8 @@
 package com.amber.insect.knowledgebase.query;
 
+import com.amber.insect.knowledgebase.common.RPage;
+import lombok.Data;
+
 /**
  * @ClassName EbookQuery
  * @Description
@@ -7,5 +10,6 @@ package com.amber.insect.knowledgebase.query;
  * @Date 2022/1/5 22:51
  * @Version 1.0
  **/
-public class EbookQuery {
+@Data
+public class EbookQuery extends RPage {
 }
