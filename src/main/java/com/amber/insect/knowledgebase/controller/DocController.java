@@ -2,15 +2,12 @@ package com.amber.insect.knowledgebase.controller;
 
 
 import com.amber.insect.knowledgebase.common.R;
-import com.amber.insect.knowledgebase.dto.DocQueryReq;
-import com.amber.insect.knowledgebase.dto.DocSaveReq;
+import com.amber.insect.knowledgebase.query.DocQuery;
 import com.amber.insect.knowledgebase.service.IDocService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
-import java.util.Arrays;
-import java.util.List;
 
 @RestController
 @RequestMapping("/doc")
@@ -25,12 +22,12 @@ public class DocController {
     }
 
     @GetMapping("/list")
-    public R list(@Valid DocQueryReq req) {
+    public R list(@Valid DocQuery req) {
         return R.success();
     }
 
     @PostMapping("/save")
-    public R save(@Valid @RequestBody DocSaveReq req) {
+    public R save(@Valid @RequestBody DocQuery req) {
         return R.success();
     }
 

@@ -56,8 +56,6 @@ public class CategoryServiceImpl implements ICategoryService {
         copy.setUptTime(LocalDateTime.now());
         copy.setIsDel(CommonConstants.NORMAL);
        CategoryEntity save = categoryRepository.save(copy);
-
-
     }
 
     @Override
