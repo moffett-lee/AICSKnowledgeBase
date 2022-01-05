@@ -1,7 +1,7 @@
 package com.amber.insect.knowledgebase.controller;
 
 
-import com.amber.insect.knowledgebase.common.CommonResp;
+import com.amber.insect.knowledgebase.common.R;
 import com.amber.insect.knowledgebase.common.StatisticResp;
 import com.amber.insect.knowledgebase.service.IEbookSnapshotService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,19 +19,15 @@ public class EbookSnapshotController {
     private IEbookSnapshotService ebookSnapshotService;
 
     @GetMapping("/get-statistic")
-    public CommonResp getStatistic() {
-        List<StatisticResp> statisticResp = ebookSnapshotService.getStatistic();
-        CommonResp<List<StatisticResp>> commonResp = new CommonResp<>();
-        commonResp.setContent(statisticResp);
-        return commonResp;
+    public R getStatistic() {
+
+        return R.success();
     }
 
     @GetMapping("/get-30-statistic")
-    public CommonResp get30Statistic() {
-        List<StatisticResp> statisticResp = ebookSnapshotService.get30Statistic();
-        CommonResp<List<StatisticResp>> commonResp = new CommonResp<>();
-        commonResp.setContent(statisticResp);
-        return commonResp;
+    public R get30Statistic() {
+
+        return R.success();
     }
 
 }

@@ -1,10 +1,7 @@
 package com.amber.insect.knowledgebase.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.amber.insect.knowledgebase.common.CommonResp;
-import com.amber.insect.knowledgebase.common.PageResp;
-import com.amber.insect.knowledgebase.common.UserLoginResp;
-import com.amber.insect.knowledgebase.common.UserQueryResp;
+import com.amber.insect.knowledgebase.common.R;
 import com.amber.insect.knowledgebase.dto.UserLoginReq;
 import com.amber.insect.knowledgebase.dto.UserQueryReq;
 import com.amber.insect.knowledgebase.dto.UserResetPasswordReq;
@@ -37,56 +34,32 @@ public class UserController {
     private RedisTemplate redisTemplate;
 
     @GetMapping("/list")
-    public CommonResp list(@Valid UserQueryReq req) {
-        CommonResp<PageResp<UserQueryResp>> resp = new CommonResp<>();
-        PageResp<UserQueryResp> list = userService.list(req);
-        resp.setContent(list);
-        return resp;
+    public R list(@Valid UserQueryReq req) {
+        return R.success();
     }
 
     @PostMapping("/save")
-    public CommonResp save(@Valid @RequestBody UserSaveReq req) {
-        req.setPassword(DigestUtils.md5DigestAsHex(req.getPassword().getBytes()));
-        CommonResp resp = new CommonResp<>();
-        userService.save(req);
-        return resp;
+    public R save(@Valid @RequestBody UserSaveReq req) {
+        return R.success();
     }
 
     @DeleteMapping("/delete/{id}")
-    public CommonResp delete(@PathVariable Long id) {
-        CommonResp resp = new CommonResp<>();
-        userService.delete(id);
-        return resp;
+    public R delete(@PathVariable Long id) {
+        return R.success();
     }
 
     @PostMapping("/reset-password")
-    public CommonResp resetPassword(@Valid @RequestBody UserResetPasswordReq req) {
-        req.setPassword(DigestUtils.md5DigestAsHex(req.getPassword().getBytes()));
-        CommonResp resp = new CommonResp<>();
-        userService.resetPassword(req);
-        return resp;
+    public R resetPassword(@Valid @RequestBody UserResetPasswordReq req) {
+        return R.success();
     }
 
     @PostMapping("/login")
-    public CommonResp login(@Valid @RequestBody UserLoginReq req) {
-        req.setPassword(DigestUtils.md5DigestAsHex(req.getPassword().getBytes()));
-        CommonResp<UserLoginResp> resp = new CommonResp<>();
-        UserLoginResp userLoginResp = userService.login(req);
-
-        Long token = snowFlake.nextId();
-        LOG.info("生成单点登录token：{}，并放入redis中", token);
-        userLoginResp.setToken(token.toString());
-        redisTemplate.opsForValue().set(token.toString(), JSONObject.toJSONString(userLoginResp), 3600 * 24, TimeUnit.SECONDS);
-
-        resp.setContent(userLoginResp);
-        return resp;
+    public R login(@Valid @RequestBody UserLoginReq req) {
+        return R.success();
     }
 
     @GetMapping("/logout/{token}")
-    public CommonResp logout(@PathVariable String token) {
-        CommonResp resp = new CommonResp<>();
-        redisTemplate.delete(token);
-        LOG.info("从redis中删除token: {}", token);
-        return resp;
+    public R logout(@PathVariable String token) {
+        return R.success();
     }
 }

@@ -1,9 +1,9 @@
 package com.amber.insect.knowledgebase.controller;
 
 
-import com.amber.insect.knowledgebase.common.CommonResp;
-import com.amber.insect.knowledgebase.common.DocQueryResp;
-import com.amber.insect.knowledgebase.common.PageResp;
+import com.amber.insect.knowledgebase.common.R;
+import com.amber.insect.knowledgebase.dto.DocQueryReq;
+import com.amber.insect.knowledgebase.dto.DocSaveReq;
 import com.amber.insect.knowledgebase.service.IDocService;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,48 +20,32 @@ public class DocController {
     private IDocService docService;
 
     @GetMapping("/all/{ebookId}")
-    public CommonResp all(@PathVariable Long ebookId) {
-        CommonResp<List<DocQueryResp>> resp = new CommonResp<>();
-        List<DocQueryResp> list = docService.all(ebookId);
-        resp.setContent(list);
-        return resp;
+    public R all(@PathVariable Long ebookId) {
+        return R.success();
     }
 
     @GetMapping("/list")
-    public CommonResp list(@Valid DocQueryReq req) {
-        CommonResp<PageResp<DocQueryResp>> resp = new CommonResp<>();
-        PageResp<DocQueryResp> list = docService.list(req);
-        resp.setContent(list);
-        return resp;
+    public R list(@Valid DocQueryReq req) {
+        return R.success();
     }
 
     @PostMapping("/save")
-    public CommonResp save(@Valid @RequestBody DocSaveReq req) {
-        CommonResp resp = new CommonResp<>();
-        docService.save(req);
-        return resp;
+    public R save(@Valid @RequestBody DocSaveReq req) {
+        return R.success();
     }
 
     @DeleteMapping("/delete/{idsStr}")
-    public CommonResp delete(@PathVariable String idsStr) {
-        CommonResp resp = new CommonResp<>();
-        List<String> list = Arrays.asList(idsStr.split(","));
-        docService.delete(list);
-        return resp;
+    public R delete(@PathVariable String idsStr) {
+        return R.success();
     }
 
     @GetMapping("/find-content/{id}")
-    public CommonResp findContent(@PathVariable Long id) {
-        CommonResp<String> resp = new CommonResp<>();
-        String content = docService.findContent(id);
-        resp.setContent(content);
-        return resp;
+    public R findContent(@PathVariable Long id) {
+        return R.success();
     }
 
     @GetMapping("/vote/{id}")
-    public CommonResp vote(@PathVariable Long id) {
-        CommonResp commonResp = new CommonResp();
-        docService.vote(id);
-        return commonResp;
+    public R vote(@PathVariable Long id) {
+        return  R.success();
     }
 }

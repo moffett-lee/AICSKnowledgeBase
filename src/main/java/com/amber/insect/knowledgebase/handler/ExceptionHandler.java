@@ -1,4 +1,4 @@
-package com.amber.insect.knowledgebase.controller;
+package com.amber.insect.knowledgebase.handler;
 
 
 import com.amber.insect.knowledgebase.common.CommonResp;
@@ -7,23 +7,22 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 统一异常处理、数据预处理等
  */
 @ControllerAdvice
-public class ControllerExceptionHandler {
+public class ExceptionHandler {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ControllerExceptionHandler.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ExceptionHandler.class);
 
     /**
      * 校验异常统一处理
      * @param e
      * @return
      */
-    @ExceptionHandler(value = BindException.class)
+    @org.springframework.web.bind.annotation.ExceptionHandler(value = BindException.class)
     @ResponseBody
     public CommonResp validExceptionHandler(BindException e) {
         CommonResp commonResp = new CommonResp();
@@ -38,7 +37,7 @@ public class ControllerExceptionHandler {
      * @param e
      * @return
      */
-    @ExceptionHandler(value = BusinessException.class)
+    @org.springframework.web.bind.annotation.ExceptionHandler(value = BusinessException.class)
     @ResponseBody
     public CommonResp validExceptionHandler(BusinessException e) {
         CommonResp commonResp = new CommonResp();
@@ -53,7 +52,7 @@ public class ControllerExceptionHandler {
      * @param e
      * @return
      */
-    @ExceptionHandler(value = Exception.class)
+    @org.springframework.web.bind.annotation.ExceptionHandler(value = Exception.class)
     @ResponseBody
     public CommonResp validExceptionHandler(Exception e) {
         CommonResp commonResp = new CommonResp();
