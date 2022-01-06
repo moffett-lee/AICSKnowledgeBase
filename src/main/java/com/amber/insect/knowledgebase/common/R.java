@@ -43,6 +43,19 @@ public class R<T> implements Serializable {
 	@Setter
 	private T data;
 
+	/**
+	 * 业务上的成功或失败
+	 */
+	private boolean success = true;
+
+	public boolean isSuccess() {
+		return success;
+	}
+
+	public void setSuccess(boolean success) {
+		this.success = success;
+	}
+
 	public static <T> R<T> success() {
 		return restResult(null, CommonConstants.SUCCESS, null);
 	}

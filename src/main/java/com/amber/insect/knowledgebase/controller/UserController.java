@@ -97,6 +97,8 @@ public class UserController {
      **/
     @PostMapping("/login")
     public R login(@Valid @RequestBody UserLoginReq loginReq) {
+
+        loginReq.setPassWord(DigestUtils.md5DigestAsHex(loginReq.getPassWord().getBytes()));
         UserDto userDto = userService.login(loginReq);
         Long token = snowFlake.nextId();
         log.info("生成单点登录token：{}，并放入redis中", token);

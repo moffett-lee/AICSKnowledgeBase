@@ -33,6 +33,6 @@ public interface DocRepository extends PagingAndSortingRepository<DocEntity, Str
     @Query("update DocEntity doc set doc.voteCount = voteCount + 1 where id = ?1")
     void increaseVoteCount(Long id);
 
-    void updateIsDelById(int isDel ,Long aLong);
+    //void updateIsDelById(int isDel ,Long aLong);
 
 }

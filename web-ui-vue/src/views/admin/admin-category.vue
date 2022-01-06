@@ -70,7 +70,7 @@
       </a-form-item>
       <a-form-item label="父分类">
         <a-select
-          v-model:value="category.parent"
+          v-model:value="category.parentId"
           ref="select"
         >
           <a-select-option :value="0">
@@ -144,11 +144,11 @@
         loading.value = true;
         // 如果不清空现有数据，则编辑保存重新加载数据后，再点编辑，则列表显示的还是编辑前的数据
         level1.value = [];
-        axios.get("/category/all").then((response) => {
+        axios.get("/category/getCategoryList").then((response) => {
           loading.value = false;
           const data = response.data;
           if (data.success) {
-            categorys.value = data.content;
+            categorys.value = data.data;
             console.log("原始数组：", categorys.value);
 
             level1.value = [];

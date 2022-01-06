@@ -99,10 +99,10 @@ export default defineComponent({
      * 查询所有分类
      **/
     const handleQueryCategory = () => {
-      axios.get("/category/all").then((response) => {
+      axios.get("/category/getCategoryList").then((response) => {
         const data = response.data;
         if (data.success) {
-          categorys = data.content;
+          categorys = data.data;
           console.log("原始数组：", categorys);
 
           // 加载完分类后，将侧边栏全部展开

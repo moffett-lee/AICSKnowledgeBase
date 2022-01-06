@@ -40,7 +40,7 @@ public class UserServiceImpl implements IUserService {
         Pageable pageable = PageRequest.of(query.getPage(), query.getSize(), sort);
         Page<UserEntity> entities = userRepository.findAllByIsDelIs(pageable, CommonConstants.NORMAL);
         List<UserEntity> content = entities.getContent();
-        List<CategoryDto> dtos = CopyUtil.copyList(content, CategoryDto.class);
+        List<UserDto> dtos = CopyUtil.copyList(content, UserDto.class);
         page.setList(dtos);
         page.setTotal(entities.getTotalElements());
         return page;

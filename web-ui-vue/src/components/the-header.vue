@@ -38,7 +38,7 @@
         </a>
       </a-popconfirm>
       <a class="login-menu" v-show="user.id">
-        <span>您好：{{user.name}}</span>
+        <span>您好：{{user.userName}}</span>
       </a>
       <a class="login-menu" v-show="!user.id" @click="showLoginModal">
         <span>登录</span>
@@ -53,10 +53,10 @@
     >
       <a-form :model="loginUser" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
         <a-form-item label="登录名">
-          <a-input v-model:value="loginUser.loginName" />
+          <a-input v-model:value="loginUser.userCode" />
         </a-form-item>
         <a-form-item label="密码">
-          <a-input v-model:value="loginUser.password" type="password" />
+          <a-input v-model:value="loginUser.passWord" type="password" />
         </a-form-item>
       </a-form>
     </a-modal>
@@ -80,8 +80,8 @@
 
       // 用来登录
       const loginUser = ref({
-        loginName: "test",
-        password: "test"
+        userCode: "liyuze",
+        passWord: "123456"
       });
       const loginModalVisible = ref(false);
       const loginModalLoading = ref(false);
@@ -93,7 +93,7 @@
       const login = () => {
         console.log("开始登录");
         loginModalLoading.value = true;
-        loginUser.value.password = hexMd5(loginUser.value.password + KEY);
+        loginUser.value.passWord = hexMd5(loginUser.value.passWord + KEY);
         axios.post('/user/login', loginUser.value).then((response) => {
           loginModalLoading.value = false;
           const data = response.data;
@@ -101,7 +101,7 @@
             loginModalVisible.value = false;
             message.success("登录成功！");
 
-            store.commit("setUser", data.content);
+            store.commit("setUser", data.data);
           } else {
             message.error(data.message);
           }

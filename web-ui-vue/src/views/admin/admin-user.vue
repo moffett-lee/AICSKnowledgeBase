@@ -61,13 +61,13 @@
   >
     <a-form :model="user" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
       <a-form-item label="登陆名">
-        <a-input v-model:value="user.loginName" :disabled="!!user.id"/>
+        <a-input v-model:value="user.userCode" :disabled="!!user.id"/>
       </a-form-item>
       <a-form-item label="昵称">
-        <a-input v-model:value="user.name" />
+        <a-input v-model:value="user.userName" />
       </a-form-item>
       <a-form-item label="密码" v-show="!user.id">
-        <a-input v-model:value="user.password" type="password"/>
+        <a-input v-model:value="user.passWord" type="password"/>
       </a-form-item>
     </a-form>
   </a-modal>
@@ -80,7 +80,7 @@
   >
     <a-form :model="user" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
       <a-form-item label="新密码">
-        <a-input v-model:value="user.password" type="password"/>
+        <a-input v-model:value="user.passWord" type="password"/>
       </a-form-item>
     </a-form>
   </a-modal>
@@ -111,15 +111,15 @@
       const columns = [
         {
           title: '登陆名',
-          dataIndex: 'loginName'
+          dataIndex: 'userCode'
         },
         {
           title: '名称',
-          dataIndex: 'name'
+          dataIndex: 'userName'
         },
         {
           title: '密码',
-          dataIndex: 'password'
+          dataIndex: 'passWord'
         },
         {
           title: 'Action',
@@ -135,17 +135,17 @@
         loading.value = true;
         // 如果不清空现有数据，则编辑保存重新加载数据后，再点编辑，则列表显示的还是编辑前的数据
         users.value = [];
-        axios.get("/user/list", {
+        axios.get("/user/getUserListPage", {
           params: {
             page: params.page,
             size: params.size,
-            loginName: param.value.loginName
+            userCode: param.value.userCode
           }
         }).then((response) => {
           loading.value = false;
           const data = response.data;
           if (data.success) {
-            users.value = data.content.list;
+            users.value = data.data.list;
 
             // 重置分页按钮
             pagination.value.current = params.page;

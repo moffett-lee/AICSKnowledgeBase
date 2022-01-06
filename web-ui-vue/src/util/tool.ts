@@ -40,7 +40,7 @@ export class Tool {
     for (let i = 0; i < array.length; i++) {
       const c = array[i];
       // console.log(Number(c.parent), Number(parentId));
-      if (Number(c.parent) === Number(parentId)) {
+      if (Number(c.parentId) === Number(parentId)) {
         result.push(c);
 
         // 递归查看当前节点对应的子节点

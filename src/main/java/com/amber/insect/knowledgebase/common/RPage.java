@@ -13,6 +13,7 @@ public class RPage<T> {
     private int size;
 
 
+
     private long total;
 
     private List<T> list;

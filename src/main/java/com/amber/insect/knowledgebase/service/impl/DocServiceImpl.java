@@ -72,7 +72,7 @@ public class DocServiceImpl implements IDocService {
 
         if (list.size() > 0) {
             for (Long aLong : list) {
-                docRepository.updateIsDelById(CommonConstants.DEL,aLong);
+                //docRepository.updateIsDelById(CommonConstants.DEL,aLong);
             }
         }
     }
