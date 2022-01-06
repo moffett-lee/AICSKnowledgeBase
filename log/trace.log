@@ -1,0 +1,631 @@
+2022-01-05 13:35:10.775 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2022-01-05 13:35:10.792 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on ZB-20210629CYMT with PID 13420 (D:\ext.liyuze\Documents\code\knowledge-base\target\classes started by ext.liyuze in D:\ext.liyuze\Documents\code\knowledge-base)
+2022-01-05 13:35:10.792 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-05 13:35:10.892 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-05 13:35:10.892 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-05 13:35:14.385 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 13:35:14.385 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-05 13:35:14.520 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 119 ms. Found 6 JPA repository interfaces.
+2022-01-05 13:35:14.848 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 13:35:14.850 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-05 13:35:14.872 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.CategoryRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:35:14.873 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:35:14.873 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.DocRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:35:14.874 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:35:14.874 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookSnapshotRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:35:14.875 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:35:14.876 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-01-05 13:35:15.112 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner  :44   [32m                  [0;39m No MyBatis mapper was found in '[com.amber.insect.knowledgebase]' package. Please check your configuration.
+2022-01-05 13:35:18.193 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-05 13:35:18.202 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-05 13:35:18.203 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-05 13:35:18.203 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-05 13:35:18.285 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-05 13:35:18.285 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 7391 ms
+2022-01-05 13:35:18.536 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-05 13:35:18.591 INFO  org.hibernate.Version                             :44   [32m                  [0;39m HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-05 13:35:18.761 INFO  org.hibernate.annotations.common.Version          :56   [32m                  [0;39m HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-05 13:35:18.882 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2022-01-05 13:35:21.774 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2022-01-05 13:35:21.791 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-05 13:35:22.581 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-05 13:35:22.590 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 13:35:23.504 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryRepository' defined in com.amber.insect.knowledgebase.repository.CategoryRepository defined in @EnableJpaRepositories declared on KnowledgeBaseApplication: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! Reason: Failed to create query for method public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! No property updateIsDelById found for type CategoryEntity!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! No property updateIsDelById found for type CategoryEntity!
+2022-01-05 13:35:23.517 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 13:35:23.521 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2022-01-05 13:35:23.530 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2022-01-05 13:35:23.532 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2022-01-05 13:35:23.542 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-05 13:35:23.713 ERROR org.springframework.boot.SpringApplication        :819  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryRepository' defined in com.amber.insect.knowledgebase.repository.CategoryRepository defined in @EnableJpaRepositories declared on KnowledgeBaseApplication: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! Reason: Failed to create query for method public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! No property updateIsDelById found for type CategoryEntity!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! No property updateIsDelById found for type CategoryEntity!
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.amber.insect.knowledgebase.KnowledgeBaseApplication.main(KnowledgeBaseApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryRepository' defined in com.amber.insect.knowledgebase.repository.CategoryRepository defined in @EnableJpaRepositories declared on KnowledgeBaseApplication: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! Reason: Failed to create query for method public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! No property updateIsDelById found for type CategoryEntity!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! No property updateIsDelById found for type CategoryEntity!
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryRepository' defined in com.amber.insect.knowledgebase.repository.CategoryRepository defined in @EnableJpaRepositories declared on KnowledgeBaseApplication: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! Reason: Failed to create query for method public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! No property updateIsDelById found for type CategoryEntity!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! No property updateIsDelById found for type CategoryEntity!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 38 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! Reason: Failed to create query for method public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! No property updateIsDelById found for type CategoryEntity!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! No property updateIsDelById found for type CategoryEntity!
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:106)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:94)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1051)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:96)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:86)
+	at java.util.Optional.map(Optional.java:215)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:86)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:364)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:322)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:328)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 51 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.amber.insect.knowledgebase.repository.CategoryRepository.updateIsDelById(java.lang.Long)! No property updateIsDelById found for type CategoryEntity!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:113)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:254)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:87)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:102)
+	... 73 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property updateIsDelById found for type CategoryEntity!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:437)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:413)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:366)
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:324)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:348)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:331)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:249)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:250)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:383)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:384)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:92)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89)
+	... 77 common frames omitted
+2022-01-05 13:46:09.826 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2022-01-05 13:46:09.836 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on ZB-20210629CYMT with PID 6172 (D:\ext.liyuze\Documents\code\knowledge-base\target\classes started by ext.liyuze in D:\ext.liyuze\Documents\code\knowledge-base)
+2022-01-05 13:46:09.837 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-05 13:46:09.901 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-05 13:46:09.901 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-05 13:46:10.751 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 13:46:10.751 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-05 13:46:10.895 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 129 ms. Found 6 JPA repository interfaces.
+2022-01-05 13:46:13.267 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 13:46:13.269 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-05 13:46:13.287 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.CategoryRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:46:13.288 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:46:13.289 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.DocRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:46:13.290 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:46:13.291 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookSnapshotRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:46:13.291 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:46:13.292 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-01-05 13:46:13.509 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner  :44   [32m                  [0;39m No MyBatis mapper was found in '[com.amber.insect.knowledgebase]' package. Please check your configuration.
+2022-01-05 13:46:14.221 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-05 13:46:14.229 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-05 13:46:14.230 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-05 13:46:14.230 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-05 13:46:14.300 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-05 13:46:14.300 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 4398 ms
+2022-01-05 13:46:14.611 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-05 13:46:14.657 INFO  org.hibernate.Version                             :44   [32m                  [0;39m HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-05 13:46:14.794 INFO  org.hibernate.annotations.common.Version          :56   [32m                  [0;39m HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-05 13:46:14.898 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2022-01-05 13:46:17.769 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2022-01-05 13:46:17.784 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-05 13:46:18.415 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-05 13:46:18.423 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 13:46:19.186 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'docController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.amber.insect.knowledgebase.service.IDocService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2022-01-05 13:46:19.200 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 13:46:19.203 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2022-01-05 13:46:19.215 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2022-01-05 13:46:19.217 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2022-01-05 13:46:19.227 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-05 13:46:19.253 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.amber.insect.knowledgebase.service.IDocService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.amber.insect.knowledgebase.service.IDocService' in your configuration.
+
+2022-01-05 13:50:23.314 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2022-01-05 13:50:23.324 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on ZB-20210629CYMT with PID 19728 (D:\ext.liyuze\Documents\code\knowledge-base\target\classes started by ext.liyuze in D:\ext.liyuze\Documents\code\knowledge-base)
+2022-01-05 13:50:23.325 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-05 13:50:23.382 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-05 13:50:23.382 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-05 13:50:24.029 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 13:50:24.029 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-05 13:50:24.179 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 140 ms. Found 6 JPA repository interfaces.
+2022-01-05 13:50:26.541 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 13:50:26.543 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-05 13:50:26.564 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.CategoryRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:50:26.565 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:50:26.566 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.DocRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:50:26.567 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:50:26.567 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookSnapshotRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:50:26.568 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:50:26.569 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2022-01-05 13:50:26.781 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner  :44   [32m                  [0;39m No MyBatis mapper was found in '[com.amber.insect.knowledgebase]' package. Please check your configuration.
+2022-01-05 13:50:27.550 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-05 13:50:27.557 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-05 13:50:27.558 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-05 13:50:27.558 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-05 13:50:27.632 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-05 13:50:27.633 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 4250 ms
+2022-01-05 13:50:27.871 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-05 13:50:27.915 INFO  org.hibernate.Version                             :44   [32m                  [0;39m HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-05 13:50:28.046 INFO  org.hibernate.annotations.common.Version          :56   [32m                  [0;39m HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-05 13:50:28.141 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2022-01-05 13:50:30.930 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2022-01-05 13:50:30.942 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-05 13:50:31.576 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-05 13:50:31.585 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 13:50:34.874 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-05 13:50:35.086 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerAdapter' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'jsonSchemaConverter' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'associationLinks' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'associationLinks' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'resourceMappings' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.core.mapping.RepositoryResourceMappings]: Factory method 'resourceMappings' threw exception; nested exception is java.lang.IllegalStateException: Path /userRepository configured for com.amber.insect.knowledgebase.repository.UserRepository must only contain a single path segment!
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerAdapter' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'jsonSchemaConverter' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'associationLinks' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'associationLinks' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'resourceMappings' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.core.mapping.RepositoryResourceMappings]: Factory method 'resourceMappings' threw exception; nested exception is java.lang.IllegalStateException: Path /userRepository configured for com.amber.insect.knowledgebase.repository.UserRepository must only contain a single path segment!
+2022-01-05 13:50:35.101 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 13:50:35.103 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2022-01-05 13:50:35.113 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2022-01-05 13:50:35.115 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2022-01-05 13:50:35.124 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-05 13:50:35.149 ERROR org.springframework.boot.SpringApplication        :819  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerAdapter' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'jsonSchemaConverter' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'associationLinks' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'associationLinks' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'resourceMappings' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.core.mapping.RepositoryResourceMappings]: Factory method 'resourceMappings' threw exception; nested exception is java.lang.IllegalStateException: Path /userRepository configured for com.amber.insect.knowledgebase.repository.UserRepository must only contain a single path segment!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.amber.insect.knowledgebase.KnowledgeBaseApplication.main(KnowledgeBaseApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'jsonSchemaConverter' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'associationLinks' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'associationLinks' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'resourceMappings' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.core.mapping.RepositoryResourceMappings]: Factory method 'resourceMappings' threw exception; nested exception is java.lang.IllegalStateException: Path /userRepository configured for com.amber.insect.knowledgebase.repository.UserRepository must only contain a single path segment!
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'jsonSchemaConverter' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'associationLinks' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'associationLinks' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'resourceMappings' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.core.mapping.RepositoryResourceMappings]: Factory method 'resourceMappings' threw exception; nested exception is java.lang.IllegalStateException: Path /userRepository configured for com.amber.insect.knowledgebase.repository.UserRepository must only contain a single path segment!
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'jsonSchemaConverter' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'associationLinks' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'associationLinks' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'resourceMappings' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.core.mapping.RepositoryResourceMappings]: Factory method 'resourceMappings' threw exception; nested exception is java.lang.IllegalStateException: Path /userRepository configured for com.amber.insect.knowledgebase.repository.UserRepository must only contain a single path segment!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:671)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659)
+	at org.springframework.boot.convert.ApplicationConversionService.addBeans(ApplicationConversionService.java:276)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.addFormatters(WebMvcAutoConfiguration.java:328)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.addFormatters(WebMvcConfigurerComposite.java:81)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.addFormatters(DelegatingWebMvcConfiguration.java:78)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.mvcConversionService(WebMvcAutoConfiguration.java:522)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 39 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'associationLinks' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'associationLinks' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'resourceMappings' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.core.mapping.RepositoryResourceMappings]: Factory method 'resourceMappings' threw exception; nested exception is java.lang.IllegalStateException: Path /userRepository configured for com.amber.insect.knowledgebase.repository.UserRepository must only contain a single path segment!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 60 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'resourceMappings' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.core.mapping.RepositoryResourceMappings]: Factory method 'resourceMappings' threw exception; nested exception is java.lang.IllegalStateException: Path /userRepository configured for com.amber.insect.knowledgebase.repository.UserRepository must only contain a single path segment!
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 74 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.core.mapping.RepositoryResourceMappings]: Factory method 'resourceMappings' threw exception; nested exception is java.lang.IllegalStateException: Path /userRepository configured for com.amber.insect.knowledgebase.repository.UserRepository must only contain a single path segment!
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 88 common frames omitted
+Caused by: java.lang.IllegalStateException: Path /userRepository configured for com.amber.insect.knowledgebase.repository.UserRepository must only contain a single path segment!
+	at org.springframework.data.rest.core.mapping.RepositoryCollectionResourceMapping.lambda$new$6(RepositoryCollectionResourceMapping.java:108)
+	at java.util.Optional.filter(Optional.java:178)
+	at org.springframework.data.rest.core.mapping.RepositoryCollectionResourceMapping.<init>(RepositoryCollectionResourceMapping.java:104)
+	at org.springframework.data.rest.core.mapping.RepositoryResourceMappings.populateCache(RepositoryResourceMappings.java:83)
+	at org.springframework.data.rest.core.mapping.RepositoryResourceMappings.<init>(RepositoryResourceMappings.java:64)
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.resourceMappings(RepositoryRestMvcConfiguration.java:709)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 89 common frames omitted
+2022-01-05 13:53:01.583 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2022-01-05 13:53:01.593 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on ZB-20210629CYMT with PID 14280 (D:\ext.liyuze\Documents\code\knowledge-base\target\classes started by ext.liyuze in D:\ext.liyuze\Documents\code\knowledge-base)
+2022-01-05 13:53:01.594 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-05 13:53:01.650 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-05 13:53:01.650 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-05 13:53:04.438 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 13:53:04.438 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-05 13:53:04.519 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 72 ms. Found 6 JPA repository interfaces.
+2022-01-05 13:53:04.694 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 13:53:04.695 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-05 13:53:04.709 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.CategoryRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:53:04.710 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:53:04.710 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.DocRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:53:04.710 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:53:04.711 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookSnapshotRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:53:04.711 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:53:04.712 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-01-05 13:53:04.875 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner  :44   [32m                  [0;39m No MyBatis mapper was found in '[com.amber.insect.knowledgebase]' package. Please check your configuration.
+2022-01-05 13:53:05.585 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-05 13:53:05.592 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-05 13:53:05.592 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-05 13:53:05.592 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-05 13:53:05.663 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-05 13:53:05.663 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 4012 ms
+2022-01-05 13:53:05.912 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-05 13:53:05.955 INFO  org.hibernate.Version                             :44   [32m                  [0;39m HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-05 13:53:06.074 INFO  org.hibernate.annotations.common.Version          :56   [32m                  [0;39m HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-05 13:53:08.273 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2022-01-05 13:53:08.871 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2022-01-05 13:53:08.884 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-05 13:53:09.599 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-05 13:53:09.608 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 13:53:12.866 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-05 13:53:13.899 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2022-01-05 13:53:13.915 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 13:53:13.918 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2022-01-05 13:53:13.928 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2022-01-05 13:53:13.930 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2022-01-05 13:53:13.941 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-05 13:53:13.957 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌──->──┐
+|  com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration
+└──<-──┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2022-01-05 13:55:30.114 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2022-01-05 13:55:30.125 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on ZB-20210629CYMT with PID 15648 (D:\ext.liyuze\Documents\code\knowledge-base\target\classes started by ext.liyuze in D:\ext.liyuze\Documents\code\knowledge-base)
+2022-01-05 13:55:30.126 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-05 13:55:30.183 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-05 13:55:30.183 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-05 13:55:30.994 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 13:55:30.994 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-05 13:55:31.106 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 102 ms. Found 6 JPA repository interfaces.
+2022-01-05 13:55:31.322 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 13:55:31.323 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-05 13:55:31.335 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.CategoryRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:55:31.336 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:55:31.336 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.DocRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:55:31.337 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:55:31.337 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookSnapshotRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:55:31.338 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:55:31.338 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2022-01-05 13:55:34.360 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-05 13:55:34.367 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-05 13:55:34.368 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-05 13:55:34.368 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-05 13:55:34.446 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-05 13:55:34.447 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 4263 ms
+2022-01-05 13:55:34.691 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-05 13:55:34.732 INFO  org.hibernate.Version                             :44   [32m                  [0;39m HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-05 13:55:34.853 INFO  org.hibernate.annotations.common.Version          :56   [32m                  [0;39m HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-05 13:55:34.940 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2022-01-05 13:55:37.656 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2022-01-05 13:55:37.673 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-05 13:55:38.427 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-05 13:55:38.435 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 13:55:39.554 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-05 13:55:43.349 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-01-05 13:55:43.379 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-01-05 13:55:43.395 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-01-05 13:55:43.408 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 13.791 seconds (JVM running for 17.39)
+2022-01-05 13:56:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m133810712744169472[0;39m 生成今日电子书快照开始
+2022-01-05 13:56:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m133810712744169472[0;39m 生成今日电子书快照结束，耗时：0毫秒
+2022-01-05 13:56:05.097 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m133810734047039488[0;39m 更新电子书下的文档数据开始
+2022-01-05 13:56:05.121 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m133810734047039488[0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-05 13:56:35.009 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m133810859574169600[0;39m 更新电子书下的文档数据开始
+2022-01-05 13:56:35.017 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m133810859574169600[0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-05 13:57:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m133810964419186688[0;39m 生成今日电子书快照开始
+2022-01-05 13:57:00.021 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m133810964419186688[0;39m 生成今日电子书快照结束，耗时：0毫秒
+2022-01-05 13:57:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m133810985382318080[0;39m 更新电子书下的文档数据开始
+2022-01-05 13:57:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m133810985382318080[0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-05 13:57:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m133811111203049472[0;39m 更新电子书下的文档数据开始
+2022-01-05 13:57:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m133811111203049472[0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-05 13:58:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m133811216064843776[0;39m 生成今日电子书快照开始
+2022-01-05 13:58:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m133811216064843776[0;39m 生成今日电子书快照结束，耗时：0毫秒
+2022-01-05 13:58:03.273 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-05 13:58:03.273 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-01-05 13:58:03.274 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2022-01-05 13:58:03.292 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :34   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-05 13:58:03.293 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :45   [32m                  [0;39m 接口登录拦截：，path：http://localhost:8880/category/getCategoryList
+2022-01-05 13:58:03.293 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :49   [32m                  [0;39m 登录校验开始，token：null
+2022-01-05 13:58:03.293 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :51   [32m                  [0;39m token为空，请求被拦截
+2022-01-05 13:58:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m133811237036363776[0;39m 更新电子书下的文档数据开始
+2022-01-05 13:58:05.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m133811237036363776[0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-05 13:58:16.688 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :34   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-05 13:58:16.689 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :45   [32m                  [0;39m 接口登录拦截：，path：http://localhost:8880/category/getCategoryList
+2022-01-05 13:58:16.689 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :49   [32m                  [0;39m 登录校验开始，token：null
+2022-01-05 13:58:16.689 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :51   [32m                  [0;39m token为空，请求被拦截
+2022-01-05 13:58:19.534 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :34   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-05 13:58:19.535 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :45   [32m                  [0;39m 接口登录拦截：，path：http://localhost:8880/category/getCategoryList
+2022-01-05 13:58:19.536 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :49   [32m                  [0;39m 登录校验开始，token：null
+2022-01-05 13:58:19.536 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :51   [32m                  [0;39m token为空，请求被拦截
+2022-01-05 13:58:35.025 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m133811362957758464[0;39m 更新电子书下的文档数据开始
+2022-01-05 13:58:35.034 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m133811362957758464[0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-05 13:59:00.009 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m133811467752443904[0;39m 生成今日电子书快照开始
+2022-01-05 13:59:00.012 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m133811467752443904[0;39m 生成今日电子书快照结束，耗时：0毫秒
+2022-01-05 13:59:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m133811488694603776[0;39m 更新电子书下的文档数据开始
+2022-01-05 13:59:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m133811488694603776[0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-05 13:59:13.828 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 13:59:13.832 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2022-01-05 13:59:13.847 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2022-01-05 13:59:26.228 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2022-01-05 13:59:26.237 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on ZB-20210629CYMT with PID 15748 (D:\ext.liyuze\Documents\code\knowledge-base\target\classes started by ext.liyuze in D:\ext.liyuze\Documents\code\knowledge-base)
+2022-01-05 13:59:26.237 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-05 13:59:26.292 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-05 13:59:26.292 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-05 13:59:26.885 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 13:59:26.885 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-05 13:59:26.977 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 83 ms. Found 6 JPA repository interfaces.
+2022-01-05 13:59:27.166 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 13:59:27.167 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-05 13:59:27.181 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.CategoryRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:59:27.182 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:59:27.183 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.DocRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:59:27.183 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:59:27.184 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookSnapshotRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:59:27.184 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 13:59:27.184 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-01-05 13:59:27.862 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-05 13:59:27.869 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-05 13:59:27.870 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-05 13:59:27.870 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-05 13:59:29.882 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-05 13:59:29.988 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 3694 ms
+2022-01-05 13:59:30.315 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-05 13:59:30.357 INFO  org.hibernate.Version                             :44   [32m                  [0;39m HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-05 13:59:30.476 INFO  org.hibernate.annotations.common.Version          :56   [32m                  [0;39m HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-05 13:59:30.559 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2022-01-05 13:59:31.190 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2022-01-05 13:59:31.203 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-05 13:59:31.841 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-05 13:59:31.849 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 13:59:35.314 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-05 13:59:38.702 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-01-05 13:59:38.753 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-01-05 13:59:38.769 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-01-05 13:59:38.783 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 15.296 seconds (JVM running for 16.595)
+2022-01-05 13:59:47.776 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-05 13:59:47.777 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-01-05 13:59:47.778 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2022-01-05 13:59:47.799 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :34   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-05 13:59:47.801 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :45   [32m                  [0;39m 接口登录拦截：，path：http://localhost:8880/category/getCategoryList
+2022-01-05 13:59:47.801 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :49   [32m                  [0;39m 登录校验开始，token：null
+2022-01-05 13:59:47.801 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :51   [32m                  [0;39m token为空，请求被拦截
+2022-01-05 14:00:00.003 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m133811719385518080[0;39m 生成今日电子书快照开始
+2022-01-05 14:00:00.003 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m133811719385518080[0;39m 生成今日电子书快照结束，耗时：0毫秒
+2022-01-05 14:00:03.743 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :34   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-05 14:00:03.744 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :45   [32m                  [0;39m 接口登录拦截：，path：http://localhost:8880/category/getCategoryList
+2022-01-05 14:00:03.744 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :49   [32m                  [0;39m 登录校验开始，token：null
+2022-01-05 14:00:03.745 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :51   [32m                  [0;39m token为空，请求被拦截
+2022-01-05 14:00:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m133811740348649472[0;39m 更新电子书下的文档数据开始
+2022-01-05 14:00:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m133811740348649472[0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-05 14:00:16.035 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :34   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-05 14:00:16.036 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :45   [32m                  [0;39m 接口登录拦截：，path：http://localhost:8880/category/getCategoryList
+2022-01-05 14:00:16.036 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :49   [32m                  [0;39m 登录校验开始，token：null
+2022-01-05 14:00:16.037 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :51   [32m                  [0;39m token为空，请求被拦截
+2022-01-05 14:00:33.554 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 14:00:33.558 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2022-01-05 14:00:33.573 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2022-01-05 14:00:45.183 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2022-01-05 14:00:45.193 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on ZB-20210629CYMT with PID 3172 (D:\ext.liyuze\Documents\code\knowledge-base\target\classes started by ext.liyuze in D:\ext.liyuze\Documents\code\knowledge-base)
+2022-01-05 14:00:45.193 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-05 14:00:45.248 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-05 14:00:45.249 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-05 14:00:45.833 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 14:00:45.833 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-05 14:00:45.915 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 73 ms. Found 6 JPA repository interfaces.
+2022-01-05 14:00:46.077 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-05 14:00:46.078 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-05 14:00:46.093 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.CategoryRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 14:00:46.093 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 14:00:46.094 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.DocRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 14:00:46.094 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 14:00:46.095 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookSnapshotRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 14:00:46.095 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-05 14:00:46.096 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-01-05 14:00:47.465 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-05 14:00:47.884 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-05 14:00:47.913 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-05 14:00:47.929 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-05 14:00:49.016 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-05 14:00:49.016 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 3767 ms
+2022-01-05 14:00:49.240 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-05 14:00:49.276 INFO  org.hibernate.Version                             :44   [32m                  [0;39m HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-05 14:00:49.387 INFO  org.hibernate.annotations.common.Version          :56   [32m                  [0;39m HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-05 14:00:49.471 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2022-01-05 14:00:50.215 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2022-01-05 14:00:50.227 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-05 14:00:50.879 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-05 14:00:50.888 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 14:00:54.252 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-05 14:00:57.482 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-01-05 14:00:57.511 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-01-05 14:00:57.528 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-01-05 14:00:57.546 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 15.198 seconds (JVM running for 16.506)
+2022-01-05 14:01:00.088 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m133811971358330880[0;39m 生成今日电子书快照开始
+2022-01-05 14:01:00.121 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m133811971358330880[0;39m 生成今日电子书快照结束，耗时：0毫秒
+2022-01-05 14:01:02.858 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-05 14:01:02.859 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-01-05 14:01:02.861 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 2 ms
+2022-01-05 14:01:05.070 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m133811992292102144[0;39m 更新电子书下的文档数据开始
+2022-01-05 14:01:05.078 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m133811992292102144[0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-05 14:01:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m133812117836009472[0;39m 更新电子书下的文档数据开始
+2022-01-05 14:01:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m133812117836009472[0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-05 14:02:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m133812222697803776[0;39m 生成今日电子书快照开始
+2022-01-05 14:02:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m133812222697803776[0;39m 生成今日电子书快照结束，耗时：0毫秒
+2022-01-05 14:02:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m133812243669323776[0;39m 更新电子书下的文档数据开始
+2022-01-05 14:02:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m133812243669323776[0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-05 14:02:29.416 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-05 14:02:29.420 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2022-01-05 14:02:29.432 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
