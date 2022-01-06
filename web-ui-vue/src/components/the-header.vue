@@ -24,6 +24,9 @@
       <a-menu-item key="/aliyun">
         <router-link to="/aliyun">阿里云优惠</router-link>
       </a-menu-item>
+      <a-menu-item key="/kanban">
+              <router-link to="/kanban">看板</router-link>
+       </a-menu-item>
       <a-popconfirm
         title="确认退出登录?"
         ok-text="是"

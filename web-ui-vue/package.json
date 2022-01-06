@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "^5.1.8",
+    "@antv/g2": "^4.1.35",
+    "@antv/g2plot": "^2.4.5",
     "ant-design-vue": "^2.0.0-rc.3",
     "axios": "^0.21.0",
     "vue": "^3.0.0",
