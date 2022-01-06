@@ -2,9 +2,7 @@ package com.amber.insect.knowledgebase.service.impl;
 
 
 import com.amber.insect.knowledgebase.common.RPage;
-import com.amber.insect.knowledgebase.dto.CategoryDto;
 import com.amber.insect.knowledgebase.dto.DocDto;
-import com.amber.insect.knowledgebase.entity.CategoryEntity;
 import com.amber.insect.knowledgebase.entity.ContentEntity;
 import com.amber.insect.knowledgebase.entity.DocEntity;
 import com.amber.insect.knowledgebase.enums.CommonConstants;
@@ -72,7 +70,11 @@ public class DocServiceImpl implements IDocService {
     @Override
     public void delete(List<Long> list) {
 
-        //docRepository.save();
+        if (list.size() > 0) {
+            for (Long aLong : list) {
+                docRepository.updateIsDelById(CommonConstants.DEL,aLong);
+            }
+        }
     }
 
     @Override
