@@ -25,8 +25,8 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-//@Aspect
-//@Component
+@Aspect
+@Component
 public class LogAspect {
 
     private final static Logger LOG = LoggerFactory.getLogger(LogAspect.class);
@@ -72,7 +72,7 @@ public class LogAspect {
             arguments[i] = args[i];
         }
         // 排除字段，敏感字段或太长的字段不显示
-        String[] excludeProperties = {"password", "file"};
+        String[] excludeProperties = {"passWord", "file"};
         PropertyPreFilters filters = new PropertyPreFilters();
         PropertyPreFilters.MySimplePropertyPreFilter excludefilter = filters.addFilter();
         excludefilter.addExcludes(excludeProperties);
@@ -84,7 +84,7 @@ public class LogAspect {
         long startTime = System.currentTimeMillis();
         Object result = proceedingJoinPoint.proceed();
         // 排除字段，敏感字段或太长的字段不显示
-        String[] excludeProperties = {"password", "file"};
+        String[] excludeProperties = {"passWord", "file"};
         PropertyPreFilters filters = new PropertyPreFilters();
         PropertyPreFilters.MySimplePropertyPreFilter excludefilter = filters.addFilter();
         excludefilter.addExcludes(excludeProperties);

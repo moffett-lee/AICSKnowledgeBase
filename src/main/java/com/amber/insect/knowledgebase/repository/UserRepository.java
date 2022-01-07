@@ -10,8 +10,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends PagingAndSortingRepository<UserEntity, Long>, JpaSpecificationExecutor<UserEntity> {
-
     Page<UserEntity> findAllByIsDelIs(Pageable pageable, int normal);
-
     UserEntity findOneByUserCode(String userCode);
 }

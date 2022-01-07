@@ -1,10 +1,7 @@
 package com.amber.insect.knowledgebase.service.impl;
 
 import com.amber.insect.knowledgebase.common.RPage;
-import com.amber.insect.knowledgebase.common.UserLoginResp;
-import com.amber.insect.knowledgebase.dto.CategoryDto;
 import com.amber.insect.knowledgebase.dto.UserDto;
-import com.amber.insect.knowledgebase.entity.CategoryEntity;
 import com.amber.insect.knowledgebase.entity.UserEntity;
 import com.amber.insect.knowledgebase.enums.CommonConstants;
 import com.amber.insect.knowledgebase.exception.BusinessException;
@@ -20,6 +17,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.util.DigestUtils;
 import org.springframework.util.ObjectUtils;
 
 import javax.annotation.Resource;
@@ -49,6 +47,8 @@ public class UserServiceImpl implements IUserService {
     @Override
     public void save(UserDto userDto) {
         UserEntity copy = CopyUtil.copy(userDto, UserEntity.class);
+        //密码简单加密处理
+        copy.setPassWord(DigestUtils.md5DigestAsHex(copy.getPassWord().getBytes()));
         copy.setCTime(LocalDateTime.now());
         copy.setUptTime(LocalDateTime.now());
         copy.setIsDel(CommonConstants.NORMAL);
@@ -67,6 +67,7 @@ public class UserServiceImpl implements IUserService {
     @Override
     public void resetPassword(UserDto userDto) {
         UserEntity entity = CopyUtil.copy(userDto, UserEntity.class);
+        entity.setPassWord(DigestUtils.md5DigestAsHex(entity.getPassWord().getBytes()));
         entity.setIsDel(CommonConstants.DEL);
         entity.setUptTime(LocalDateTime.now());
         userRepository.save(entity);
@@ -86,7 +87,6 @@ public class UserServiceImpl implements IUserService {
                 return userDto;
             } else {
                 // 密码不对
-                log.info("密码不对, 输入密码：{}, 数据库密码：{}", loginReq.getPassWord(), oneByUserCode.getPassWord());
                 throw new BusinessException(BusinessExceptionCode.LOGIN_USER_ERROR);
             }
         }

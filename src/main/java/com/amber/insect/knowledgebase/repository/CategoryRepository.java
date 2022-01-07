@@ -14,16 +14,8 @@ import java.util.List;
 
 @Repository("categoryRepository")
 public interface CategoryRepository extends PagingAndSortingRepository<CategoryEntity, Long>, JpaSpecificationExecutor<CategoryEntity> {
-
-
-
-
     List<CategoryEntity> findAllByIsDelIs(Integer isDel);
-
-
     Page<CategoryEntity> findAllByIsDelIs(Pageable pageable, int normal);
-
-
     @Query(value = "update tb_category set name=?1 where id=?2 ", nativeQuery = true)
     @Modifying
     Integer update(CategoryEntity ce);

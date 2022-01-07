@@ -14,25 +14,15 @@ import java.util.List;
 
 @Repository("docRepository")
 public interface DocRepository extends PagingAndSortingRepository<DocEntity, String>, JpaSpecificationExecutor<DocEntity> {
-
-
-
    List<DocEntity> findAllByIsDelAndEbookIdIs(Integer del, Long ebookId);
-
-
     Page<DocEntity> findAllByIsDelIs(Pageable pageable, int normal);
-
     DocEntity findOneById(Long id);
-
     @Modifying
     @Query("update DocEntity doc set doc.viewCount = viewCount + 1 where id = ?1")
     void increaseViewCount(Long id);
-
-
     @Modifying
     @Query("update DocEntity doc set doc.voteCount = voteCount + 1 where id = ?1")
     void increaseVoteCount(Long id);
-
     //void updateIsDelById(int isDel ,Long aLong);
 
 }

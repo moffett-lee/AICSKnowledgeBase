@@ -3,14 +3,12 @@ package com.amber.insect.knowledgebase.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.amber.insect.knowledgebase.common.R;
 import com.amber.insect.knowledgebase.common.RPage;
-import com.amber.insect.knowledgebase.dto.*;
+import com.amber.insect.knowledgebase.dto.UserDto;
 import com.amber.insect.knowledgebase.query.UserLoginReq;
 import com.amber.insect.knowledgebase.query.UserQuery;
 import com.amber.insect.knowledgebase.service.IUserService;
 import com.amber.insect.knowledgebase.util.SnowFlake;
 import lombok.extern.log4j.Log4j2;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
@@ -97,7 +95,6 @@ public class UserController {
      **/
     @PostMapping("/login")
     public R login(@Valid @RequestBody UserLoginReq loginReq) {
-
         loginReq.setPassWord(DigestUtils.md5DigestAsHex(loginReq.getPassWord().getBytes()));
         UserDto userDto = userService.login(loginReq);
         Long token = snowFlake.nextId();

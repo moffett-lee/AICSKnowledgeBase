@@ -1,9 +1,7 @@
-/*
 package com.amber.insect.knowledgebase.interceptor;
 
 import com.alibaba.fastjson.JSONObject;
-
-import com.amber.insect.knowledgebase.common.CommonResp;
+import com.amber.insect.knowledgebase.common.R;
 import com.amber.insect.knowledgebase.common.UserLoginResp;
 import com.amber.insect.knowledgebase.util.LoginUserContext;
 import org.slf4j.Logger;
@@ -16,10 +14,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-*/
+
 /**
  * 拦截器：Spring框架特有的，常用于登录校验，权限校验，请求日志打印
- *//*
+ */
 
 @Component
 public class ActionInterceptor implements HandlerInterceptor {
@@ -42,14 +40,14 @@ public class ActionInterceptor implements HandlerInterceptor {
 
         LOG.info("操作被拦截");
         response.setStatus(HttpStatus.OK.value());
-        CommonResp commonResp = new CommonResp();
-        commonResp.setSuccess(false);
-        commonResp.setMessage("哈哈，操作被拦截了，你就当操作成功了！示例网站暂不开放增删改操作");
+        R r = new R();
+        r.setSuccess(false);
+        r.setMsg("哈哈，操作被拦截了，你就当操作成功了！示例网站暂不开放增删改操作");
         response.setContentType("application/json;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
-        response.getWriter().print(JSONObject.toJSON(commonResp));
+        response.getWriter().print(JSONObject.toJSON(r));
         return true;
     }
 
 }
-*/
+

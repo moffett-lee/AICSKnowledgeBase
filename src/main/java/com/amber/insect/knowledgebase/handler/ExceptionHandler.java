@@ -1,7 +1,7 @@
 package com.amber.insect.knowledgebase.handler;
 
 
-import com.amber.insect.knowledgebase.common.CommonResp;
+import com.amber.insect.knowledgebase.common.R;
 import com.amber.insect.knowledgebase.exception.BusinessException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,12 +24,12 @@ public class ExceptionHandler {
      */
     @org.springframework.web.bind.annotation.ExceptionHandler(value = BindException.class)
     @ResponseBody
-    public CommonResp validExceptionHandler(BindException e) {
-        CommonResp commonResp = new CommonResp();
+    public R validExceptionHandler(BindException e) {
+        R r = new R();
         LOG.warn("参数校验失败：{}", e.getBindingResult().getAllErrors().get(0).getDefaultMessage());
-        commonResp.setSuccess(false);
-        commonResp.setMessage(e.getBindingResult().getAllErrors().get(0).getDefaultMessage());
-        return commonResp;
+        r.setSuccess(false);
+        r.setMsg(e.getBindingResult().getAllErrors().get(0).getDefaultMessage());
+        return r;
     }
 
     /**
@@ -39,12 +39,12 @@ public class ExceptionHandler {
      */
     @org.springframework.web.bind.annotation.ExceptionHandler(value = BusinessException.class)
     @ResponseBody
-    public CommonResp validExceptionHandler(BusinessException e) {
-        CommonResp commonResp = new CommonResp();
+    public R validExceptionHandler(BusinessException e) {
+        R r = new R();
         LOG.warn("业务异常：{}", e.getCode().getDesc());
-        commonResp.setSuccess(false);
-        commonResp.setMessage(e.getCode().getDesc());
-        return commonResp;
+        r.setSuccess(false);
+        r.setMsg(e.getCode().getDesc());
+        return r;
     }
 
     /**
@@ -54,11 +54,11 @@ public class ExceptionHandler {
      */
     @org.springframework.web.bind.annotation.ExceptionHandler(value = Exception.class)
     @ResponseBody
-    public CommonResp validExceptionHandler(Exception e) {
-        CommonResp commonResp = new CommonResp();
+    public R validExceptionHandler(Exception e) {
+        R r = new R();
         LOG.error("系统异常：", e);
-        commonResp.setSuccess(false);
-        commonResp.setMessage("系统出现异常，请联系管理员");
-        return commonResp;
+        r.setSuccess(false);
+        r.setMsg("系统出现异常，请联系管理员");
+        return r;
     }
 }
