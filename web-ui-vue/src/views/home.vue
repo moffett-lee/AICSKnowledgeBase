@@ -115,24 +115,24 @@ export default defineComponent({
           level1.value = Tool.array2Tree(categorys, 0);
           console.log("树形结构：", level1.value);
         } else {
-          message.error(data.message);
+          message.error(data.msg);
         }
       });
     };
 
     const isShowWelcome = ref(true);
-    let categoryId2 = 0;
+    let categoryTwoId = 0;
 
     const handleQueryEbook = () => {
       axios.get("/ebook/list", {
         params: {
           page: 1,
           size: 1000,
-          categoryId2: categoryId2
+          categoryTwoId: categoryTwoId
         }
       }).then((response) => {
         const data = response.data;
-        ebooks.value = data.content.list;
+        ebooks.value = data.data.list;
         // ebooks1.books = data.content;
       });
     };
@@ -142,7 +142,7 @@ export default defineComponent({
       if (value.key === 'welcome') {
         isShowWelcome.value = true;
       } else {
-        categoryId2 = value.key;
+        categoryTwoId = value.key;
         isShowWelcome.value = false;
         handleQueryEbook();
       }

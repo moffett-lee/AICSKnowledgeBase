@@ -155,7 +155,7 @@
             level1.value = Tool.array2Tree(categorys.value, 0);
             console.log("树形结构：", level1);
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -175,7 +175,7 @@
             // 重新加载列表
             handleQuery();
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -203,7 +203,7 @@
             // 重新加载列表
             handleQuery();
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };

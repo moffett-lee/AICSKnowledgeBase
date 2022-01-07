@@ -12,4 +12,8 @@ import lombok.Data;
  **/
 @Data
 public class EbookQuery extends RPage {
+    private Long id;
+    private String name;
+    private Long categoryOneId;
+    private Long categoryTwoId;
 }

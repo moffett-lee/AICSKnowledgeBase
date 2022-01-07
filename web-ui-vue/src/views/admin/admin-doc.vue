@@ -171,11 +171,11 @@
         loading.value = true;
         // 如果不清空现有数据，则编辑保存重新加载数据后，再点编辑，则列表显示的还是编辑前的数据
         level1.value = [];
-        axios.get("/doc/all/" + route.query.ebookId).then((response) => {
+        axios.get("/doc/getDocListByEbookId/" + route.query.ebookId).then((response) => {
           loading.value = false;
           const data = response.data;
           if (data.success) {
-            docs.value = data.content;
+            docs.value = data.data;
             console.log("原始数组：", docs.value);
 
             level1.value = [];
@@ -187,7 +187,7 @@
             // 为选择树添加一个"无"
             treeSelectData.value.unshift({id: 0, name: '无'});
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -219,7 +219,7 @@
             // 重新加载列表
             handleQuery();
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -294,12 +294,12 @@
        * 内容查询
        **/
       const handleQueryContent = () => {
-        axios.get("/doc/find-content/" + doc.value.id).then((response) => {
+        axios.get("/doc/findContent/" + doc.value.id).then((response) => {
           const data = response.data;
           if (data.success) {
-            editor.txt.html(data.content)
+            editor.txt.html(data.data)
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -357,7 +357,7 @@
                 // 重新加载列表
                 handleQuery();
               } else {
-                message.error(data.message);
+                message.error(data.msg);
               }
             });
           },

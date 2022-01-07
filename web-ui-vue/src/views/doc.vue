@@ -72,12 +72,12 @@
        * 内容查询
        **/
       const handleQueryContent = (id: number) => {
-        axios.get("/doc/find-content/" + id).then((response) => {
+        axios.get("/doc/findContent/" + id).then((response) => {
           const data = response.data;
           if (data.success) {
-            html.value = data.content;
+            html.value = data.data;
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -86,10 +86,10 @@
        * 数据查询
        **/
       const handleQuery = () => {
-        axios.get("/doc/all/" + route.query.ebookId).then((response) => {
+        axios.get("/doc/getDocListByEbookId/" + route.query.ebookId).then((response) => {
           const data = response.data;
           if (data.success) {
-            docs.value = data.content;
+            docs.value = data.data;
 
             level1.value = [];
             level1.value = Tool.array2Tree(docs.value, 0);
@@ -101,7 +101,7 @@
               doc.value = level1.value[0];
             }
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -123,7 +123,7 @@
           if (data.success) {
             doc.value.voteCount++;
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };

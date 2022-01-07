@@ -151,7 +151,7 @@
             pagination.value.current = params.page;
             pagination.value.total = data.content.total;
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -188,7 +188,7 @@
               size: pagination.value.pageSize,
             });
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -219,7 +219,7 @@
               size: pagination.value.pageSize,
             });
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -230,9 +230,9 @@
       const handleResetModalOk = () => {
         resetModalLoading.value = true;
 
-        user.value.password = hexMd5(user.value.password + KEY);
+        user.value.passWord = hexMd5(user.value.passWord + KEY);
 
-        axios.post("/user/reset-password", user.value).then((response) => {
+        axios.post("/user/resetPassword", user.value).then((response) => {
           resetModalLoading.value = false;
           const data = response.data; // data = commonResp
           if (data.success) {
@@ -244,7 +244,7 @@
               size: pagination.value.pageSize,
             });
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -255,7 +255,7 @@
       const resetPassword = (record: any) => {
         resetModalVisible.value = true;
         user.value = Tool.copy(record);
-        user.value.password = null;
+        user.value.passWord = null;
       };
 
       onMounted(() => {

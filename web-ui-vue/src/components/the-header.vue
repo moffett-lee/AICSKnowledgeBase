@@ -19,7 +19,7 @@
         <router-link to="/admin/category">分类管理</router-link>
       </a-menu-item>
       <a-menu-item key="/about">
-        <router-link to="/about">关于我们</router-link>
+        <router-link to="/about">关于</router-link>
       </a-menu-item>
       <a-menu-item key="/aliyun">
         <router-link to="/aliyun">阿里云优惠</router-link>
@@ -100,10 +100,9 @@
           if (data.success) {
             loginModalVisible.value = false;
             message.success("登录成功！");
-
             store.commit("setUser", data.data);
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };

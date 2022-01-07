@@ -33,7 +33,7 @@
           <img v-if="cover" :src="cover" alt="avatar" />
         </template>
         <template v-slot:category="{ text, record }">
-          <span>{{ getCategoryName(record.category1Id) }} / {{ getCategoryName(record.category2Id) }}</span>
+          <span>{{ getCategoryName(record.categoryOneId) }} / {{ getCategoryName(record.categoryTwoId) }}</span>
         </template>
         <template v-slot:action="{ text, record }">
           <a-space size="small">
@@ -157,13 +157,13 @@
           loading.value = false;
           const data = response.data;
           if (data.success) {
-            ebooks.value = data.content.list;
+            ebooks.value = data.data.list;
 
             // 重置分页按钮
             pagination.value.current = params.page;
-            pagination.value.total = data.content.total;
+            pagination.value.total = data.data.total;
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -203,7 +203,7 @@
               size: pagination.value.pageSize,
             });
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -214,7 +214,7 @@
       const edit = (record: any) => {
         modalVisible.value = true;
         ebook.value = Tool.copy(record);
-        categoryIds.value = [ebook.value.category1Id, ebook.value.category2Id]
+        categoryIds.value = [ebook.value.categoryOneId, ebook.value.categoryTwoId]
       };
 
       /**
@@ -235,7 +235,7 @@
               size: pagination.value.pageSize,
             });
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
@@ -247,11 +247,11 @@
        **/
       const handleQueryCategory = () => {
         loading.value = true;
-        axios.get("/category/all").then((response) => {
+        axios.get("/category/getCategoryList").then((response) => {
           loading.value = false;
           const data = response.data;
           if (data.success) {
-            categorys = data.content;
+            categorys = data.data;
             console.log("原始数组：", categorys);
 
             level1.value = [];
@@ -264,7 +264,7 @@
               size: pagination.value.pageSize,
             });
           } else {
-            message.error(data.message);
+            message.error(data.msg);
           }
         });
       };
