@@ -8,4 +8,6 @@ public interface IEbookSnapshotService {
     List<EbookSnapshotDto> getStatistic();
 
     List<EbookSnapshotDto> get30Statistic();
+
+    void genSnapshot();
 }

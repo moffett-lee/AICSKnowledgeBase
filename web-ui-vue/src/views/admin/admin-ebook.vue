@@ -134,7 +134,7 @@
           dataIndex: 'voteCount'
         },
         {
-          title: 'Action',
+          title: '操作',
           key: 'action',
           slots: { customRender: 'action' }
         }
@@ -189,8 +189,8 @@
       const modalLoading = ref(false);
       const handleModalOk = () => {
         modalLoading.value = true;
-        ebook.value.category1Id = categoryIds.value[0];
-        ebook.value.category2Id = categoryIds.value[1];
+        ebook.value.categoryOneId = categoryIds.value[0];
+        ebook.value.categoryTwoId = categoryIds.value[1];
         axios.post("/ebook/save", ebook.value).then((response) => {
           modalLoading.value = false;
           const data = response.data; // data = commonResp

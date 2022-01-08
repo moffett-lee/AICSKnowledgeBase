@@ -16,6 +16,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
@@ -29,8 +30,8 @@ public class EbookServiceImpl implements IEbookService {
     @Override
     public RPage<EbookDto> list(EbookQuery query) {
         RPage page = new RPage();
-        Sort sort = Sort.by(Sort.Order.asc("id"));
-        Pageable pageable = PageRequest.of(query.getPage(), query.getSize(), sort);
+        Sort sort = Sort.by(Sort.Order.desc("uptTime"));
+        Pageable pageable = PageRequest.of(query.getPage() - 1, query.getSize(), sort);
         Page<EbookEntity> categoryEntities = ebookRepository.findAllByIsDelIs(pageable, CommonConstants.NORMAL);
         List<EbookEntity> content = categoryEntities.getContent();
         List<EbookDto> categoryDtos = CopyUtil.copyList(content, EbookDto.class);
@@ -49,11 +50,8 @@ public class EbookServiceImpl implements IEbookService {
     }
 
     @Override
+    @Transactional
     public void delete(Long id) {
-        EbookEntity entity = new EbookEntity();
-        entity.setId(id);
-        entity.setIsDel(CommonConstants.DEL);
-        entity.setUptTime(LocalDateTime.now());
-        ebookRepository.save(entity);
+       int i = ebookRepository.delete(id,CommonConstants.DEL);
     }
 }

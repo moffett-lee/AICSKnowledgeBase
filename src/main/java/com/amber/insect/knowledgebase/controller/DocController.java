@@ -7,10 +7,12 @@ import com.amber.insect.knowledgebase.dto.CategoryDto;
 import com.amber.insect.knowledgebase.dto.DocDto;
 import com.amber.insect.knowledgebase.query.DocQuery;
 import com.amber.insect.knowledgebase.service.IDocService;
+import com.sun.javafx.iio.gif.GIFImageLoaderFactory;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -25,7 +27,7 @@ public class DocController {
     
     /**
      * @Author Amber.L
-     * @Description  
+     * @Description  查询电子书下面的所有文档
      * @Date 2022/1/5 23:02
      * @Param [ebookId]
      * @return com.amber.insect.knowledgebase.common.R
@@ -38,7 +40,7 @@ public class DocController {
 
     /**
      * @Author Amber.L
-     * @Description
+     * @Description 查询文档列表分页
      * @Date 2022/1/5 23:12
      * @Param [req]
      * @return com.amber.insect.knowledgebase.common.R
@@ -51,7 +53,7 @@ public class DocController {
 
     /**
      * @Author Amber.L
-     * @Description
+     * @Description 保存文章
      * @Date 2022/1/5 23:13
      * @Param [dto]
      * @return com.amber.insect.knowledgebase.common.R
@@ -65,14 +67,21 @@ public class DocController {
 
     /**
      * @Author Amber.L
-     * @Description
+     * @Description 批量删除文档
      * @Date 2022/1/5 23:17
      * @Param [idsStr]
      * @return com.amber.insect.knowledgebase.common.R
      **/
     @DeleteMapping("/delete/{idsStr}")
     public R delete(@PathVariable String idsStr) {
-        List<Long> list = Arrays.asList(Long.valueOf(idsStr.split(",").toString()));
+        List<Long> list = new ArrayList<>();
+        String[] split = idsStr.split(",");
+        if (split.length > 0) {
+            for (int i = 0; i < split.length; i++) {
+                String s = split[i];
+                list.add(Long.valueOf(s));
+            }
+        }
         docService.delete(list);
         return R.success();
     }

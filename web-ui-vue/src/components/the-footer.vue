@@ -1,6 +1,6 @@
 <template>
   <a-layout-footer style="text-align: center">
-    昆虫云知识库<span v-show="user.id">，欢迎：{{user.name}}</span>
+    Copyright © 2020-2022 Amber.L | 昆虫云知识库<span v-show="user.id">，欢迎：{{user.userName}}</span>
   </a-layout-footer>
 </template>
 

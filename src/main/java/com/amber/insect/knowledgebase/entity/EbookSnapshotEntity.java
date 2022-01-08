@@ -14,6 +14,7 @@ public class EbookSnapshotEntity extends BaseEntity  {
 
     @Column(name = "ebook_id")
     private Long ebookId;
+
     private LocalDateTime date;
     private Integer sort;
     @Column(name = "view_count")

@@ -107,17 +107,17 @@
           title: '名称',
           dataIndex: 'name'
         },
-        // {
-        //   title: '父分类',
-        //   key: 'parent',
-        //   dataIndex: 'parent'
-        // },
+        {
+          title: '父分类',
+          key: 'parentId',
+          dataIndex: 'parentId'
+        },
         {
           title: '顺序',
           dataIndex: 'sort'
         },
         {
-          title: 'Action',
+          title: '操作',
           key: 'action',
           slots: { customRender: 'action' }
         }

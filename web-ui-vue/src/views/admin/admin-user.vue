@@ -6,7 +6,7 @@
       <p>
         <a-form layout="inline" :model="param">
           <a-form-item>
-            <a-input v-model:value="param.loginName" placeholder="登陆名">
+            <a-input v-model:value="param.userName" placeholder="用户名">
             </a-input>
           </a-form-item>
           <a-form-item>
@@ -60,7 +60,7 @@
     @ok="handleModalOk"
   >
     <a-form :model="user" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
-      <a-form-item label="登陆名">
+      <a-form-item label="用户名">
         <a-input v-model:value="user.userCode" :disabled="!!user.id"/>
       </a-form-item>
       <a-form-item label="昵称">
@@ -110,7 +110,7 @@
 
       const columns = [
         {
-          title: '登陆名',
+          title: '用户名',
           dataIndex: 'userCode'
         },
         {
@@ -149,7 +149,7 @@
 
             // 重置分页按钮
             pagination.value.current = params.page;
-            pagination.value.total = data.content.total;
+            pagination.value.total = data.data.total;
           } else {
             message.error(data.msg);
           }
@@ -178,7 +178,7 @@
 
         axios.post("/user/save", user.value).then((response) => {
           modalLoading.value = false;
-          const data = response.data; // data = commonResp
+          const data = response.data;
           if (data.success) {
             modalVisible.value = false;
 
@@ -211,7 +211,7 @@
 
       const handleDelete = (id: number) => {
         axios.delete("/user/delete/" + id).then((response) => {
-          const data = response.data; // data = commonResp
+          const data = response.data;
           if (data.success) {
             // 重新加载列表
             handleQuery({
@@ -234,7 +234,7 @@
 
         axios.post("/user/resetPassword", user.value).then((response) => {
           resetModalLoading.value = false;
-          const data = response.data; // data = commonResp
+          const data = response.data;
           if (data.success) {
             resetModalVisible.value = false;
 

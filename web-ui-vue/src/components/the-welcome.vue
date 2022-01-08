@@ -1,23 +1,10 @@
 <template>
   <div>
     <div class="tip">
-      <div><b>示例网站说明（网站实现的功能课程都有手把手教）：</b></div>
-      <div>1. 统计数据是真实的，一分钟左右延时，<b>用到了定时器、复杂SQL统计、echarts</b></div>
-      <div>2. 有文档被别人点赞，你也会收到实时通知哦！<b>用到了websocket、异步化、RocketMQ、防重设计</b></div>
-      <div>3. 文档树可无限级扩展，支持文字、图片、视频。<b>用到了无限级树设计知识</b></div>
-      <div>4. 登录后可看到更多菜单。<b>用到了单点登录、前后端登录拦截、安全性设计</b></div>
-      <div>课程技术栈思维导图，
-        <a href="http://www.jiawablog.com/detail?id=152412053087326208" target="_blank">
-          点击查看：SpringBoot+Vue3
-        </a>
-      </div>
-      <div>你也想有个WIKI知识库吗？，<b>配套视频课程</b>：
-        <a href="https://coding.imooc.com/class/474.html" target="_blank">
-        《SpringBoot知识体系+Vue3全家桶 前后端分离 实战WIKI知识库系统》
-        </a>
+      <div class="t_title">
+      <h2 class="title">昆虫云知识库可视化看板</h2>
       </div>
     </div>
-
     <a-row>
       <a-col :span="24">
         <a-card>
@@ -126,20 +113,20 @@
       const statistic = ref();
       statistic.value = {};
       const getStatistic = () => {
-        axios.get('/ebook-snapshot/get-statistic').then((response) => {
+        axios.get('/ebookSnapshot/getStatistic').then((response) => {
           const data = response.data;
           if (data.success) {
-            const statisticResp = data.content;
-            statistic.value.viewCount = statisticResp[1].viewCount;
-            statistic.value.voteCount = statisticResp[1].voteCount;
-            statistic.value.todayViewCount = statisticResp[1].viewIncrease;
-            statistic.value.todayVoteCount = statisticResp[1].voteIncrease;
+            const statisticResp = data.data;
+            statistic.value.viewCount = statisticResp[0].viewCount;
+            statistic.value.voteCount = statisticResp[0].voteCount;
+            statistic.value.todayViewCount = statisticResp[0].viewIncrease;
+            statistic.value.todayVoteCount = statisticResp[0].voteIncrease;
 
             // 按分钟计算当前时间点，占一天的百分比
             const now = new Date();
             const nowRate = (now.getHours() * 60 + now.getMinutes()) / (60 * 24);
             // console.log(nowRate)
-            statistic.value.todayViewIncrease = parseInt(String(statisticResp[1].viewIncrease / nowRate));
+            statistic.value.todayViewIncrease = parseInt(String(statisticResp[0].viewIncrease / nowRate));
             // todayViewIncreaseRate：今日预计增长率
             statistic.value.todayViewIncreaseRate = (statistic.value.todayViewIncrease - statisticResp[0].viewIncrease) / statisticResp[0].viewIncrease * 100;
             statistic.value.todayViewIncreaseRateAbs = Math.abs(statistic.value.todayViewIncreaseRate);
@@ -220,11 +207,10 @@
       };
 
       const get30DayStatistic = () => {
-        axios.get('/ebook-snapshot/get-30-statistic').then((response) => {
+        axios.get('/ebookSnapshot/get30Statistic').then((response) => {
           const data = response.data;
           if (data.success) {
-            const statisticList = data.content;
-
+            const statisticList = data.data;
             init30DayEcharts(statisticList)
           }
         });
@@ -274,11 +260,14 @@
   .tip {
     padding: 10px 5px;
     margin-bottom: 20px;
-    border: 1px solid transparent;
     background: linear-gradient(white,white) padding-box,repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%) 0/.6em .6em;
     animation:ants 12s linear infinite;
   }
   .tip b{
     color: red;
+  }
+  .t_title h2{
+    text-align:center;
+    font-weight: bold;
   }
 </style>

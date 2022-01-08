@@ -38,7 +38,7 @@
         </a>
       </a-popconfirm>
       <a class="login-menu" v-show="user.id">
-        <span>您好：{{user.userName}}</span>
+        <span>您好:{{user.userName}}</span>
       </a>
       <a class="login-menu" v-show="!user.id" @click="showLoginModal">
         <span>登录</span>
@@ -52,7 +52,7 @@
       @ok="login"
     >
       <a-form :model="loginUser" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
-        <a-form-item label="登录名">
+        <a-form-item label="用户名">
           <a-input v-model:value="loginUser.userCode" />
         </a-form-item>
         <a-form-item label="密码">

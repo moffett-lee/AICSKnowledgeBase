@@ -5,6 +5,7 @@ import com.amber.insect.knowledgebase.common.RPage;
 import com.amber.insect.knowledgebase.dto.DocDto;
 import com.amber.insect.knowledgebase.entity.ContentEntity;
 import com.amber.insect.knowledgebase.entity.DocEntity;
+import com.amber.insect.knowledgebase.entity.UserEntity;
 import com.amber.insect.knowledgebase.enums.CommonConstants;
 import com.amber.insect.knowledgebase.exception.BusinessException;
 import com.amber.insect.knowledgebase.exception.BusinessExceptionCode;
@@ -15,16 +16,21 @@ import com.amber.insect.knowledgebase.service.IDocService;
 import com.amber.insect.knowledgebase.util.CopyUtil;
 import com.amber.insect.knowledgebase.util.RedisUtil;
 import com.amber.insect.knowledgebase.util.RequestContext;
+import com.amber.insect.knowledgebase.util.SnowFlake;
 import org.slf4j.MDC;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ObjectUtils;
 
 import javax.annotation.Resource;
+import javax.persistence.criteria.Predicate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -38,10 +44,19 @@ public class DocServiceImpl implements IDocService {
     public RedisUtil redisUtil;
 
     @Resource
+    private SnowFlake snowFlake;
+    @Resource
     public WsService wsService;
     @Override
     public List<DocDto> getDocListByEbookId(Long ebookId) {
-        List<DocEntity> allByIsDelAndEbookIdIs = docRepository.findAllByIsDelAndEbookIdIs(CommonConstants.NORMAL, ebookId);
+        //查询条件
+        Specification<DocEntity> spec = (root, query, cb) -> {
+            List<Predicate> list = new ArrayList<>();
+            list.add(cb.equal(root.get("isDel").as(Integer.class), CommonConstants.NORMAL));
+            list.add(cb.equal(root.get("ebookId").as(Long.class),ebookId));
+            return cb.and(list.toArray(new Predicate[list.size()]));
+        };
+        List<DocEntity> allByIsDelAndEbookIdIs = docRepository.findAll(spec);
         return CopyUtil.copyList(allByIsDelAndEbookIdIs,DocDto.class);
     }
 
@@ -59,25 +74,49 @@ public class DocServiceImpl implements IDocService {
     }
 
     @Override
+    @Transactional
     public void save(DocDto dto) {
-        DocEntity copy = CopyUtil.copy(dto, DocEntity.class);
-        copy.setCTime(LocalDateTime.now());
-        copy.setUptTime(LocalDateTime.now());
-        copy.setIsDel(CommonConstants.NORMAL);
-        DocEntity save = docRepository.save(copy);
+        DocEntity docEntity = CopyUtil.copy(dto, DocEntity.class);
+
+        if (ObjectUtils.isEmpty(docEntity.getId())) {
+            ContentEntity contentEntity = CopyUtil.copy(dto, ContentEntity.class);
+            docEntity.setId(snowFlake.nextId());
+            docEntity.setCTime(LocalDateTime.now());
+            docEntity.setUptTime(LocalDateTime.now());
+            docEntity.setIsDel(CommonConstants.NORMAL);
+            docEntity.setViewCount(0);
+            docEntity.setVoteCount(0);
+            contentEntity.setId(docEntity.getId());
+            DocEntity save = docRepository.save(docEntity);
+            ContentEntity flag = contentRepository.save(contentEntity);
+        }else {
+            ContentEntity contentEntity = CopyUtil.copy(dto, ContentEntity.class);
+            docEntity.setCTime(LocalDateTime.now());
+            docEntity.setUptTime(LocalDateTime.now());
+            docEntity.setIsDel(CommonConstants.NORMAL);
+            DocEntity save = docRepository.save(docEntity);
+            int flag = contentRepository.updateById(contentEntity.getContent(), contentEntity.getId());
+            if (flag == 0) {
+                contentRepository.save(contentEntity);
+            }
+        }
+
+
+
     }
 
     @Override
+    @Transactional
     public void delete(List<Long> list) {
-
         if (list.size() > 0) {
             for (Long aLong : list) {
-                //docRepository.updateIsDelById(CommonConstants.DEL,aLong);
+                docRepository.delete(aLong,CommonConstants.DEL);
             }
         }
     }
 
     @Override
+    @Transactional
     public String findContent(Long id) {
         ContentEntity content = contentRepository.findOneById(id);
         // 文档阅读数+1
@@ -90,16 +129,16 @@ public class DocServiceImpl implements IDocService {
     }
 
     @Override
+    @Transactional
     public void vote(Long id) {
         // docMapperCust.increaseVoteCount(id);
         // 远程IP+doc.id作为key，24小时内不能重复
         String ip = RequestContext.getRemoteAddr();
-        if (redisUtil.validateRepeat("DOC_VOTE_" + id + "_" + ip, 5000)) {
+        if (redisUtil.validateRepeat("DOC_VOTE_" + id + "_" + ip, 3000)) {
             docRepository.increaseVoteCount(id);
         } else {
             throw new BusinessException(BusinessExceptionCode.VOTE_REPEAT);
         }
-
         // 推送消息
         DocEntity docDb = docRepository.findOneById(id);
         String logId = MDC.get("LOG_ID");

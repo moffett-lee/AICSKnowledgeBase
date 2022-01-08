@@ -40,7 +40,7 @@ public class CategoryServiceImpl implements ICategoryService {
     public RPage<CategoryDto> getCategoryListPage(CategoryQuery query) {
         RPage page = new RPage();
         Sort sort = Sort.by(Sort.Order.asc("id"));
-        Pageable pageable =PageRequest.of(query.getPage(), query.getSize(), sort);
+        Pageable pageable =PageRequest.of(query.getPage() - 1, query.getSize(), sort);
         Page<CategoryEntity> categoryEntities = categoryRepository.findAllByIsDelIs(pageable,CommonConstants.NORMAL);
         List<CategoryEntity> content = categoryEntities.getContent();
         List<CategoryDto> categoryDtos = CopyUtil.copyList(content, CategoryDto.class);

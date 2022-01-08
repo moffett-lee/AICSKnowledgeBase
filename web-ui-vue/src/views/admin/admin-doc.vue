@@ -67,7 +67,7 @@
             </a-form-item>
             <a-form-item>
               <a-tree-select
-                v-model:value="doc.parent"
+                v-model:value="doc.parentId"
                 style="width: 100%"
                 :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
                 :tree-data="treeSelectData"
@@ -144,7 +144,7 @@
           slots: { customRender: 'name' }
         },
         {
-          title: 'Action',
+          title: '操作',
           key: 'action',
           slots: { customRender: 'action' }
         }
