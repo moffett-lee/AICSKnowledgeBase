@@ -9,6 +9,7 @@ import com.amber.insect.knowledgebase.query.UserQuery;
 import com.amber.insect.knowledgebase.service.IUserService;
 import com.amber.insect.knowledgebase.util.SnowFlake;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 @Log4j2
 public class UserController {
 
-    @Resource
+    @Autowired
     private IUserService userService;
 
     @Resource
@@ -55,7 +56,7 @@ public class UserController {
     @PostMapping("/save")
     public R save(@Valid @RequestBody UserDto userDto) {
         userService.save(userDto);
-        return R.success();
+        return R.success(1);
     }
 
 

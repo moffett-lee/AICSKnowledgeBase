@@ -2,7 +2,7 @@ package com.amber.insect.knowledgebase.interceptor;
 
 import com.alibaba.fastjson.JSONObject;
 import com.amber.insect.knowledgebase.common.R;
-import com.amber.insect.knowledgebase.common.UserLoginResp;
+import com.amber.insect.knowledgebase.common.TokenUserInfo;
 import com.amber.insect.knowledgebase.util.LoginUserContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,22 +31,19 @@ public class ActionInterceptor implements HandlerInterceptor {
         if("OPTIONS".equals(request.getMethod().toUpperCase())){
             return true;
         }
-
-        UserLoginResp userLoginResp = LoginUserContext.getUser();
-        if ("admin".equals(userLoginResp.getLoginName())) {
+        TokenUserInfo tokenUserInfo = LoginUserContext.getUser();
+        if ("admin".equals(tokenUserInfo.getUserCode())) {
             // admin用户不拦截
             return true;
         }
-
-        LOG.info("操作被拦截");
         response.setStatus(HttpStatus.OK.value());
         R r = new R();
         r.setSuccess(false);
-        r.setMsg("哈哈，操作被拦截了，你就当操作成功了！示例网站暂不开放增删改操作");
+        r.setMsg("抱歉,非管理员权限不能操作。");
         response.setContentType("application/json;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.getWriter().print(JSONObject.toJSON(r));
-        return true;
+        return false;
     }
 
 }

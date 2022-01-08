@@ -1,5 +1,8 @@
 package com.amber.insect.knowledgebase.interceptor;
 
+import com.alibaba.fastjson.JSON;
+import com.amber.insect.knowledgebase.common.TokenUserInfo;
+import com.amber.insect.knowledgebase.util.LoginUserContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -54,7 +57,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             return false;
         } else {
             LOG.info("已登录：{}", object);
-            //LoginUserContext.setUser(JSON.parseObject((String) object, (Type) UserLoginResp.class));
+            LoginUserContext.setUser(JSON.parseObject((String) object, TokenUserInfo.class));
             return true;
         }
     }

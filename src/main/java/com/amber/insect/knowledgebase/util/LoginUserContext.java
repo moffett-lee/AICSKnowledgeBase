@@ -3,19 +3,27 @@ package com.amber.insect.knowledgebase.util;
 
 
 
-import com.amber.insect.knowledgebase.common.UserLoginResp;
+import com.amber.insect.knowledgebase.common.TokenUserInfo;
 
 import java.io.Serializable;
 
+
+/**
+ * @ClassName LoginUserContext
+ * @Description 全局共享token
+ * @Author Amber.L
+ * @Date 2022/1/8 16:02
+ * @Version 1.0
+ **/
 public class LoginUserContext implements Serializable {
 
-    private static ThreadLocal<UserLoginResp> user = new ThreadLocal<>();
+    private static ThreadLocal<TokenUserInfo> user = new ThreadLocal<>();
 
-    public static UserLoginResp getUser() {
+    public static TokenUserInfo getUser() {
         return user.get();
     }
 
-    public static void setUser(UserLoginResp user) {
+    public static void setUser(TokenUserInfo user) {
         LoginUserContext.user.set(user);
     }
 
