@@ -14,6 +14,7 @@ public class EbookEntity implements Serializable {
      * 唯一主键标识
      */
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //主键生成策略，自增
     private Long id;
     @Column(name = "category_one_id")
     private Long categoryOneId;
