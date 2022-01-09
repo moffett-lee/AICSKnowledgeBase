@@ -25,6 +25,14 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
+
+/**
+ * @ClassName LogAspect
+ * @Description 日志贴面
+ * @Author Amber.L
+ * @Date 2022/1/9 22:45
+ * @Version 1.0
+ **/
 @Aspect
 @Component
 public class LogAspect {

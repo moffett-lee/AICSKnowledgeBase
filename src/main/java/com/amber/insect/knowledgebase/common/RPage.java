@@ -3,7 +3,13 @@ package com.amber.insect.knowledgebase.common;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import java.util.List;
-
+/**
+ * @ClassName RPage
+ * @Description 分页入参
+ * @Author Amber.L
+ * @Date 2022/1/9 22:45
+ * @Version 1.0
+ **/
 public class RPage<T> {
     @NotNull(message = "【页码】不能为空")
     private int page;

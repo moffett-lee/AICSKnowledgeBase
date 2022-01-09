@@ -22,7 +22,13 @@ import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 
-
+/**
+ * @ClassName R
+ * @Description 全局响应类
+ * @Author Amber.L
+ * @Date 2022/1/9 22:45
+ * @Version 1.0
+ **/
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor

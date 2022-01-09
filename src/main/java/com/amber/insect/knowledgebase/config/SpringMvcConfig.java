@@ -8,7 +8,13 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.annotation.Resource;
-
+/**
+ * @ClassName SpringMvcConfig
+ * @Description
+ * @Author Amber.L
+ * @Date 2022/1/9 22:45
+ * @Version 1.0
+ **/
 @Configuration
 public class SpringMvcConfig implements WebMvcConfigurer {
 
