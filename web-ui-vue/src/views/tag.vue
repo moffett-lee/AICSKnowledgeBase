@@ -1,69 +1,112 @@
 <template>
-  <a-layout>
-    <a-layout-content :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }">
-      <div class="aliyun">
-       <div>
-           <h4 style="margin-bottom: 16px">
-             Presets:
-           </h4>
-           <div>
-             <a-tag color="pink">
-               pink
-             </a-tag>
-             <a-tag color="red">
-               red
-             </a-tag>
-             <a-tag color="orange">
-               orange
-             </a-tag>
-             <a-tag color="green">
-               green
-             </a-tag>
-             <a-tag color="cyan">
-               cyan
-             </a-tag>
-             <a-tag color="blue">
-               blue
-             </a-tag>
-             <a-tag color="purple">
-               purple
-             </a-tag>
-           </div>
-           <h4 style="margin: '16px 0'">
-             Custom:
-           </h4>
-           <div>
-             <a-tag color="#f50">
-               #f50
-             </a-tag>
-             <a-tag color="#2db7f5">
-               #2db7f5
-             </a-tag>
-             <a-tag color="#87d068">
-               #87d068
-             </a-tag>
-             <a-tag color="#108ee9">
-               #108ee9
-             </a-tag>
-           </div>
-         </div>
-      </div>
-    </a-layout-content>
-  </a-layout>
+    <a-layout>
+        <a-layout-content :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }">
+            <h2 style="margin-bottom: 20px; font-size:1.3rem;text-align: center;">
+                技术成就榜
+            </h2>
+            <h3 style="text-align: center;">技多不压身，努力掌握更多的技术栈。</h3>
+            <div class="tag-main">
+                <a-tag color="pink">
+                    Spring
+                </a-tag>
+                <a-tag color="red">
+                    Mysql
+                </a-tag>
+                <a-tag color="orange">
+                    orange
+                </a-tag>
+                <a-tag color="green">
+                    green
+                </a-tag>
+                <a-tag color="cyan">
+                    cyan
+                </a-tag>
+                <a-tag color="blue">
+                    blue
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+                <a-tag color="purple">
+                    purple
+                </a-tag>
+            </div>
+        </a-layout-content>
+    </a-layout>
 </template>
 
 <style>
-  .aliyun {
-    line-height: 30px;
-    padding: 40px;
-    background-color: #f5f5f5;
-    font-size: 16px;
-  }
-  .aliyun h2 {
-    margin-bottom: 30px;
-    font-weight: 700;
-  }
-  .aliyun img {
-    margin-top: 10px;
-  }
+.tag-main {
+   line-height: 6vh;
+}
+
 </style>
