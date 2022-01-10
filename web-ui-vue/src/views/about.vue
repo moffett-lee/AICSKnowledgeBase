@@ -34,7 +34,7 @@
         </div>
         <div style="color: rgb(194, 79, 74)"><b>公众号：LOVECODE，扫码关注</b></div>
         <div>
-          <img src="/image/weix-wl.png">
+          <img style="width:450px;height:150px;" src="/image/weix-wl.png">
         </div>
       </div>
     </a-layout-content>
