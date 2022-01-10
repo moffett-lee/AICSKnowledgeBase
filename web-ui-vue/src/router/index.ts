@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/home.vue'
 import About from '../views/about.vue'
-import Aliyun from '../views/aliyun.vue'
+import Tag from '../views/tag.vue'
 import Kb from '../views/kb.vue'
 import Doc from '../views/doc.vue'
 import AdminUser from '../views/admin/admin-user.vue'
@@ -32,9 +32,9 @@ const routes: Array<RouteRecordRaw> = [
     // component: () => import(/* webpackChunkName: "about" */ '../views/about.vue')
   },
   {
-    path: '/aliyun',
-    name: 'Aliyun',
-    component: Aliyun
+    path: '/tag',
+    name: 'Tag',
+    component: Tag
   },
   {
     path: '/kanban',
