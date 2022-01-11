@@ -4,13 +4,14 @@ package com.amber.insect.knowledgebase.service.impl;
 import com.amber.insect.knowledgebase.common.RPage;
 import com.amber.insect.knowledgebase.dto.DocDto;
 import com.amber.insect.knowledgebase.entity.ContentEntity;
+import com.amber.insect.knowledgebase.entity.ContributeEntity;
 import com.amber.insect.knowledgebase.entity.DocEntity;
-import com.amber.insect.knowledgebase.entity.UserEntity;
 import com.amber.insect.knowledgebase.enums.CommonConstants;
 import com.amber.insect.knowledgebase.exception.BusinessException;
 import com.amber.insect.knowledgebase.exception.BusinessExceptionCode;
 import com.amber.insect.knowledgebase.query.DocQuery;
 import com.amber.insect.knowledgebase.repository.ContentRepository;
+import com.amber.insect.knowledgebase.repository.ContributeRepository;
 import com.amber.insect.knowledgebase.repository.DocRepository;
 import com.amber.insect.knowledgebase.service.IDocService;
 import com.amber.insect.knowledgebase.util.CopyUtil;
@@ -39,6 +40,8 @@ public class DocServiceImpl implements IDocService {
     private DocRepository docRepository;
     @Resource
     private ContentRepository contentRepository;
+    @Resource
+    private ContributeRepository contributeRepository;
 
     @Resource
     public RedisUtil redisUtil;
@@ -77,7 +80,6 @@ public class DocServiceImpl implements IDocService {
     @Transactional
     public void save(DocDto dto) {
         DocEntity docEntity = CopyUtil.copy(dto, DocEntity.class);
-
         if (ObjectUtils.isEmpty(docEntity.getId())) {
             ContentEntity contentEntity = CopyUtil.copy(dto, ContentEntity.class);
             docEntity.setId(snowFlake.nextId());
@@ -100,8 +102,9 @@ public class DocServiceImpl implements IDocService {
                 contentRepository.save(contentEntity);
             }
         }
-
-
+        //增加活跃度
+        ContributeEntity contributeEntity = new ContributeEntity();
+        //contributeRepository.addContributeArticleCount();
 
     }
 

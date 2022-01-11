@@ -240,6 +240,18 @@ CREATE TABLE `tb_tag` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='标签表';
 
 
+
+-- `knowledge-base`.tb_contribute definition
+
+CREATE TABLE `tb_contribute` (
+  `id` bigint NOT NULL COMMENT '主键id',
+  `day_date` date DEFAULT NULL COMMENT '日期',
+  `article_num` int DEFAULT NULL COMMENT '文章更新数量',
+  `code_num` int DEFAULT NULL COMMENT '代码提交数量'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='贡献度';
+
+
+
 --
 -- Dumping data for table `tb_user`
 --

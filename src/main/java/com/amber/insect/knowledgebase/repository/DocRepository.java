@@ -10,10 +10,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository("docRepository")
-public interface DocRepository extends PagingAndSortingRepository<DocEntity, String>, JpaSpecificationExecutor<DocEntity> {
+public interface DocRepository extends PagingAndSortingRepository<DocEntity, Long>, JpaSpecificationExecutor<DocEntity> {
 
     Page<DocEntity> findAllByIsDelIs(Pageable pageable, int normal);
     DocEntity findOneById(Long id);
