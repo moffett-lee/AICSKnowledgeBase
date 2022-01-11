@@ -16,7 +16,8 @@ public interface ContributeRepository extends PagingAndSortingRepository<Contrib
     @Query(value = "INSERT INTO `tb_contribute`(day_date , article_num) VALUES('2021-09-24',8)\n" +
             "  ON DUPLICATE KEY \n" +
             "  update day_date = '2021-09-24', article_num=8; \n",nativeQuery = true)
-    autoUpdateArticleNum();
+    @Modifying
+    void autoUpdateArticleNum();
 
 
 }

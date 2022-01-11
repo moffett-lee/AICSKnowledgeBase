@@ -107,7 +107,7 @@ public class DocServiceImpl implements IDocService {
         ContributeEntity contributeEntity = new ContributeEntity();
         contributeEntity.setDate(LocalDate.now());
         contributeEntity.setArticleNum(1);
-        //contributeRepository.addContributeArticleCount();
+        contributeRepository.autoUpdateArticleNum();
 
     }
 
