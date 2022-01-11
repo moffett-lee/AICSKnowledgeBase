@@ -220,6 +220,26 @@ CREATE TABLE `tb_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+
+-- `knowledge-base`.tb_tag definition
+
+CREATE TABLE `tb_tag` (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `name` varchar(100) DEFAULT NULL,
+  `sort` int DEFAULT NULL,
+  `color` varchar(100) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT '0' COMMENT '0-正常，9-锁定',
+  `is_del` tinyint(1) DEFAULT '0' COMMENT '0-正常，1-删除',
+  `flag` tinyint(1) DEFAULT NULL COMMENT '标识',
+  `c_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `upt_time` datetime DEFAULT NULL COMMENT '修改时间',
+  `c_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '创建者',
+  `upt_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '更新人',
+  `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='标签表';
+
+
 --
 -- Dumping data for table `tb_user`
 --
