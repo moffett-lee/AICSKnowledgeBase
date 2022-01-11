@@ -30,6 +30,7 @@ import org.springframework.util.ObjectUtils;
 
 import javax.annotation.Resource;
 import javax.persistence.criteria.Predicate;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -104,6 +105,8 @@ public class DocServiceImpl implements IDocService {
         }
         //增加活跃度
         ContributeEntity contributeEntity = new ContributeEntity();
+        contributeEntity.setDate(LocalDate.now());
+        contributeEntity.setArticleNum(1);
         //contributeRepository.addContributeArticleCount();
 
     }
