@@ -1,101 +1,182 @@
 <template>
-    <a-layout>
-        <a-layout-content>
-            <div class="aaaaa">
-                <div id="main" :style="{width: '90%', height: '560px'}"></div>
-            </div>
-        </a-layout-content>
-    </a-layout>
+	<a-layout>
+		<a-layout-content>
+			<div class="aaaaa">
+				<div id="main" :style="{width: '95%', height: '560px'}"></div>
+			</div>
+		</a-layout-content>
+	</a-layout>
 </template>
 
 <script>
-    // 引入echarts
-    import * as echarts from 'echarts'
-    import {
-        onMounted
-    } from "vue";
+	// 引入echarts
+	import * as echarts from 'echarts'
+	import {
+		onMounted
+	} from "vue";
 
-    export default {
-        setup() {
-            function getVirtulData(year) {
-                year = year || '2022';
-                const date = +echarts.number.parseDate(year + '-01-01');
-                const end = +echarts.number.parseDate(+year + 1 + '-01-01');
-                const dayTime = 3600 * 24 * 1000;
-                const data = [];
-                for (let time = date; time < end; time += dayTime) {
-                    data.push([
-                        echarts.format.formatTime('yyyy-MM-dd', time),
-                        Math.floor(Math.random() * 10000)
-                    ]);
-                }
-                return data;
-            }
+	export default {
+		setup() {
+			function getVirtulData(year) {
+				year = year || '2022';
+				const date = +echarts.number.parseDate(year + '-01-01');
+				const end = +echarts.number.parseDate(+year + 1 + '-01-01');
+				const dayTime = 3600 * 24 * 1000;
+				const data = [];
+				for (let time = date; time < end; time += dayTime) {
+					data.push([
+						echarts.format.formatTime('yyyy-MM-dd', time),
+						Math.floor(Math.random() * 10000)
+					]);
+				}
+				return data;
+			}
 
-            onMounted(() => { // 需要获取到element,所以是onMounted的Hook
-                const myChart = echarts.init(document.getElementById("main"));
-                // 绘制图表
-                myChart.setOption({
-                    title: [{
-                        top: 30,
-                        left: 'center',
-                        text: '文章贡献活跃度'
-                    }, {
-                        top: 330,
-                        left: 'center',
-                        text: '文章贡献活跃度'
-                    }],
-                    tooltip: {
-                        position: 'top',
-                        formatter: function (p) {
-                            const format = echarts.format.formatTime('yyyy-MM-dd', p.data[0]);
-                            return format + ': ' + p.data[1];
-                        }
-                    },
-                    visualMap: {
-                        min: 0,
-                        max: 10000,
-                        type: 'piecewise',
-                        orient: 'horizontal',
-                        left: 'center',
-                        top: 65
-                    },
-                    calendar: [
-                        {
-                            top: 140,
-                            left: 30,
-                            orient: 'horizontal',
-                            range: '2015'
-                        },
-                        {
-                            top: 350,
-                            left: 30,
-                            orient: 'horizontal',
-                            range: '2016'
-                        }
-                    ],
-                    series: [
-                        {
-                            type: 'heatmap',
-                            coordinateSystem: 'calendar',
-                            calendarIndex: 0,
-                            data: getVirtulData('2015')
-                        },
-                        {
-                            type: 'heatmap',
-                            coordinateSystem: 'calendar',
-                            calendarIndex: 1,
-                            data: getVirtulData('2016')
-                        }
-                    ]
-                });
-                window.onresize =
-                    function () { // 自适应大小
-                        myChart.resize();
-                    };
-            });
-        }
-    }
+			onMounted(() => { // 需要获取到element,所以是onMounted的Hook
+				const myChart = echarts.init(document.getElementById("main"));
+				// 绘制图表
+				myChart.setOption({
+					title: [{
+						top: 30,
+						left: 'center',
+						text: '文章贡献活跃度'
+					}, {
+						top: 320,
+						left: 'center',
+						text: '代码贡献活跃度'
+					}],
+					tooltip: {
+						position: 'top',
+						formatter: function(p) {
+							const format = echarts.format.formatTime('yyyy-MM-dd', p.data[0]);
+							return format + ': ' + p.data[1];
+						}
+					},
+					legend:{
+						show:false
+					},
+					visualMap: [{
+							min: 0,
+							max: 10000,
+							type: 'piecewise',
+							orient: 'horizontal',
+							left: 'center',
+							calculable: true,
+							seriesIndex: 0,
+							show:false,      //是否显示图例 
+							top: 65,
+							inRange: {
+								//红蓝相间
+								//color: ['#5A8BC7', '#7E9FB9', '#A3B5A9', '#C9CB9D', '#ECE191', '#FEDC88',
+								//	'#FCC080', '#FBA279', '#F98673', '#F7676C'
+								//]
+
+								//红色色系
+								color: ['white', '#FFE9BB', '#FFD1A7', '#FFBB95', '#FFA383', '#FF8D70',
+									'#FF745C', '#FF5C4A', '#FF4638', '#FF2E26', '#FF1812'
+								]
+							}
+
+						},
+						{
+							min: 0,
+							max: 10000,
+							type: 'continuous',
+							orient: 'horizontal',
+							left: 'center',
+							calculable: true,
+							seriesIndex: 1,
+							show:false,      //是否显示图例 
+							top: 1,
+							inRange: {
+								//红蓝相间
+								color: ['#5A8BC7', '#7E9FB9', '#A3B5A9', '#C9CB9D', '#ECE191',
+									'#FEDC88',
+									'#FCC080', '#FBA279', '#F98673', '#F7676C'
+								]
+
+								//红色色系
+								//color: ['white', '#FFE9BB', '#FFD1A7', '#FFBB95', '#FFA383', '#FF8D70',
+								//	'#FF745C', '#FF5C4A', '#FF4638', '#FF2E26', '#FF1812'
+								//]
+							}
+
+						}
+					],
+					calendar: [{
+							top: 100,
+							left: '15%',
+							orient: 'horizontal',
+							range: '2022',
+							itemStyle: {
+								normal: {
+									borderWidth: 0.5
+								}
+							},
+							yearLabel: {
+								show: true,
+								color: 'red',
+							},
+							monthLabel: {
+								nameMap: [
+									'一月', '二月', '三月',
+									'四月', '五月', '六月',
+									'七月', '八月', '九月',
+									'十月', '十一月', '十二月'
+								]
+							},
+							dayLabel: {
+								nameMap: ['日', '一', '二', '三', '四', '五', '六']
+							}
+						},
+						{
+							top: 390,
+							left: '15%',
+							orient: 'horizontal',
+							range: '2022',
+							itemStyle: {
+								normal: {
+									borderWidth: 0.5
+								}
+							},
+							yearLabel: {
+								show: true,
+								color: 'red',
+							},
+							monthLabel: {
+								nameMap: [
+									'一月', '二月', '三月',
+									'四月', '五月', '六月',
+									'七月', '八月', '九月',
+									'十月', '十一月', '十二月'
+								]
+							},
+							dayLabel: {
+								nameMap: ['日', '一', '二', '三', '四', '五', '六']
+							}
+						}
+					],
+					series: [{
+							type: 'heatmap',
+							coordinateSystem: 'calendar',
+							calendarIndex: 0,
+							data: getVirtulData('2022')
+						},
+						{
+							type: 'heatmap',
+							coordinateSystem: 'calendar',
+							calendarIndex: 1,
+							data: getVirtulData('2022')
+						}
+					]
+				});
+				window.onresize =
+					function() { // 自适应大小
+						myChart.resize();
+					};
+			});
+		}
+	}
 </script>
 <style>
 </style>

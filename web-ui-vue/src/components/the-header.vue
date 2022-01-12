@@ -18,7 +18,7 @@
 				<router-link to="/tag">技术签</router-link>
 			</a-menu-item>
 			<a-menu-item key="/kanban">
-				<router-link to="/kanban">文章贡献度</router-link>
+				<router-link to="/kanban">贡献度</router-link>
 			</a-menu-item>
 			<a-menu-item key="/about">
 				<router-link to="/about">关于</router-link>
