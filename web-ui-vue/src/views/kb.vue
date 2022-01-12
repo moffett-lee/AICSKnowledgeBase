@@ -11,26 +11,41 @@
 <script>
 	// 引入echarts
 	import * as echarts from 'echarts'
-	import {
-		onMounted
-	} from "vue";
-
-	export default {
+	import {defineComponent, onMounted, ref} from 'vue';
+	import axios from 'axios';
+	import {message} from 'ant-design-vue';
+	export default defineComponent({
+		name: 'Kanban',
+		components: {},
 		setup() {
-			function getVirtulData(year) {
-				year = year || '2022';
-				const date = +echarts.number.parseDate(year + '-01-01');
-				const end = +echarts.number.parseDate(+year + 1 + '-01-01');
-				const dayTime = 3600 * 24 * 1000;
-				const data = [];
-				for (let time = date; time < end; time += dayTime) {
-					data.push([
-						echarts.format.formatTime('yyyy-MM-dd', time),
-						Math.floor(Math.random() * 10000)
-					]);
+			const contributes =[];
+			const articleNum = [];
+			/**
+			 * 查询所有日志数据
+			 **/
+			const handleQueryCategory = () => {
+				axios.get("/contribute/getContributeList").then((response) => {
+					if (response.data.success) {
+						contributes.value = response.data.data;
+						console.log("contributes：", contributes);
+					} else {
+						message.error(response.data.msg);
+					}
+				});
+			};
+			onMounted(() => {
+				handleQueryCategory();
+			});
+
+			const getVirtulData = () => {
+				for (let i = 0; i < contributes.length; i++) {
+
+					articleNum.push(contributes[i].articleNum)
 				}
-				return data;
-			}
+				return articleNum;
+			};
+
+			console.log("=========：", articleNum);
 
 			onMounted(() => { // 需要获取到element,所以是onMounted的Hook
 				const myChart = echarts.init(document.getElementById("main"));
@@ -63,7 +78,7 @@
 							left: 'center',
 							calculable: true,
 							seriesIndex: 0,
-							show:false,      //是否显示图例 
+							show:false,      //是否显示图例
 							top: 65,
 							inRange: {
 								//红蓝相间
@@ -86,7 +101,7 @@
 							left: 'center',
 							calculable: true,
 							seriesIndex: 1,
-							show:false,      //是否显示图例 
+							show:false,      //是否显示图例
 							top: 1,
 							inRange: {
 								//红蓝相间
@@ -160,13 +175,13 @@
 							type: 'heatmap',
 							coordinateSystem: 'calendar',
 							calendarIndex: 0,
-							data: getVirtulData('2022')
+							data: getVirtulData()
 						},
 						{
 							type: 'heatmap',
 							coordinateSystem: 'calendar',
 							calendarIndex: 1,
-							data: getVirtulData('2022')
+							data: getVirtulData()
 						}
 					]
 				});
@@ -175,8 +190,12 @@
 						myChart.resize();
 					};
 			});
+			return {
+				contributes,
+				articleNum
+			}
 		}
-	}
+	})
 </script>
 <style>
 </style>

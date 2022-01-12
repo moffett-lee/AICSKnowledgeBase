@@ -16,7 +16,7 @@ public class ContributeEntity implements Serializable {
 
     @Id
     private Long id;
-    private LocalDate date;
+    private LocalDate dayDate;
     private Integer articleNum;
     private Integer codeNum;
 }

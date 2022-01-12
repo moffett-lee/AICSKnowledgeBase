@@ -20,6 +20,13 @@ public class ContributeController {
 
 
 
+    /**
+     * @Author Amber.L
+     * @Description  
+     * @Date 2022/1/12 23:09
+     * @Param []
+     * @return com.amber.insect.knowledgebase.common.R
+     **/
     @GetMapping("/getContributeList")
     public R getContributeList() {
         List<ContributeDto> contributeDtos =  contributeService.getContributeList();

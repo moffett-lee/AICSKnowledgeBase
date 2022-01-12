@@ -36,11 +36,7 @@ public class TagServiceImpl implements ITagService {
 
     @Override
     public void delete(Long id) {
-        TagEntity tagEntity = new TagEntity();
-        tagEntity.setId(id);
-        tagEntity.setIsDel(CommonConstants.DEL);
-        tagEntity.setUptTime(LocalDateTime.now());
-        tagRepository.save(tagEntity);
+        tagRepository.delete(id,CommonConstants.DEL);
     }
 
     @Override

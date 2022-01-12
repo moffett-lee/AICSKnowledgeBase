@@ -14,6 +14,9 @@
 			<a-menu-item key="/admin/category" :style="user.id? {} : {display:'none'}">
 				<router-link to="/admin/category">分类管理</router-link>
 			</a-menu-item>
+			<a-menu-item key="/admin/tag" :style="user.id? {} : {display:'none'}">
+				<router-link to="/admin/tag">标签管理</router-link>
+			</a-menu-item>
 			<a-menu-item key="/tag">
 				<router-link to="/tag">技术签</router-link>
 			</a-menu-item>

@@ -22,4 +22,9 @@ public interface TagRepository extends PagingAndSortingRepository<TagEntity, Lon
     @Modifying
     Integer update(CategoryEntity ce);
 
+
+    @Modifying
+    @Query("update TagEntity t set t.isDel = ?2 where t.id = ?1")
+    void delete(Long aLong, Integer del);
+
 }

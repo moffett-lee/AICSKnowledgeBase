@@ -6,7 +6,7 @@
       <p>
         <a-form layout="inline" :model="param">
           <a-form-item>
-            <a-button type="primary" @click="handleQuery()">
+            <a-button type="primary" @click="handleQuery({page: 1, size: pagination.pageSize})">
               查询
             </a-button>
           </a-form-item>
@@ -20,19 +20,18 @@
       <p>
         <a-alert
                 class="tip"
-                message="小提示：这里的分类会显示到首页的侧边菜单"
+                message="小提示：每学习或者掌握一门技术，将形成一个标签记录下来"
                 type="info"
                 closable
         />
       </p>
       <a-table
-        v-if="level1.length > 0"
-        :columns="columns"
-        :row-key="record => record.id"
-        :data-source="level1"
-        :loading="loading"
-        :pagination="false"
-        :defaultExpandAllRows="true"
+       :columns="columns"
+       :row-key="record => record.id"
+       :data-source="tags"
+       :pagination="pagination"
+       :loading="loading"
+       @change="handleTableChange"
       >
         <template #cover="{ text: cover }">
           <img v-if="cover" :src="cover" alt="avatar" />
@@ -43,7 +42,7 @@
               编辑
             </a-button>
             <a-popconfirm
-              title="删除后不可恢复，确认删除?"
+              title="确认删除?"
               ok-text="是"
               cancel-text="否"
               @confirm="handleDelete(record.id)"
@@ -88,7 +87,11 @@
       param.value = {};
       const tags = ref();
       const loading = ref(false);
-
+      const pagination = ref({
+        current: 1,
+        pageSize: 10,
+        total: 0
+      });
       const columns = [
         {
           title: '名称',
@@ -97,6 +100,10 @@
         {
           title: '顺序',
           dataIndex: 'sort'
+        },
+        {
+          title: '颜色',
+          dataIndex: 'color'
         },
         {
           title: '操作',
@@ -111,23 +118,38 @@
       /**
        * 数据查询
        **/
-      const handleQuery = () => {
+      const handleQuery = (params: any) => {
         loading.value = true;
         // 如果不清空现有数据，则编辑保存重新加载数据后，再点编辑，则列表显示的还是编辑前的数据
-        level1.value = [];
-        axios.get("/tag/getTagList").then((response) => {
+        tags.value = [];
+        axios.get("/tag/getTagListPage", {
+          params: {
+            page: params.page,
+            size: params.size,
+          }
+        }).then((response) => {
           loading.value = false;
           const data = response.data;
           if (data.success) {
-            tags.value = data.data;
-            console.log("原始数组：", tags.value);
+            tags.value = data.data.list;
 
-            level1.value = [];
-            level1.value = Tool.array2Tree(tags.value, 0);
-            console.log("树形结构：", level1);
+            // 重置分页按钮
+            pagination.value.current = params.page;
+            pagination.value.total = data.data.total;
           } else {
             message.error(data.msg);
           }
+        });
+      };
+
+      /**
+       * 表格点击页码时触发
+       */
+      const handleTableChange = (pagination: any) => {
+        console.log("看看自带的分页参数都有啥：" + pagination);
+        handleQuery({
+          page: pagination.current,
+          size: pagination.pageSize
         });
       };
 
@@ -144,7 +166,10 @@
             modalVisible.value = false;
 
             // 重新加载列表
-            handleQuery();
+            handleQuery({
+              page: pagination.value.current,
+              size: pagination.value.pageSize,
+            });
           } else {
             message.error(data.msg);
           }
@@ -172,7 +197,10 @@
           const data = response.data; // data = commonResp
           if (data.success) {
             // 重新加载列表
-            handleQuery();
+            handleQuery({
+              page: pagination.value.current,
+              size: pagination.value.pageSize,
+            });
           } else {
             message.error(data.msg);
           }
@@ -180,17 +208,21 @@
       };
 
       onMounted(() => {
-        handleQuery();
+        // 重新加载列表
+        handleQuery({
+          page: pagination.value.current,
+          size: pagination.value.pageSize,
+        });
       });
 
       return {
         param,
-        // tags,
-        level1,
+        tags,
+        pagination,
         columns,
         loading,
         handleQuery,
-
+        handleTableChange,
         edit,
         add,
 

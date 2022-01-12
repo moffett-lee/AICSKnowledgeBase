@@ -10,7 +10,7 @@ import java.time.LocalDate;
 public class ContributeDto implements Serializable {
 
     private Long id;
-    private LocalDate date;
+    private LocalDate dayDate;
     private Integer articleNum;
     private Integer codeNum;
 }

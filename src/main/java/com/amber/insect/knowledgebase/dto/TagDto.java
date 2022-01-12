@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class TagDto {
     private Long id;
-    private Long color;
+    private String color;
     private String name;
     private Integer sort;
 

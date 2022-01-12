@@ -105,7 +105,7 @@ public class DocServiceImpl implements IDocService {
         }
         //增加活跃度
         ContributeEntity contributeEntity = new ContributeEntity();
-        contributeEntity.setDate(LocalDate.now());
+        contributeEntity.setDayDate(LocalDate.now());
         contributeEntity.setArticleNum(1);
         contributeRepository.autoUpdateArticleNum();
 
