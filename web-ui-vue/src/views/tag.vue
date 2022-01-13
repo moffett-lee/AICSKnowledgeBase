@@ -1,6 +1,6 @@
 <template>
     <a-layout>
-        <a-layout-content :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }">
+        <a-layout-content :style="{ background: '#f8f3d4', padding: '24px', margin: 0, minHeight: '580px' }">
             <h2 style="margin-bottom: 20px; font-size:1.3rem;text-align: center;">
                 技术成就榜
             </h2>

@@ -25,7 +25,7 @@
       </a-menu>
     </a-layout-sider>
     <a-layout-content
-    :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
+    :style="{ background: '#fde9c9', padding: '24px', margin: 0, minHeight: '280px' }"
   >
       <div class="welcome" v-show="isShowWelcome">
         <the-welcome></the-welcome>

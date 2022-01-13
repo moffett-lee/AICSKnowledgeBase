@@ -1,6 +1,6 @@
 <template>
-	<a-layout-footer style="text-align: center;position: absolute;
-    bottom: 0;
+	<a-layout-footer style="text-align: center;position: relative;
+    bottom: 0; min-height:100%; background: #21aba5;
     width: 100%;">
 		Copyright © 2020-2022 Amber.L | 昆虫云知识库<span v-show="user.id">，欢迎：{{user.userName}}</span>
 	</a-layout-footer>

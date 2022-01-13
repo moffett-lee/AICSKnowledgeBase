@@ -1,6 +1,6 @@
 <template>
   <a-layout>
-    <a-layout-content :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }">
+    <a-layout-content :style="{ background: '#fde9c9', padding: '24px', margin: 0, minHeight: '280px' }">
       <div class="about">
         <h2>我是Amber·L，偏Java后端的全栈工程师。</h2>
         <div><b>这是一个为自己平时学习所开发的知识库笔记系统，简单至上。</b></div>
@@ -45,7 +45,7 @@
   .about {
     line-height: 30px;
     padding: 40px;
-    background-color: #f5f5f5;
+    background-color: #fde9c9;
     font-size: 16px;
   }
   .about h2 {

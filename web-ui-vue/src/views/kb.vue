@@ -1,6 +1,6 @@
 <template>
 	<a-layout>
-		<a-layout-content>
+		<a-layout-content :style="{ background: '#fde9c9', padding: '24px', margin: 0, minHeight: '240px' }">
 			<div class="aaaaa">
 				<div id="main" :style="{width: '95%', height: '560px'}"></div>
 			</div>
@@ -11,14 +11,20 @@
 <script>
 	// 引入echarts
 	import * as echarts from 'echarts'
-	import {defineComponent, onMounted, ref} from 'vue';
+	import {
+		defineComponent,
+		onMounted,
+		ref
+	} from 'vue';
 	import axios from 'axios';
-	import {message} from 'ant-design-vue';
+	import {
+		message
+	} from 'ant-design-vue';
 	export default defineComponent({
 		name: 'Kanban',
 		components: {},
 		setup() {
-			const contributes =[];
+			const contributes = [];
 			const articleNum = [];
 			/**
 			 * 查询所有日志数据
@@ -37,13 +43,27 @@
 				handleQueryCategory();
 			});
 
-			const getVirtulData = () => {
-				for (let i = 0; i < contributes.length; i++) {
+			// const getVirtulData = () => {
+			// 	for (let i = 0; i < contributes.length; i++) {
 
-					articleNum.push(contributes[i].articleNum)
+			// 		articleNum.push(contributes[i].articleNum)
+			// 	}
+			// 	return articleNum;
+			// };
+			function getVirtulData(year) {
+				year = year || '2017';
+				const date = +echarts.number.parseDate(year + '-01-01');
+				const end = +echarts.number.parseDate(+year + 1 + '-01-01');
+				const dayTime = 3600 * 24 * 1000;
+				const data = []
+				for (let time = date; time < end; time += dayTime) {
+					data.push([
+						echarts.format.formatTime('yyyy-MM-dd', time),
+						Math.floor(Math.random() * 100)
+					]);
 				}
-				return articleNum;
-			};
+				return data;
+			}
 
 			console.log("=========：", articleNum);
 
@@ -67,53 +87,42 @@
 							return format + ': ' + p.data[1];
 						}
 					},
-					legend:{
-						show:false
+					legend: {
+						show: false
 					},
 					visualMap: [{
 							min: 0,
-							max: 10000,
+							max: 100,
 							type: 'piecewise',
 							orient: 'horizontal',
 							left: 'center',
 							calculable: true,
 							seriesIndex: 0,
-							show:false,      //是否显示图例
+							show: false, //是否显示图例
 							top: 65,
 							inRange: {
-								//红蓝相间
-								//color: ['#5A8BC7', '#7E9FB9', '#A3B5A9', '#C9CB9D', '#ECE191', '#FEDC88',
-								//	'#FCC080', '#FBA279', '#F98673', '#F7676C'
-								//]
-
+							
 								//红色色系
-								color: ['white', '#FFE9BB', '#FFD1A7', '#FFBB95', '#FFA383', '#FF8D70',
-									'#FF745C', '#FF5C4A', '#FF4638', '#FF2E26', '#FF1812'
+								color: ['#eaff56','#fff143','#ffa631','#ff7500'
 								]
 							}
 
 						},
 						{
 							min: 0,
-							max: 10000,
+							max: 100,
 							type: 'continuous',
 							orient: 'horizontal',
 							left: 'center',
 							calculable: true,
 							seriesIndex: 1,
-							show:false,      //是否显示图例
+							show: false, //是否显示图例
 							top: 1,
 							inRange: {
 								//红蓝相间
-								color: ['#5A8BC7', '#7E9FB9', '#A3B5A9', '#C9CB9D', '#ECE191',
-									'#FEDC88',
-									'#FCC080', '#FBA279', '#F98673', '#F7676C'
+								color: ['#ffc371','#ff5f6d',
 								]
 
-								//红色色系
-								//color: ['white', '#FFE9BB', '#FFD1A7', '#FFBB95', '#FFA383', '#FF8D70',
-								//	'#FF745C', '#FF5C4A', '#FF4638', '#FF2E26', '#FF1812'
-								//]
 							}
 
 						}
@@ -175,13 +184,13 @@
 							type: 'heatmap',
 							coordinateSystem: 'calendar',
 							calendarIndex: 0,
-							data: getVirtulData()
+							data: getVirtulData('2022')
 						},
 						{
 							type: 'heatmap',
 							coordinateSystem: 'calendar',
 							calendarIndex: 1,
-							data: getVirtulData()
+							data: getVirtulData('2022')
 						}
 					]
 				});

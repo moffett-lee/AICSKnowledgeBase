@@ -16,6 +16,7 @@
     "ant-design-vue": "^2.0.0-rc.3",
     "axios": "^0.21.0",
     "echarts": "^5.2.2",
+    "highlight.js": "^11.4.0",
     "less-loader": "^6.0.0",
     "vue": "^3.0.0",
     "vue-calendar-heatmap": "^0.8.4",

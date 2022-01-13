@@ -1,6 +1,6 @@
 <template>
   <a-layout>
-    <a-layout-content :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }">
+    <a-layout-content :style="{ background: '#f8f3d4', padding: '24px', margin: 0, minHeight: '280px' }">
       <h3 v-if="level1.length === 0">对不起，找不到相关文档！</h3>
       <a-row>
         <a-col :span="6">
@@ -16,7 +16,7 @@
         </a-col>
         <a-col :span="18">
           <div>
-            <h2>{{doc.name}}</h2>
+            <h2 style="text-align: center; font-size: 26px; font-weight: 500;">{{doc.name}}</h2>
             <div>
               <span>阅读数：{{doc.viewCount}}</span> &nbsp; &nbsp;
               <span>点赞数：{{doc.voteCount}}</span>
@@ -37,6 +37,7 @@
 
 <script lang="ts">
   import { defineComponent, onMounted, ref, createVNode } from 'vue';
+
   import axios from 'axios';
   import {message} from 'ant-design-vue';
   import {Tool} from "@/util/tool";
@@ -45,6 +46,10 @@
   export default defineComponent({
     name: 'Doc',
     setup() {
+		
+	
+		
+		
       const route = useRoute();
       const docs = ref();
       const html = ref();
@@ -182,6 +187,7 @@
     border-radius: 3px;
     padding: 3px 5px;
     margin: 0 3px;
+	font-family: "lucida console";
   }
   .wangeditor pre code {
     display: block;
@@ -194,7 +200,7 @@
 
   /* 和antdv p冲突，覆盖掉 */
   .wangeditor blockquote p {
-    font-family:"YouYuan";
+    font-family:"Microsoft YaHei";
     margin: 20px 10px !important;
     font-size: 16px !important;
     font-weight:600;
