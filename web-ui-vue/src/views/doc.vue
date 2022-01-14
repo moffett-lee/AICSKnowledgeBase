@@ -18,8 +18,8 @@
           <div>
             <h2 style="text-align: center; font-size: 26px; font-weight: 500;">{{doc.name}}</h2>
             <div>
-              <span>阅读数：{{doc.viewCount}}</span> &nbsp; &nbsp;
-              <span>点赞数：{{doc.voteCount}}</span>
+              <span><component v-bind:is="'LikeOutlined'" style="margin-right: 8px" />:{{doc.viewCount}}</span> &nbsp; &nbsp;
+              <span><component v-bind:is="'LikeOutlined'" style="margin-right: 8px" />:{{doc.voteCount}}</span>
             </div>
             <a-divider style="height: 2px; background-color: #9999cc"/>
           </div>
