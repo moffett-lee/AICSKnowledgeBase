@@ -25,7 +25,8 @@
             </div>
             <a-divider style="height: 2px; background-color: #9999cc"/>
           </div>
-          <div class="wangeditor" :innerHTML="html"></div>
+
+          <div class="vditor-reset" :innerHTML="html"></div>
           <div class="vote-div">
             <a-button type="primary" shape="round" :size="'large'" @click="vote">
               <template #icon><LikeOutlined /> &nbsp;点赞：{{doc.voteCount}} </template>
@@ -39,12 +40,14 @@
 
 <script lang="ts">
   import { defineComponent, onMounted, ref, createVNode } from 'vue';
-
+  import hljs from 'highlight.js';
+  import 'highlight.js/styles/monokai-sublime.css';
   import axios from 'axios';
   import {message} from 'ant-design-vue';
   import {Tool} from "@/util/tool";
   import {useRoute} from "vue-router";
-
+  import Vditor from 'vditor'
+  import "vditor/dist/index.css"
   export default defineComponent({
     name: 'Doc',
     setup() {
@@ -76,6 +79,7 @@
        **/
       const handleQueryContent = (id: number) => {
         axios.get("/doc/findContent/" + id).then((response) => {
+
           const data = response.data;
           if (data.success) {
             html.value = data.data;
@@ -141,7 +145,7 @@
         onSelect,
         defaultSelectedKeys,
         doc,
-        vote
+        vote,
       }
     }
   });
@@ -180,17 +184,19 @@
   }
 
   /* code 样式 */
-  .wangeditor code {
+  .vditor-reset code {
     display: inline-block;
     *display: inline;
     *zoom: 1;
     background-color: #fafafa;
     border-radius: 3px;
-    border: 1px solid hsl(0, 0%, 91%);
+    border: 3px solid hsl(0, 0%, 91%);
     margin: 0 3px;
 	font-family: "lucida console";
     padding: 10px;
-    font-size: 14px;
+    font-size: 14px!important;
+    max-width: 100%;
+    height: auto;
   }
   .wangeditor pre code {
     display: block;
@@ -202,7 +208,7 @@
   }
 
   /* 和antdv p冲突，覆盖掉 */
-  .wangeditor blockquote p {
+  .vditor-reset blockquote p {
     font-family:"Microsoft YaHei";
     margin: 20px 10px !important;
     font-size: 16px !important;

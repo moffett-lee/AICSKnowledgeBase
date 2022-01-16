@@ -9,7 +9,9 @@ import axios from 'axios';
 import {Tool} from "@/util/tool";
 import { message } from 'ant-design-vue';
 
-
+// 内部函数
+import Common from '../public/js/common.js';
+// import { Config } from '../public/config/config'
 axios.defaults.baseURL = process.env.VUE_APP_SERVER;
 
 /**
@@ -50,7 +52,7 @@ const icons: any = Icons;
 for (const i in icons) {
   app.component(i, icons[i]);
 }
-
+app.config.globalProperties.$Common = Common;
 
 
 

@@ -12,7 +12,6 @@
                 </a-tag>
                 </span>
             </div>
-
             <!--<a-row type="flex" justify="space-around" align="middle" style="margin: auto;width: 90%">
                 <a-col :span="2">
                     <div class="height-120">
@@ -60,11 +59,11 @@
     import {message} from 'ant-design-vue';
     export default defineComponent({
         name: 'Tag',
-        components: {},
+        components: {
+
+        },
         setup() {
             const tags = ref();
-
-
             /**
              * 查询所有标签
              **/
