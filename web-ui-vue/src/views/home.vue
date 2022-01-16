@@ -1,6 +1,6 @@
 <template>
   <a-layout>
-    <a-layout-sider width="200" style="background: #fff">
+    <a-layout-sider width="200" style="background: #f8f3d4">
       <a-menu
         mode="inline"
         :style="{ height: '100%', borderRight: 0 }"
@@ -8,24 +8,24 @@
         :openKeys="openKeys"
       >
         <a-menu-item key="welcome">
-          <MailOutlined />
+          <AppstoreOutlined />
           <span>欢迎</span>
         </a-menu-item>
         <a-sub-menu v-for="item in level1" :key="item.id" :disabled="true">
           <template v-slot:title>
-            <span><user-outlined />{{item.name}}</span>
+            <span>{{item.name}}</span>
           </template>
           <a-menu-item v-for="child in item.children" :key="child.id">
-            <MailOutlined /><span>{{child.name}}</span>
+            <span>{{child.name}}</span>
           </a-menu-item>
         </a-sub-menu>
         <a-menu-item key="tip" :disabled="true">
-          <span>以上菜单在分类管理配置</span>
+          <!--<span>以上菜单在分类管理配置</span>-->
         </a-menu-item>
       </a-menu>
     </a-layout-sider>
     <a-layout-content
-    :style="{ background: '#fde9c9', padding: '24px', margin: 0, minHeight: '280px' }"
+    :style="{ background: '#f8f3d4', padding: '24px', margin: 0, minHeight: '280px' }"
   >
       <div class="welcome" v-show="isShowWelcome">
         <the-welcome></the-welcome>
@@ -35,7 +35,7 @@
           <a-list-item key="item.name">
             <template #actions>
               <span>
-                <component v-bind:is="'FileOutlined'" style="margin-right: 8px" />
+                <component v-bind:is="'BookOutlined'" style="margin-right: 8px" />
                 {{ item.docCount }}
               </span>
               <span>

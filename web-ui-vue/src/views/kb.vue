@@ -1,6 +1,6 @@
 <template>
 	<a-layout>
-		<a-layout-content :style="{ background: '#fde9c9', padding: '24px', margin: 0, minHeight: '240px' }">
+		<a-layout-content :style="{ background: '#f8f3d4', padding: '24px', margin: 0, minHeight: '240px' }">
 			<div class="aaaaa">
 				<div id="main" :style="{width: '95%', height: '560px'}"></div>
 			</div>

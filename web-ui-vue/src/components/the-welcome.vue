@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="tip">
+    <div class="tip" style="background: #f8f3d4">
       <div class="t_title">
       <h2 class="title">昆虫云知识库可视化看板</h2>
       </div>
     </div>
-    <a-row>
+    <a-row >
       <a-col :span="24">
-        <a-card>
+        <a-card style="background: #f8f3d4">
           <a-row>
             <a-col :span="8">
               <a-statistic title="总阅读量" :value="statistic.viewCount">
@@ -40,7 +40,7 @@
     <br>
     <a-row :gutter="16">
       <a-col :span="12">
-        <a-card>
+        <a-card style="background: #f8f3d4">
           <a-row>
             <a-col :span="12">
               <a-statistic title="今日阅读" :value="statistic.todayViewCount" style="margin-right: 50px">
@@ -60,7 +60,7 @@
         </a-card>
       </a-col>
       <a-col :span="12">
-        <a-card>
+        <a-card style="background: #f8f3d4">
           <a-row>
             <a-col :span="12">
               <a-statistic

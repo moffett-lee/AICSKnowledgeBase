@@ -18,6 +18,7 @@ import com.amber.insect.knowledgebase.util.CopyUtil;
 import com.amber.insect.knowledgebase.util.RedisUtil;
 import com.amber.insect.knowledgebase.util.RequestContext;
 import com.amber.insect.knowledgebase.util.SnowFlake;
+import com.amber.insect.knowledgebase.vo.DocVo;
 import org.slf4j.MDC;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -52,7 +53,7 @@ public class DocServiceImpl implements IDocService {
     @Resource
     public WsService wsService;
     @Override
-    public List<DocDto> getDocListByEbookId(Long ebookId) {
+    public List<DocVo> getDocListByEbookId(Long ebookId) {
         //查询条件
         Specification<DocEntity> spec = (root, query, cb) -> {
             List<Predicate> list = new ArrayList<>();
@@ -61,7 +62,7 @@ public class DocServiceImpl implements IDocService {
             return cb.and(list.toArray(new Predicate[list.size()]));
         };
         List<DocEntity> allByIsDelAndEbookIdIs = docRepository.findAll(spec);
-        return CopyUtil.copyList(allByIsDelAndEbookIdIs,DocDto.class);
+        return CopyUtil.copyList(allByIsDelAndEbookIdIs,DocVo.class);
     }
 
     @Override
@@ -107,7 +108,7 @@ public class DocServiceImpl implements IDocService {
         ContributeEntity contributeEntity = new ContributeEntity();
         contributeEntity.setDayDate(LocalDate.now());
         contributeEntity.setArticleNum(1);
-        contributeRepository.autoUpdateArticleNum();
+       // contributeRepository.autoUpdateArticleNum();
 
     }
 

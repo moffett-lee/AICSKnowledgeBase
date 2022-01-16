@@ -4,11 +4,12 @@ import com.amber.insect.knowledgebase.common.RPage;
 import com.amber.insect.knowledgebase.dto.CategoryDto;
 import com.amber.insect.knowledgebase.dto.DocDto;
 import com.amber.insect.knowledgebase.query.DocQuery;
+import com.amber.insect.knowledgebase.vo.DocVo;
 
 import java.util.List;
 
 public interface IDocService {
-    List<DocDto> getDocListByEbookId(Long ebookId);
+    List<DocVo> getDocListByEbookId(Long ebookId);
 
     RPage<DocDto> getDocListPage(DocQuery req);
 

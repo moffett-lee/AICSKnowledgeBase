@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/tag")
@@ -72,4 +73,32 @@ public class TagController {
         tagService.delete(id);
         return R.success();
     }
+
+
+
+
+
+    /**
+     * @Author Amber.L
+     * @Description  段位算法
+     * @Date 2022/1/15 18:04
+     * @Param []
+     * @return com.amber.insect.knowledgebase.common.R
+     **/
+    @DeleteMapping("/getDan")
+    public R getDan() {
+        Map<String,Object> map =tagService.getDan();
+        return R.success(map);
+    }
+
+
+
+
+
+
+
+
+
+
+
 }

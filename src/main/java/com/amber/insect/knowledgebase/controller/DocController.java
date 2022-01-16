@@ -7,6 +7,7 @@ import com.amber.insect.knowledgebase.dto.CategoryDto;
 import com.amber.insect.knowledgebase.dto.DocDto;
 import com.amber.insect.knowledgebase.query.DocQuery;
 import com.amber.insect.knowledgebase.service.IDocService;
+import com.amber.insect.knowledgebase.vo.DocVo;
 import com.sun.javafx.iio.gif.GIFImageLoaderFactory;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,7 +35,7 @@ public class DocController {
      **/
     @GetMapping("/getDocListByEbookId/{ebookId}")
     public R getDocListByEbookId(@PathVariable Long ebookId) {
-        List<DocDto> docDtoList =  docService.getDocListByEbookId(ebookId);
+        List<DocVo> docDtoList =  docService.getDocListByEbookId(ebookId);
         return R.success(docDtoList);
     }
 

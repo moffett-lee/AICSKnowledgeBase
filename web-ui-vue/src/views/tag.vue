@@ -12,6 +12,44 @@
                 </a-tag>
                 </span>
             </div>
+
+            <!--<a-row type="flex" justify="space-around" align="middle" style="margin: auto;width: 90%">
+                <a-col :span="2">
+                    <div class="height-120">
+                        <a-statistic title="等级" :value="112893" style="margin-right: 50px" />
+                        <a-statistic title="经验" :value="112893" />
+                    </div>
+                </a-col>
+                <a-col :span="2">
+                    <div class="height-120">
+                        <h1>王者</h1>
+                    </div>
+                </a-col>
+                <a-col :span="2">
+                    <div class="height-120">
+                        <a-progress type="circle" :percent="23232">
+                            <template #format="percent">
+                                <span style="color: red">{{ percent }}</span>
+                            </template>
+                        </a-progress>
+                    </div>
+                </a-col>
+            </a-row>
+
+            <div style="margin:0 auto;width: 90%;">
+                <a-steps v-model="current" type="navigation" :style="stepStyle">
+                    <a-step status="finish" title="英勇黄铜" />
+                    <a-step status="process" title="英勇黄铜" />
+                    <a-step status="wait" title="英勇黄铜" />
+                    <a-step status="wait" title="英勇黄铜" />
+                    <a-step status="wait" title="英勇黄铜" />
+                    <a-step status="wait" title="英勇黄铜" />
+                    <a-step status="wait" title="英勇黄铜" />
+                    <a-step status="wait" title="英勇黄铜" />
+                    <a-step status="wait" title="英勇黄铜" />
+                    <a-step status="wait" title="英勇黄铜" />
+                </a-steps>
+            </div>-->
         </a-layout-content>
     </a-layout>
 </template>
@@ -25,6 +63,7 @@
         components: {},
         setup() {
             const tags = ref();
+
 
             /**
              * 查询所有标签

@@ -1,6 +1,6 @@
 <template>
   <a-layout>
-    <a-layout-content :style="{ background: '#fde9c9', padding: '24px', margin: 0, minHeight: '280px' }">
+    <a-layout-content :style="{ background: '#f8f3d4', padding: '24px', margin: 0, minHeight: '280px' }">
       <div class="about">
         <h2>我是Amber·L，偏Java后端的全栈工程师。</h2>
         <div><b>这是一个为自己平时学习所开发的知识库笔记系统，简单至上。</b></div>
@@ -28,7 +28,7 @@
         <br>
         <div><b>QQ：619147075</b></div>
         <div><b>微信号：Rainze-Lee</b></div>
-        <div><b>QQ群：619147075</b></div>
+        <div><b>QQ群：666768414</b></div>
         <div><b>个人全栈技术博客：
           <a href="https://blog.liyuze.work/" target="_blank">X-Bugs</a></b>
         </div>
@@ -45,7 +45,7 @@
   .about {
     line-height: 30px;
     padding: 40px;
-    background-color: #fde9c9;
+    background-color: #f8f3d4;
     font-size: 16px;
   }
   .about h2 {

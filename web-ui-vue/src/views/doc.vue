@@ -17,9 +17,11 @@
         <a-col :span="18">
           <div>
             <h2 style="text-align: center; font-size: 26px; font-weight: 500;">{{doc.name}}</h2>
-            <div>
-              <span><component v-bind:is="'LikeOutlined'" style="margin-right: 8px" />:{{doc.viewCount}}</span> &nbsp; &nbsp;
-              <span><component v-bind:is="'LikeOutlined'" style="margin-right: 8px" />:{{doc.voteCount}}</span>
+            <div style="text-align: center">
+              <span style="font-size: 16px"><component v-bind:is="'UserOutlined'" style="margin-right: 8px" />Amber-L</span>&nbsp; &nbsp;
+              <span style="font-size: 16px"><component v-bind:is="'ClockCircleOutlined'" style="margin-right: 8px" />{{doc.uptTime}}</span>&nbsp; &nbsp;
+              <span style="font-size: 16px"><component v-bind:is="'EyeOutlined'" style="margin-right: 8px" />{{doc.viewCount}}</span> &nbsp; &nbsp;
+              <span style="font-size: 16px"><component v-bind:is="'LikeOutlined'" style="margin-right: 8px" />{{doc.voteCount}}</span>&nbsp; &nbsp;
             </div>
             <a-divider style="height: 2px; background-color: #9999cc"/>
           </div>
@@ -46,10 +48,6 @@
   export default defineComponent({
     name: 'Doc',
     setup() {
-		
-	
-		
-		
       const route = useRoute();
       const docs = ref();
       const html = ref();
@@ -155,12 +153,14 @@
   .wangeditor table {
     border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
+    border-collapse: collapse;
   }
   .wangeditor table td,
   .wangeditor table th {
     border-bottom: 1px solid #ccc;
     border-right: 1px solid #ccc;
     padding: 3px 5px;
+    text-align: left;
   }
   .wangeditor table th {
     border-bottom: 2px solid #ccc;
@@ -176,6 +176,7 @@
     line-height: 1.4;
     font-size: 100%;
     background-color: #f1f1f1;
+    white-space: pre-wrap; /* 显示空格 */
   }
 
   /* code 样式 */
@@ -183,11 +184,13 @@
     display: inline-block;
     *display: inline;
     *zoom: 1;
-    background-color: #f1f1f1;
+    background-color: #fafafa;
     border-radius: 3px;
-    padding: 3px 5px;
+    border: 1px solid hsl(0, 0%, 91%);
     margin: 0 3px;
 	font-family: "lucida console";
+    padding: 10px;
+    font-size: 14px;
   }
   .wangeditor pre code {
     display: block;
@@ -223,4 +226,6 @@
     width: 100%;
     height: 400px;
   }
+
+
 </style>
