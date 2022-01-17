@@ -1,7 +1,7 @@
 <template>
-	<a-layout-header class="header" style="background: #21aba5">
+	<a-layout-header class="header" style="background: #41b883">
 		<div class="logo">昆虫云知识库</div>
-		<a-menu theme="dark" mode="horizontal" :style="{ lineHeight: '64px',background: '#21aba5' }">
+		<a-menu theme="dark" mode="horizontal" :style="{color:'#FFF', lineHeight: '64px',background: '#41b883' }">
 			<a-menu-item key="/">
 				<router-link to="/">首页</router-link>
 			</a-menu-item>

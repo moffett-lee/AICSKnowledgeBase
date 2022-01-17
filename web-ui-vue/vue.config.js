@@ -6,9 +6,11 @@ module.exports = {
         lessOptions: {
           // If you are using less-loader@5 please spread the lessOptions to options directly
           modifyVars: {
-            'primary-color': '#11a8cd',
+            'primary-color': '#5e72e4',
             'link-color': '#f85f73',
-            'border-radius-base': '2px',
+            'border-radius-base': '3px',
+			'font-size':'24px',
+			'font-family':"Microsoft YaHei",
           },
           javascriptEnabled: true,
         },

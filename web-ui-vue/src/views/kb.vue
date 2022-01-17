@@ -1,7 +1,7 @@
 <template>
 	<a-layout>
-		<a-layout-content :style="{ background: '#f8f3d4', padding: '24px', margin: 0, minHeight: '240px' }">
-			<div class="aaaaa">
+		<a-layout-content class= "kb" :style="{padding: '24px', margin: 0, minHeight: '240px' }">
+			<div>
 				<div id="main" :style="{width: '95%', height: '560px'}"></div>
 			</div>
 		</a-layout-content>
@@ -103,7 +103,7 @@
 							inRange: {
 							
 								//红色色系
-								color: ['#eaff56','#fff143','#ffa631','#ff7500'
+								color: ['#11cdef','#1ab6d2','#2e7ade','#1171ef'
 								]
 							}
 
@@ -120,7 +120,7 @@
 							top: 1,
 							inRange: {
 								//红蓝相间
-								color: ['#ffc371','#ff5f6d',
+								color: ['#fbb140','#fb6340',
 								]
 
 							}
@@ -207,4 +207,7 @@
 	})
 </script>
 <style>
+	.kb {
+		background: linear-gradient(87deg, #2dce89, #2dcecc) !important;
+	}
 </style>

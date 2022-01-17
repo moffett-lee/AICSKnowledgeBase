@@ -1,13 +1,13 @@
 <template>
     <a-layout>
-        <a-layout-content :style="{ background: '#f8f3d4', padding: '24px', margin: 0, minHeight: '580px' }">
+        <a-layout-content class= "tagbg" :style="{padding: '24px', margin: 0, minHeight: '580px' }">
             <h2 style="margin-bottom: 20px; font-size:1.3rem;text-align: center;">
                 技术成就榜
             </h2>
             <h3 style="text-align: center;">技多不压身，努力掌握更多的技术栈。</h3>
             <div class="tag-main">
                 <span v-for="item in tags" :key="item.id">
-                <a-tag :style="{color:item.color}">
+                <a-tag :style="{background:item.color}" class="tag-tex" >
                     {{item.name}}
                 </a-tag>
                 </span>
@@ -91,5 +91,14 @@
     .tag-main {
         line-height: 6vh;
     }
+	.tagbg {
+		background: linear-gradient(87deg, #2dce89, #2dcecc) !important;
+	}
+	.tag-tex {
+		color:'#FFF';
+		lineHeight:'24px';
+		font-size: 14px;
+		border: 4px yellow;
+	}
 
 </style>

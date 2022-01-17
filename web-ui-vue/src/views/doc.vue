@@ -40,8 +40,6 @@
 
 <script lang="ts">
   import { defineComponent, onMounted, ref, createVNode } from 'vue';
-  import hljs from 'highlight.js';
-  import 'highlight.js/styles/monokai-sublime.css';
   import axios from 'axios';
   import {message} from 'ant-design-vue';
   import {Tool} from "@/util/tool";
@@ -79,7 +77,6 @@
        **/
       const handleQueryContent = (id: number) => {
         axios.get("/doc/findContent/" + id).then((response) => {
-
           const data = response.data;
           if (data.success) {
             html.value = data.data;
@@ -172,7 +169,7 @@
   }
 
   /* blockquote 样式 */
-  .wangeditor blockquote {
+  .vditor-reset blockquote {
     display: block;
     border-left: 8px solid #d0e5f2;
     padding: 5px 10px;
@@ -198,8 +195,9 @@
     max-width: 100%;
     height: auto;
   }
-  .wangeditor pre code {
+  .vditor-reset pre code {
     display: block;
+	background-color: #172b4d;
   }
 
   /* ul ol 样式 */
