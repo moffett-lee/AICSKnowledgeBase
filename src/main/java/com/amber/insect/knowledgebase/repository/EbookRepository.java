@@ -13,7 +13,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository("ebookRepository")
 public interface EbookRepository extends PagingAndSortingRepository<EbookEntity, String>, JpaSpecificationExecutor<EbookEntity> {
-    Page<EbookEntity> findAllByIsDelIs(Pageable pageable, int normal);
 
     @Query("update EbookEntity set isDel = ?2 where id = ?1")
     @Modifying

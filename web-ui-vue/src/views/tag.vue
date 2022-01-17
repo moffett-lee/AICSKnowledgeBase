@@ -92,7 +92,7 @@
         line-height: 6vh;
     }
 	.tagbg {
-		background: linear-gradient(87deg, #2dce89, #2dcecc) !important;
+		background: linear-gradient(87deg, #aaffa9, #11ffbd) !important;
 	}
 	.tag-tex {
 		color:'#FFF';

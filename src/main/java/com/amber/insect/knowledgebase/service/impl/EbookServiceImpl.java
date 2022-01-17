@@ -15,11 +15,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import javax.persistence.criteria.Predicate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -27,12 +30,20 @@ public class EbookServiceImpl implements IEbookService {
 
     @Resource
     private EbookRepository ebookRepository;
+
+
     @Override
     public RPage<EbookDto> list(EbookQuery query) {
+        Specification<EbookEntity> spec = (root, q, cb) -> {
+            List<Predicate> list = new ArrayList<>();
+            list.add(cb.equal(root.get("isDel").as(Integer.class), CommonConstants.NORMAL));
+            list.add(cb.equal(root.get("categoryTwoId").as(Long.class),query.getCategoryTwoId()));
+            return cb.and(list.toArray(new Predicate[list.size()]));
+        };
         RPage page = new RPage();
         Sort sort = Sort.by(Sort.Order.desc("uptTime"));
         Pageable pageable = PageRequest.of(query.getPage() - 1, query.getSize(), sort);
-        Page<EbookEntity> categoryEntities = ebookRepository.findAllByIsDelIs(pageable, CommonConstants.NORMAL);
+        Page<EbookEntity> categoryEntities = ebookRepository.findAll(spec,pageable);
         List<EbookEntity> content = categoryEntities.getContent();
         List<EbookDto> categoryDtos = CopyUtil.copyList(content, EbookDto.class);
         page.setList(categoryDtos);

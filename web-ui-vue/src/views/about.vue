@@ -45,7 +45,7 @@
 	.about {
 		line-height: 30px;
 		padding: 40px;
-		background: #fff;
+		background: linear-gradient(87deg, #8e9eab, #eef2f3) !important;
 		font-size: 16px;
 	}
 
