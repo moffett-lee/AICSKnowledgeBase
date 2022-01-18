@@ -1,76 +1,65 @@
 <template>
 	<a-layout>
-		<a-layout-content class= "kb" :style="{padding: '24px', margin: 0, minHeight: '240px' }">
-			<div>
-				<div id="main" :style="{width: '95%', height: '560px'}"></div>
+		<a-layout-content class="kb" :style="{padding: '24px', margin: 0, minHeight: '240px' }">
+			<div id="xxxxx">
+				<div id="main" style="width: 100%;height:300px;"></div>
 			</div>
 		</a-layout-content>
 	</a-layout>
 </template>
 
-<script>
+<script lang="ts">
 	// 引入echarts
-	import * as echarts from 'echarts'
+	//simport * as echarts from 'echarts'
 	import {
 		defineComponent,
 		onMounted,
+		onUpdated,
 		ref
 	} from 'vue';
 	import axios from 'axios';
 	import {
 		message
 	} from 'ant-design-vue';
+	declare let echarts: any;
 	export default defineComponent({
 		name: 'Kanban',
 		components: {},
 		setup() {
-			const contributes = [];
-			const articleNum = [];
-			/**
-			 * 查询所有日志数据
-			 **/
-			const handleQueryCategory = () => {
-				axios.get("/contribute/getContributeList").then((response) => {
-					if (response.data.success) {
-						contributes.value = response.data.data;
-						console.log("contributes：", contributes);
-					} else {
-						message.error(response.data.msg);
-					}
-				});
-			};
-			onMounted(() => {
-				handleQueryCategory();
-			});
+			const statistic = ref();
 
-			// const getVirtulData = () => {
-			// 	for (let i = 0; i < contributes.length; i++) {
-
-			// 		articleNum.push(contributes[i].articleNum)
-			// 	}
-			// 	return articleNum;
-			// };
-			function getVirtulData(year) {
-				year = year || '2017';
-				const date = +echarts.number.parseDate(year + '-01-01');
-				const end = +echarts.number.parseDate(+year + 1 + '-01-01');
-				const dayTime = 3600 * 24 * 1000;
-				const data = []
-				for (let time = date; time < end; time += dayTime) {
-					data.push([
-						echarts.format.formatTime('yyyy-MM-dd', time),
-						Math.floor(Math.random() * 100)
-					]);
+			const init30DayEcharts = (list: any) => {
+				// 发布生产后出现问题：切到别的页面，再切回首页，报表显示不出来
+				// 解决方法：把原来的id=main的区域清空，重新初始化
+				const mainDom = document.getElementById('xxxxx');
+				if (mainDom) {
+					mainDom.innerHTML =
+						'<div id="main" style="width: 100%;height:600px; background: #FFF"></div>';
 				}
-				return data;
-			}
+				// 基于准备好的dom，初始化echarts实例
+				const myChart = echarts.init(document.getElementById('main'));
 
-			console.log("=========：", articleNum);
+				//const xAxis = [];
+				//const seriesView = [];
+				//const seriesVote = [];
+				//for (let i = 0; i < list.length; i++) {
+				//	const record = list[i];
+				//	xAxis.push(record.date);
+				//	seriesView.push(record.viewIncrease);
+				//	seriesVote.push(record.voteIncrease);
+				//}
 
-			onMounted(() => { // 需要获取到element,所以是onMounted的Hook
-				const myChart = echarts.init(document.getElementById("main"));
-				// 绘制图表
-				myChart.setOption({
+
+				const seriesView = [];
+
+				for (let i = 0; i < list.length; i++) {
+					const record = list[i];
+
+					seriesView.push(list);
+					console.log("seriesView", seriesView);
+				}
+				// 指定图表的配置项和数据
+				const option = {
 					title: [{
 						top: 30,
 						left: 'center',
@@ -101,10 +90,9 @@
 							show: false, //是否显示图例
 							top: 65,
 							inRange: {
-							
+
 								//红色色系
-								color: ['#11cdef','#1ab6d2','#2e7ade','#1171ef'
-								]
+								color: ['#11cdef', '#1ab6d2', '#2e7ade', '#1171ef']
 							}
 
 						},
@@ -120,8 +108,7 @@
 							top: 1,
 							inRange: {
 								//红蓝相间
-								color: ['#fbb140','#fb6340',
-								]
+								color: ['#fbb140', '#fb6340', ]
 
 							}
 
@@ -184,24 +171,41 @@
 							type: 'heatmap',
 							coordinateSystem: 'calendar',
 							calendarIndex: 0,
-							data: getVirtulData('2022')
+							data: seriesView,
 						},
 						{
 							type: 'heatmap',
 							coordinateSystem: 'calendar',
 							calendarIndex: 1,
-							data: getVirtulData('2022')
+							data: seriesView
 						}
 					]
+				}
+				// 使用刚指定的配置项和数据显示图表。
+				myChart.setOption(option);
+			};
+			/**
+			 * 查询所有日志数据
+			 **/
+			const handleQueryCategory = () => {
+				axios.get("/contribute/getContributeList").then((response) => {
+					if (response.data.success) {
+						const statisticList = response.data.data;
+						init30DayEcharts(statisticList)
+						console.log("分装结果数据", statisticList);
+					} else {
+						message.error(response.data.msg);
+					}
 				});
-				window.onresize =
-					function() { // 自适应大小
-						myChart.resize();
-					};
+			};
+			onMounted(() => {
+				handleQueryCategory();
 			});
+
 			return {
-				contributes,
-				articleNum
+
+				statistic
+
 			}
 		}
 	})
