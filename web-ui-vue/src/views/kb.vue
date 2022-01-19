@@ -42,12 +42,10 @@
 				for (let i = 0; i < list.length; i++) {
 					const record = list[i];
 					articleView.push(record);
-					console.log("articleView", articleView);
 				}
 				for (let i = 0; i < list2.length; i++) {
 					const record2 = list2[i];
 					codeView.push(record2);
-					console.log("codeView", codeView);
 				}
 				// 指定图表的配置项和数据
 				const option = {
@@ -183,7 +181,6 @@
 					if (response.data.success) {
 						const statisticList = response.data.data;
 						init30DayEcharts(statisticList.articleLists,statisticList.codeLists)
-						console.log("分装结果数据", statisticList);
 					} else {
 						message.error(response.data.msg);
 					}

@@ -71,7 +71,6 @@
                 axios.get("/tag/getTagList").then((response) => {
                     if (response.data.success) {
                         tags.value = response.data.data;
-                        console.log("tag数据：", tags);
                     } else {
                         message.error(response.data.msg);
                     }
