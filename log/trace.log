@@ -4839,3 +4839,966 @@ Caused by: java.sql.SQLException: Field 'id' doesn't have a default value
 2022-01-19 21:12:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4028293200351232  [0;39m 更新电子书下的文档数据开始
 2022-01-19 21:12:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4028293200351232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
 2022-01-19 21:12:38.778 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:41   [32m                  [0;39m 连接关闭，token：4s5padJkFf，session id：b！当前连接数：0
+2022-01-19 22:18:23.324 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2022-01-19 22:18:23.331 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on LYZ with PID 3208 (G:\amber-github-workspace\AICSKnowledgeBase\target\classes started by Administrator in G:\amber-github-workspace\AICSKnowledgeBase)
+2022-01-19 22:18:23.331 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-19 22:18:23.382 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-19 22:18:23.382 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-19 22:18:23.966 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:18:23.966 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-19 22:18:24.058 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 83 ms. Found 8 JPA repository interfaces.
+2022-01-19 22:18:24.217 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:18:24.218 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-19 22:18:24.235 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.CategoryRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:18:24.236 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:18:24.236 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContributeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:18:24.237 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.DocRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:18:24.237 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:18:24.238 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookSnapshotRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:18:24.238 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:18:24.238 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:18:24.239 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-01-19 22:18:25.090 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-19 22:18:25.097 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:18:25.098 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-19 22:18:25.098 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-19 22:18:25.184 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-19 22:18:25.185 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1802 ms
+2022-01-19 22:18:25.485 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-19 22:18:25.528 INFO  org.hibernate.Version                             :44   [32m                  [0;39m HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-19 22:18:25.644 INFO  org.hibernate.annotations.common.Version          :56   [32m                  [0;39m HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-19 22:18:25.767 INFO  com.alibaba.druid.pool.DruidDataSource            :1003 [32m                  [0;39m {dataSource-1} inited
+2022-01-19 22:18:26.125 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-19 22:18:26.746 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-19 22:18:26.756 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 22:18:28.289 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-19 22:18:29.662 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-01-19 22:18:29.697 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:18:29.712 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-01-19 22:18:29.725 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 6.818 seconds (JVM running for 7.648)
+2022-01-19 22:18:35.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4044902698717184  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:18:35.016 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4044902698717184  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:19:00.014 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4045007552122880  [0;39m 生成今日电子书快照开始
+2022-01-19 22:19:00.073 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4045007552122880  [0;39m 生成今日电子书快照结束，耗时：58毫秒
+2022-01-19 22:19:05.012 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4045028515254272  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:19:05.012 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4045028515254272  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:19:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4045154306625536  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:19:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4045154306625536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:20:00.006 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4045259176808448  [0;39m 生成今日电子书快照开始
+2022-01-19 22:20:00.014 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4045259176808448  [0;39m 生成今日电子书快照结束，耗时：7毫秒
+2022-01-19 22:20:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4045280127356928  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:20:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4045280127356928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:20:35.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4045406006808576  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:20:35.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4045406006808576  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:21:00.005 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4045510830854144  [0;39m 生成今日电子书快照开始
+2022-01-19 22:21:00.011 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4045510830854144  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-19 22:21:05.005 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4045531802374144  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:21:05.005 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4045531802374144  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:21:35.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4045657673437184  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:21:35.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4045657673437184  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:22:00.013 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4045762522648576  [0;39m 生成今日电子书快照开始
+2022-01-19 22:22:00.033 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4045762522648576  [0;39m 生成今日电子书快照结束，耗时：19毫秒
+2022-01-19 22:22:05.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4045783464808448  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:22:05.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4045783464808448  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:22:35.010 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4045909310705664  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:22:35.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4045909310705664  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:23:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4046014130556928  [0;39m 生成今日电子书快照开始
+2022-01-19 22:23:00.006 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4046014130556928  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-19 22:23:05.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4046035144019968  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:23:05.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4046035144019968  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:23:35.012 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4046160977334272  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:23:35.012 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4046160977334272  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:23:53.860 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-19 22:23:53.860 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-01-19 22:23:53.861 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2022-01-19 22:23:54.049 INFO  c.a.insect.knowledgebase.controller.UserController:102  [32m                  [0;39m 生成单点登录token：4046240815910912，并放入redis中
+2022-01-19 22:23:56.472 ERROR c.a.insect.knowledgebase.handler.ExceptionHandler :59   [32m                  [0;39m 系统异常：
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1689)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1597)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1383)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1366)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1093)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:210)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:190)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:97)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:325)
+	at com.amber.insect.knowledgebase.controller.UserController.login(UserController.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1595)
+	... 62 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2022-01-19 22:23:56.509 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379]
+2022-01-19 22:24:00.015 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4046265847517184  [0;39m 生成今日电子书快照开始
+2022-01-19 22:24:00.015 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4046265847517184  [0;39m 生成今日电子书快照结束，耗时：0毫秒
+2022-01-19 22:24:05.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4046286810648576  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:24:05.014 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4046286810648576  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:24:35.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4046412648157184  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:24:35.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4046412648157184  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:24:49.234 INFO  c.a.insect.knowledgebase.controller.UserController:102  [32m                  [0;39m 生成单点登录token：4046472286965760，并放入redis中
+2022-01-19 22:24:51.303 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:24:51.303 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：0 ms -------------
+2022-01-19 22:24:51.308 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:24:51.309 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/tag/getTagListPage
+2022-01-19 22:24:51.309 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4046472286965760
+2022-01-19 22:24:51.315 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":1,"passWord":"1f15d405949c4ed3c2279aa6d48b1e9a","token":"4046472286965760","userCode":"admin","userName":"李雨泽"}
+2022-01-19 22:24:51.372 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：64 ms -------------
+2022-01-19 22:24:53.996 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:24:53.996 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：0 ms -------------
+2022-01-19 22:24:53.999 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:24:54.000 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/getUserListPage
+2022-01-19 22:24:54.000 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4046472286965760
+2022-01-19 22:24:54.001 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":1,"passWord":"1f15d405949c4ed3c2279aa6d48b1e9a","token":"4046472286965760","userCode":"admin","userName":"李雨泽"}
+2022-01-19 22:24:54.021 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：21 ms -------------
+2022-01-19 22:24:56.215 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:24:56.216 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/getUserListPage
+2022-01-19 22:24:56.216 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4046472286965760
+2022-01-19 22:24:56.217 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":1,"passWord":"1f15d405949c4ed3c2279aa6d48b1e9a","token":"4046472286965760","userCode":"admin","userName":"李雨泽"}
+2022-01-19 22:24:56.225 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：9 ms -------------
+2022-01-19 22:25:00.009 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4046517480591360  [0;39m 生成今日电子书快照开始
+2022-01-19 22:25:00.016 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4046517480591360  [0;39m 生成今日电子书快照结束，耗时：7毫秒
+2022-01-19 22:25:05.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4046538477277184  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:25:05.016 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4046538477277184  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:25:35.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4046664306397184  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:25:35.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4046664306397184  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:25:49.513 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:25:49.514 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：1 ms -------------
+2022-01-19 22:25:49.517 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:25:49.517 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/save
+2022-01-19 22:25:49.518 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4046472286965760
+2022-01-19 22:25:49.520 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":1,"passWord":"1f15d405949c4ed3c2279aa6d48b1e9a","token":"4046472286965760","userCode":"admin","userName":"李雨泽"}
+2022-01-19 22:25:49.633 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：116 ms -------------
+2022-01-19 22:25:49.647 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:25:49.648 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/getUserListPage
+2022-01-19 22:25:49.648 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4046472286965760
+2022-01-19 22:25:49.649 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":1,"passWord":"1f15d405949c4ed3c2279aa6d48b1e9a","token":"4046472286965760","userCode":"admin","userName":"李雨泽"}
+2022-01-19 22:25:49.657 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：9 ms -------------
+2022-01-19 22:26:00.015 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4046769163997184  [0;39m 生成今日电子书快照开始
+2022-01-19 22:26:00.024 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4046769163997184  [0;39m 生成今日电子书快照结束，耗时：8毫秒
+2022-01-19 22:26:05.016 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4046790139711488  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:26:05.017 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4046790139711488  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:26:25.499 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:26:25.499 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：0 ms -------------
+2022-01-19 22:26:25.502 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:26:25.503 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/logout/4046472286965760
+2022-01-19 22:26:25.503 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4046472286965760
+2022-01-19 22:26:25.505 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":1,"passWord":"1f15d405949c4ed3c2279aa6d48b1e9a","token":"4046472286965760","userCode":"admin","userName":"李雨泽"}
+2022-01-19 22:26:25.516 INFO  c.a.insect.knowledgebase.controller.UserController:119  [32m                  [0;39m 从redis中删除token: 4046472286965760
+2022-01-19 22:26:25.517 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：14 ms -------------
+2022-01-19 22:26:35.005 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4046915922694144  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:26:35.005 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4046915922694144  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:26:42.495 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:26:42.496 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:27:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4047020767711232  [0;39m 生成今日电子书快照开始
+2022-01-19 22:27:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4047020767711232  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-19 22:27:05.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4047041776979968  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:27:05.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4047041776979968  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:27:24.714 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:27:24.715 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:27:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4047167568351232  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:27:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4047167568351232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:27:56.129 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:27:56.132 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:28:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4047272451117056  [0;39m 生成今日电子书快照开始
+2022-01-19 22:28:00.014 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4047272451117056  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-19 22:28:23.815 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4047372304912384  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:28:23.815 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4047372304912384  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:28:23.815 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:28:23.818 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:28:35.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4047419281117184  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:28:35.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4047419281117184  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:28:43.008 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 22:28:43.013 INFO  com.alibaba.druid.pool.DruidDataSource            :1948 [32m                  [0;39m {dataSource-1} closing ...
+2022-01-19 22:28:43.017 INFO  com.alibaba.druid.pool.DruidDataSource            :2020 [32m                  [0;39m {dataSource-1} closed
+2022-01-19 22:28:43.431 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on LYZ with PID 3208 (G:\amber-github-workspace\AICSKnowledgeBase\target\classes started by Administrator in G:\amber-github-workspace\AICSKnowledgeBase)
+2022-01-19 22:28:43.431 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-19 22:28:43.656 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:28:43.657 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-19 22:28:43.660 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-01-19 22:28:43.723 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:28:43.724 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-19 22:28:43.727 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2022-01-19 22:28:43.959 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-19 22:28:43.960 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:28:43.960 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-19 22:28:43.961 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-19 22:28:43.979 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-19 22:28:43.979 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 542 ms
+2022-01-19 22:28:44.057 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-19 22:28:44.065 INFO  com.alibaba.druid.pool.DruidDataSource            :1003 [32m                  [0;39m {dataSource-2} inited
+2022-01-19 22:28:44.103 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-19 22:28:44.129 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-19 22:28:44.130 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 22:28:44.181 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-19 22:28:44.785 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-01-19 22:28:44.808 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:28:44.809 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-01-19 22:28:44.822 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 1.446 seconds (JVM running for 622.745)
+2022-01-19 22:28:44.829 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :58   [32m                  [0;39m Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2022-01-19 22:28:46.332 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 22:28:46.334 INFO  com.alibaba.druid.pool.DruidDataSource            :1948 [32m                  [0;39m {dataSource-2} closing ...
+2022-01-19 22:28:46.335 INFO  com.alibaba.druid.pool.DruidDataSource            :2020 [32m                  [0;39m {dataSource-2} closed
+2022-01-19 22:28:46.650 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on LYZ with PID 3208 (G:\amber-github-workspace\AICSKnowledgeBase\target\classes started by Administrator in G:\amber-github-workspace\AICSKnowledgeBase)
+2022-01-19 22:28:46.650 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-19 22:28:46.857 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:28:46.857 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-19 22:28:46.911 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 53 ms. Found 8 JPA repository interfaces.
+2022-01-19 22:28:46.980 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:28:46.981 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-19 22:28:46.987 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.CategoryRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:28:46.987 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:28:46.988 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContributeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:28:46.988 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.DocRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:28:46.988 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:28:46.989 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookSnapshotRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:28:46.989 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:28:46.990 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:28:46.990 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-01-19 22:28:47.187 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-19 22:28:47.188 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:28:47.188 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-19 22:28:47.188 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-19 22:28:47.198 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-19 22:28:47.199 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 544 ms
+2022-01-19 22:28:47.292 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-19 22:28:47.301 INFO  com.alibaba.druid.pool.DruidDataSource            :1003 [32m                  [0;39m {dataSource-3} inited
+2022-01-19 22:28:47.327 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-19 22:28:50.822 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-19 22:28:50.823 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 22:28:51.435 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-19 22:28:51.937 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-01-19 22:28:51.953 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:28:51.955 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-01-19 22:28:51.959 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 5.346 seconds (JVM running for 629.882)
+2022-01-19 22:28:51.962 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :58   [32m                  [0;39m Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper:
+      Did not match:
+         - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found beans of type 'com.fasterxml.jackson.databind.ObjectMapper' jacksonObjectMapper (OnBeanCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2022-01-19 22:29:00.010 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4047524117745664  [0;39m 生成今日电子书快照开始
+2022-01-19 22:29:00.022 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4047524117745664  [0;39m 生成今日电子书快照结束，耗时：10毫秒
+2022-01-19 22:29:03.417 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-19 22:29:03.417 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-01-19 22:29:03.418 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2022-01-19 22:29:34.063 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4047666946379776  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:29:34.063 INFO  c.a.i.knowledgebase.service.impl.UserServiceImpl  :98   [32m                  [0;39m 用户名不存在, amberliyuze
+2022-01-19 22:29:34.063 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4047666946379776  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:30:00.215 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4047776635817984  [0;39m 生成今日电子书快照开始
+2022-01-19 22:30:00.218 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:30:00.229 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:30:00.235 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4047776635817984  [0;39m 生成今日电子书快照结束，耗时：18毫秒
+2022-01-19 22:30:00.235 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4047776719704064  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:30:00.235 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4047776719704064  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:30:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4047796713951232  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:30:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4047796713951232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:30:24.232 INFO  c.a.i.knowledgebase.service.impl.UserServiceImpl  :98   [32m                  [0;39m 用户名不存在, amberliyuze
+2022-01-19 22:30:24.233 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:30:24.235 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:30:35.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4047922589208576  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:30:35.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4047922589208576  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:30:49.739 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 22:30:49.740 INFO  com.alibaba.druid.pool.DruidDataSource            :1948 [32m                  [0;39m {dataSource-3} closing ...
+2022-01-19 22:30:49.742 INFO  com.alibaba.druid.pool.DruidDataSource            :2020 [32m                  [0;39m {dataSource-3} closed
+2022-01-19 22:30:50.180 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on LYZ with PID 3208 (G:\amber-github-workspace\AICSKnowledgeBase\target\classes started by Administrator in G:\amber-github-workspace\AICSKnowledgeBase)
+2022-01-19 22:30:50.180 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-19 22:30:50.411 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:30:50.412 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-19 22:30:50.415 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-01-19 22:30:50.497 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:30:50.497 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-19 22:30:50.500 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2022-01-19 22:30:50.707 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-19 22:30:50.708 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:30:50.708 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-19 22:30:50.708 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-19 22:30:50.724 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-19 22:30:50.724 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 541 ms
+2022-01-19 22:30:50.813 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-19 22:30:50.821 INFO  com.alibaba.druid.pool.DruidDataSource            :1003 [32m                  [0;39m {dataSource-4} inited
+2022-01-19 22:30:50.852 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-19 22:30:50.875 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-19 22:30:50.876 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 22:30:50.906 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-19 22:30:51.328 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-01-19 22:30:51.345 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:30:51.346 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-01-19 22:30:51.354 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 1.231 seconds (JVM running for 749.277)
+2022-01-19 22:30:51.357 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :58   [32m                  [0;39m Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2022-01-19 22:30:53.658 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 22:30:53.660 INFO  com.alibaba.druid.pool.DruidDataSource            :1948 [32m                  [0;39m {dataSource-4} closing ...
+2022-01-19 22:30:53.661 INFO  com.alibaba.druid.pool.DruidDataSource            :2020 [32m                  [0;39m {dataSource-4} closed
+2022-01-19 22:30:53.977 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on LYZ with PID 3208 (G:\amber-github-workspace\AICSKnowledgeBase\target\classes started by Administrator in G:\amber-github-workspace\AICSKnowledgeBase)
+2022-01-19 22:30:53.978 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-19 22:30:54.229 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:30:54.229 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-19 22:30:54.267 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 37 ms. Found 8 JPA repository interfaces.
+2022-01-19 22:30:54.315 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:30:54.315 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-19 22:30:54.319 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.CategoryRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:30:54.319 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:30:54.319 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContributeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:30:54.320 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.DocRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:30:54.320 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:30:54.320 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookSnapshotRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:30:54.320 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:30:54.320 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:30:54.321 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2022-01-19 22:30:54.520 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-19 22:30:54.521 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:30:54.521 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-19 22:30:54.522 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-19 22:30:54.537 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-19 22:30:54.537 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 554 ms
+2022-01-19 22:30:54.703 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-19 22:30:54.713 INFO  com.alibaba.druid.pool.DruidDataSource            :1003 [32m                  [0;39m {dataSource-5} inited
+2022-01-19 22:30:54.743 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-19 22:30:54.896 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-19 22:30:54.896 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 22:31:01.471 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-19 22:31:01.961 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-01-19 22:31:01.976 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:31:01.978 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-01-19 22:31:01.983 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 8.047 seconds (JVM running for 759.906)
+2022-01-19 22:31:01.984 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :58   [32m                  [0;39m Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper:
+      Did not match:
+         - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found beans of type 'com.fasterxml.jackson.databind.ObjectMapper' jacksonObjectMapper (OnBeanCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2022-01-19 22:31:05.007 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4048048393162752  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:31:05.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4048048393162752  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:31:08.865 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-19 22:31:08.865 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-01-19 22:31:08.867 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 2 ms
+2022-01-19 22:31:13.441 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:31:13.447 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:31:35.016 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4048174260031488  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:31:35.016 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4048174260031488  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:32:16.750 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4048349305114624  [0;39m 生成今日电子书快照开始
+2022-01-19 22:32:16.750 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:32:16.753 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:32:16.765 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4048349305114624  [0;39m 生成今日电子书快照结束，耗时：15毫秒
+2022-01-19 22:32:16.765 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4048349368029184  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:32:16.765 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4048349368029184  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:32:35.007 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4048425880522752  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:32:35.007 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4048425880522752  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:33:00.013 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4048530763288576  [0;39m 生成今日电子书快照开始
+2022-01-19 22:33:00.021 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4048530763288576  [0;39m 生成今日电子书快照结束，耗时：8毫秒
+2022-01-19 22:33:00.966 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:32   [32m                  [0;39m 有新连接：token：0uHOsfQtDw，session id：0，当前连接数：1
+2022-01-19 22:33:05.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4048551734808576  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:33:05.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4048551734808576  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:33:50.017 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4048740495265792  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:33:50.017 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4048740495265792  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:33:50.017 INFO  c.a.i.knowledgebase.service.impl.UserServiceImpl  :98   [32m                  [0;39m 用户名不存在, amber
+2022-01-19 22:33:50.018 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:33:50.020 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:34:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4048782371196928  [0;39m 生成今日电子书快照开始
+2022-01-19 22:34:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4048782371196928  [0;39m 生成今日电子书快照结束，耗时：7毫秒
+2022-01-19 22:34:05.010 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4048803380465664  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:34:05.010 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4048803380465664  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:34:35.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4048929192808448  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:34:35.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4048929192808448  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:34:55.561 INFO  c.a.insect.knowledgebase.controller.UserController:102  [32m                  [0;39m 生成单点登录token：4049015406727168，并放入redis中
+2022-01-19 22:35:00.005 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4049034046214144  [0;39m 生成今日电子书快照开始
+2022-01-19 22:35:00.011 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4049034046214144  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-19 22:35:05.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4049055021928448  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:35:05.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4049055021928448  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:35:35.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4049180851048448  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:35:35.007 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4049180851048448  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:35:37.274 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:35:37.274 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：0 ms -------------
+2022-01-19 22:35:37.284 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:35:37.284 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/logout/4049015406727168
+2022-01-19 22:35:37.284 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4049015406727168
+2022-01-19 22:35:37.284 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":1,"passWord":"1f15d405949c4ed3c2279aa6d48b1e9a","token":"4049015406727168","userCode":"admin","userName":"李雨泽"}
+2022-01-19 22:35:37.294 INFO  c.a.insect.knowledgebase.controller.UserController:119  [32m                  [0;39m 从redis中删除token: 4049015406727168
+2022-01-19 22:35:37.294 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：10 ms -------------
+2022-01-19 22:36:17.190 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4049357783568384  [0;39m 生成今日电子书快照开始
+2022-01-19 22:36:19.879 INFO  c.a.insect.knowledgebase.controller.UserController:102  [32m                  [0;39m 生成单点登录token：4049369062051840，并放入redis中
+2022-01-19 22:36:19.889 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4049357783568384  [0;39m 生成今日电子书快照结束，耗时：10毫秒
+2022-01-19 22:36:19.889 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4049369103994880  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:36:19.889 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4049369103994880  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:36:26.216 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:36:26.216 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/getUserListPage
+2022-01-19 22:36:26.216 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4049369062051840
+2022-01-19 22:36:26.216 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":1,"passWord":"1f15d405949c4ed3c2279aa6d48b1e9a","token":"4049369062051840","userCode":"admin","userName":"李雨泽"}
+2022-01-19 22:36:26.236 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：20 ms -------------
+2022-01-19 22:36:35.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4049432547037184  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:36:35.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4049432547037184  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:36:35.064 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:36:35.064 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/save
+2022-01-19 22:36:35.065 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4049369062051840
+2022-01-19 22:36:35.067 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":1,"passWord":"1f15d405949c4ed3c2279aa6d48b1e9a","token":"4049369062051840","userCode":"admin","userName":"李雨泽"}
+2022-01-19 22:36:35.232 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：168 ms -------------
+2022-01-19 22:36:35.257 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:36:35.257 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/getUserListPage
+2022-01-19 22:36:35.257 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4049369062051840
+2022-01-19 22:36:35.259 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":1,"passWord":"1f15d405949c4ed3c2279aa6d48b1e9a","token":"4049369062051840","userCode":"admin","userName":"李雨泽"}
+2022-01-19 22:36:35.267 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：10 ms -------------
+2022-01-19 22:37:00.012 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4049537392054272  [0;39m 生成今日电子书快照开始
+2022-01-19 22:37:00.021 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4049537392054272  [0;39m 生成今日电子书快照结束，耗时：8毫秒
+2022-01-19 22:37:05.009 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4049558350991360  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:37:05.009 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4049558350991360  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:37:06.060 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:37:06.060 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：0 ms -------------
+2022-01-19 22:37:06.063 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:37:06.064 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/logout/4049369062051840
+2022-01-19 22:37:06.064 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4049369062051840
+2022-01-19 22:37:06.066 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":1,"passWord":"1f15d405949c4ed3c2279aa6d48b1e9a","token":"4049369062051840","userCode":"admin","userName":"李雨泽"}
+2022-01-19 22:37:06.068 INFO  c.a.insect.knowledgebase.controller.UserController:119  [32m                  [0;39m 从redis中删除token: 4049369062051840
+2022-01-19 22:37:06.070 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：6 ms -------------
+2022-01-19 22:37:15.214 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:37:15.215 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:38:16.456 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4049858021429248  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:38:16.456 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4049858021429248  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:38:16.974 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:38:16.974 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4049860194078720  [0;39m 生成今日电子书快照开始
+2022-01-19 22:38:16.978 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:32   [32m                  [0;39m 有新连接：token：4tI4BPRu3S，session id：1，当前连接数：2
+2022-01-19 22:38:16.976 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:38:16.988 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:41   [32m                  [0;39m 连接关闭，token：0uHOsfQtDw，session id：0！当前连接数：1
+2022-01-19 22:38:16.993 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4049860194078720  [0;39m 生成今日电子书快照结束，耗时：19毫秒
+2022-01-19 22:38:18.109 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:38:18.110 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:38:35.010 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4049935842545664  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:38:35.010 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4049935842545664  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:39:00.010 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4050040700145664  [0;39m 生成今日电子书快照开始
+2022-01-19 22:39:00.016 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4050040700145664  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-19 22:39:05.014 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4050061688442880  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:39:05.014 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4050061688442880  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:39:35.004 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4050187475619840  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:39:35.005 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4050187475619840  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:40:00.010 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4050292358385664  [0;39m 生成今日电子书快照开始
+2022-01-19 22:40:00.018 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4050292358385664  [0;39m 生成今日电子书快照结束，耗时：7毫秒
+2022-01-19 22:40:05.016 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4050313355071488  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:40:05.016 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4050313355071488  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:40:35.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4050439163219968  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:40:35.012 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4050439163219968  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:41:00.005 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4050543995654144  [0;39m 生成今日电子书快照开始
+2022-01-19 22:41:00.024 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4050543995654144  [0;39m 生成今日电子书快照结束，耗时：18毫秒
+2022-01-19 22:41:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4050564950396928  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:41:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4050564950396928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:41:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4050690787905536  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:41:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4050690787905536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:42:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4050795641311232  [0;39m 生成今日电子书快照开始
+2022-01-19 22:42:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4050795641311232  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-19 22:42:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4050816612831232  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:42:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4050816612831232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:42:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4050942446145536  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:42:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4050942446145536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:43:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4051047299551232  [0;39m 生成今日电子书快照开始
+2022-01-19 22:43:00.011 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4051047299551232  [0;39m 生成今日电子书快照结束，耗时：8毫秒
+2022-01-19 22:43:05.007 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4051068292042752  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:43:05.008 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4051068292042752  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:43:35.008 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4051194125357056  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:43:35.009 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4051194125357056  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:43:56.416 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:43:56.417 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:44:00.004 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4051298966179840  [0;39m 生成今日电子书快照开始
+2022-01-19 22:44:00.004 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4051298966179840  [0;39m 生成今日电子书快照结束，耗时：0毫秒
+2022-01-19 22:44:05.014 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4051319979642880  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:44:05.014 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4051319979642880  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:44:39.296 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4051463768772608  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:44:39.297 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4051463768772608  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:44:39.297 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:44:39.298 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:44:58.030 INFO  c.a.insect.knowledgebase.controller.UserController:102  [32m                  [0;39m 生成单点登录token：4051542344863744，并放入redis中
+2022-01-19 22:45:00.012 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4051550657974272  [0;39m 生成今日电子书快照开始
+2022-01-19 22:45:00.017 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4051550657974272  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-19 22:45:04.970 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:45:04.970 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/getUserListPage
+2022-01-19 22:45:04.970 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4051542344863744
+2022-01-19 22:45:04.972 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":5,"passWord":"7395005cd4342cd4b9fc0b936b9c6f4d","token":"4051542344863744","userCode":"amberliyuze","userName":"李雨泽"}
+2022-01-19 22:45:04.978 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：8 ms -------------
+2022-01-19 22:45:05.014 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4051571637882880  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:45:05.014 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4051571637882880  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:45:31.492 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:45:31.493 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/tag/getTagListPage
+2022-01-19 22:45:31.493 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4051542344863744
+2022-01-19 22:45:31.494 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":5,"passWord":"7395005cd4342cd4b9fc0b936b9c6f4d","token":"4051542344863744","userCode":"amberliyuze","userName":"李雨泽"}
+2022-01-19 22:45:31.508 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：15 ms -------------
+2022-01-19 22:45:35.012 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4051697458614272  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:45:35.012 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4051697458614272  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:45:39.714 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:45:39.715 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/tag/getTagListPage
+2022-01-19 22:45:39.715 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4051542344863744
+2022-01-19 22:45:39.716 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":5,"passWord":"7395005cd4342cd4b9fc0b936b9c6f4d","token":"4051542344863744","userCode":"amberliyuze","userName":"李雨泽"}
+2022-01-19 22:45:39.721 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：6 ms -------------
+2022-01-19 22:45:41.551 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:45:41.552 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/getUserListPage
+2022-01-19 22:45:41.552 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4051542344863744
+2022-01-19 22:45:41.553 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":5,"passWord":"7395005cd4342cd4b9fc0b936b9c6f4d","token":"4051542344863744","userCode":"amberliyuze","userName":"李雨泽"}
+2022-01-19 22:45:41.557 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：5 ms -------------
+2022-01-19 22:45:50.470 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:45:50.471 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：1 ms -------------
+2022-01-19 22:45:50.474 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:45:50.474 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/logout/4051542344863744
+2022-01-19 22:45:50.474 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4051542344863744
+2022-01-19 22:45:50.475 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":5,"passWord":"7395005cd4342cd4b9fc0b936b9c6f4d","token":"4051542344863744","userCode":"amberliyuze","userName":"李雨泽"}
+2022-01-19 22:45:50.477 INFO  c.a.insect.knowledgebase.controller.UserController:119  [32m                  [0;39m 从redis中删除token: 4051542344863744
+2022-01-19 22:45:50.478 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：4 ms -------------
+2022-01-19 22:46:04.798 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4051822390153216  [0;39m 生成今日电子书快照开始
+2022-01-19 22:46:04.799 WARN  c.a.insect.knowledgebase.handler.ExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2022-01-19 22:46:04.800 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [com.amber.insect.knowledgebase.exception.BusinessException: 用户名不存在或密码错误]
+2022-01-19 22:46:04.805 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4051822390153216  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-19 22:46:05.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4051823262568448  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:46:05.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4051823262568448  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:46:15.064 INFO  c.a.insect.knowledgebase.controller.UserController:102  [32m                  [0;39m 生成单点登录token：4051865448878080，并放入redis中
+2022-01-19 22:46:18.868 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:46:18.869 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/getUserListPage
+2022-01-19 22:46:18.869 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4051865448878080
+2022-01-19 22:46:18.870 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":5,"passWord":"7395005cd4342cd4b9fc0b936b9c6f4d","token":"4051865448878080","userCode":"amberliyuze","userName":"李雨泽"}
+2022-01-19 22:46:18.874 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：5 ms -------------
+2022-01-19 22:46:20.016 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:46:20.017 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/tag/getTagListPage
+2022-01-19 22:46:20.017 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4051865448878080
+2022-01-19 22:46:20.018 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":5,"passWord":"7395005cd4342cd4b9fc0b936b9c6f4d","token":"4051865448878080","userCode":"amberliyuze","userName":"李雨泽"}
+2022-01-19 22:46:20.021 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：4 ms -------------
+2022-01-19 22:46:23.272 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:46:23.272 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/tag/getTagListPage
+2022-01-19 22:46:23.273 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4051865448878080
+2022-01-19 22:46:23.273 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":5,"passWord":"7395005cd4342cd4b9fc0b936b9c6f4d","token":"4051865448878080","userCode":"amberliyuze","userName":"李雨泽"}
+2022-01-19 22:46:23.277 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：5 ms -------------
+2022-01-19 22:46:24.606 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:46:24.606 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/user/getUserListPage
+2022-01-19 22:46:24.606 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4051865448878080
+2022-01-19 22:46:24.607 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":5,"passWord":"7395005cd4342cd4b9fc0b936b9c6f4d","token":"4051865448878080","userCode":"amberliyuze","userName":"李雨泽"}
+2022-01-19 22:46:24.611 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：5 ms -------------
+2022-01-19 22:46:27.801 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:46:27.801 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/tag/getTagListPage
+2022-01-19 22:46:27.801 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4051865448878080
+2022-01-19 22:46:27.802 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":5,"passWord":"7395005cd4342cd4b9fc0b936b9c6f4d","token":"4051865448878080","userCode":"amberliyuze","userName":"李雨泽"}
+2022-01-19 22:46:27.805 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：4 ms -------------
+2022-01-19 22:46:35.016 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4051949133631488  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:46:35.016 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4051949133631488  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:46:39.139 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:46:39.140 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：0 ms -------------
+2022-01-19 22:46:39.142 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:46:39.142 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/ebook/save
+2022-01-19 22:46:39.143 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4051865448878080
+2022-01-19 22:46:39.144 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":5,"passWord":"7395005cd4342cd4b9fc0b936b9c6f4d","token":"4051865448878080","userCode":"amberliyuze","userName":"李雨泽"}
+2022-01-19 22:47:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4052053928316928  [0;39m 生成今日电子书快照开始
+2022-01-19 22:47:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4052053928316928  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-19 22:47:05.008 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4052074929197056  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:47:05.008 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4052074929197056  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:47:35.010 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4052200766705664  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:47:35.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4052200766705664  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:48:00.006 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4052305607528448  [0;39m 生成今日电子书快照开始
+2022-01-19 22:48:00.011 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4052305607528448  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-19 22:48:05.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4052326608408576  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:48:05.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4052326608408576  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:48:15.419 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:41   [32m                  [0;39m 连接关闭，token：4tI4BPRu3S，session id：1！当前连接数：0
+2022-01-19 22:48:15.553 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 22:48:15.554 INFO  com.alibaba.druid.pool.DruidDataSource            :1948 [32m                  [0;39m {dataSource-5} closing ...
+2022-01-19 22:48:15.556 INFO  com.alibaba.druid.pool.DruidDataSource            :2020 [32m                  [0;39m {dataSource-5} closed
+2022-01-19 22:48:15.885 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on LYZ with PID 3208 (G:\amber-github-workspace\AICSKnowledgeBase\target\classes started by Administrator in G:\amber-github-workspace\AICSKnowledgeBase)
+2022-01-19 22:48:15.886 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-19 22:48:16.096 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:48:16.097 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-19 22:48:16.100 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-01-19 22:48:16.168 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:48:16.168 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-19 22:48:16.171 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2022-01-19 22:48:16.376 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-19 22:48:16.377 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:48:16.378 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-19 22:48:16.378 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-19 22:48:16.393 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-19 22:48:16.394 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 502 ms
+2022-01-19 22:48:16.479 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-19 22:48:16.489 INFO  com.alibaba.druid.pool.DruidDataSource            :1003 [32m                  [0;39m {dataSource-6} inited
+2022-01-19 22:48:16.513 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-19 22:48:16.538 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-19 22:48:16.539 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 22:48:16.572 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-19 22:48:16.994 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-01-19 22:48:17.011 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:48:17.012 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-01-19 22:48:17.020 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 1.181 seconds (JVM running for 1794.943)
+2022-01-19 22:48:17.022 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :58   [32m                  [0;39m Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2022-01-19 22:48:19.367 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 22:48:19.369 INFO  com.alibaba.druid.pool.DruidDataSource            :1948 [32m                  [0;39m {dataSource-6} closing ...
+2022-01-19 22:48:19.370 INFO  com.alibaba.druid.pool.DruidDataSource            :2020 [32m                  [0;39m {dataSource-6} closed
+2022-01-19 22:48:19.772 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on LYZ with PID 3208 (G:\amber-github-workspace\AICSKnowledgeBase\target\classes started by Administrator in G:\amber-github-workspace\AICSKnowledgeBase)
+2022-01-19 22:48:19.772 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-19 22:48:20.042 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:48:20.042 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-19 22:48:20.088 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 45 ms. Found 8 JPA repository interfaces.
+2022-01-19 22:48:20.130 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-19 22:48:20.130 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-19 22:48:20.133 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.CategoryRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:48:20.133 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:48:20.134 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContributeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:48:20.134 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.DocRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:48:20.134 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:48:20.135 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookSnapshotRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:48:20.135 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:48:20.135 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-19 22:48:20.135 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-01-19 22:48:20.279 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-19 22:48:20.279 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:48:20.280 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-19 22:48:20.280 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-19 22:48:20.290 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-19 22:48:20.290 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 512 ms
+2022-01-19 22:48:20.464 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-19 22:48:20.471 INFO  com.alibaba.druid.pool.DruidDataSource            :1003 [32m                  [0;39m {dataSource-7} inited
+2022-01-19 22:48:20.489 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-19 22:48:20.590 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-19 22:48:20.590 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 22:48:31.089 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-19 22:48:31.585 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-01-19 22:48:31.601 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-01-19 22:48:31.603 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-01-19 22:48:31.607 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 11.888 seconds (JVM running for 1809.531)
+2022-01-19 22:48:31.608 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :58   [32m                  [0;39m Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper:
+      Did not match:
+         - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found beans of type 'com.fasterxml.jackson.databind.ObjectMapper' jacksonObjectMapper (OnBeanCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2022-01-19 22:48:35.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4052452424945664  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:48:35.014 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4052452424945664  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:48:43.031 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-19 22:48:43.031 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-01-19 22:48:43.033 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 2 ms
+2022-01-19 22:48:43.035 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :32   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2022-01-19 22:48:43.035 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :43   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8880/ebook/save
+2022-01-19 22:48:43.035 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :47   [32m                  [0;39m 登录校验开始，token：4051865448878080
+2022-01-19 22:48:43.045 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :59   [32m                  [0;39m 已登录：{"id":5,"passWord":"7395005cd4342cd4b9fc0b936b9c6f4d","token":"4051865448878080","userCode":"amberliyuze","userName":"李雨泽"}
+2022-01-19 22:48:43.141 INFO  c.a.i.knowledgebase.interceptor.LoginInterceptor  :68   [32m                  [0;39m ------------- LoginInterceptor 结束 耗时：106 ms -------------
+2022-01-19 22:49:00.006 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4052557265768448  [0;39m 生成今日电子书快照开始
+2022-01-19 22:49:00.167 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4052557265768448  [0;39m 生成今日电子书快照结束，耗时：161毫秒
+2022-01-19 22:49:05.012 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4052578262454272  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:49:05.012 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4052578262454272  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:49:35.012 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4052704091574272  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:49:35.012 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4052704091574272  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:50:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4052808928202752  [0;39m 生成今日电子书快照开始
+2022-01-19 22:50:00.013 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4052808928202752  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-19 22:50:05.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4052829916499968  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:50:05.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4052829916499968  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:50:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4052955707871232  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:50:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4052955707871232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:51:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4053060586442752  [0;39m 生成今日电子书快照开始
+2022-01-19 22:51:00.013 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4053060586442752  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-19 22:51:05.005 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4053081549574144  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:51:05.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4053081549574144  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:51:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4053207366111232  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:51:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4053207366111232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:52:00.005 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4053312236294144  [0;39m 生成今日电子书快照开始
+2022-01-19 22:52:00.012 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4053312236294144  [0;39m 生成今日电子书快照结束，耗时：7毫秒
+2022-01-19 22:52:05.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4053333249757184  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:52:05.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4053333249757184  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:52:35.004 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4053459032739840  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:52:35.004 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4053459032739840  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:53:00.013 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4053563928088576  [0;39m 生成今日电子书快照开始
+2022-01-19 22:53:00.025 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4053563928088576  [0;39m 生成今日电子书快照结束，耗时：11毫秒
+2022-01-19 22:53:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4053584857665536  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:53:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4053584857665536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:53:35.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4053710737117184  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:53:35.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4053710737117184  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:54:00.014 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4053815590522880  [0;39m 生成今日电子书快照开始
+2022-01-19 22:54:00.022 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4053815590522880  [0;39m 生成今日电子书快照结束，耗时：7毫秒
+2022-01-19 22:54:05.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4053836566237184  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:54:05.015 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4053836566237184  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:54:35.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4053962357608448  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:54:35.007 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4053962357608448  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:55:00.005 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4054067211014144  [0;39m 生成今日电子书快照开始
+2022-01-19 22:55:00.014 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4054067211014144  [0;39m 生成今日电子书快照结束，耗时：8毫秒
+2022-01-19 22:55:05.005 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4054088182534144  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:55:05.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4054088182534144  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:55:35.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4054214045208576  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:55:35.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4054214045208576  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:56:00.016 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4054318915391488  [0;39m 生成今日电子书快照开始
+2022-01-19 22:56:00.020 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4054318915391488  [0;39m 生成今日电子书快照结束，耗时：4毫秒
+2022-01-19 22:56:05.033 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4054339954020352  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:56:05.033 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4054339954020352  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:56:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4054465653116928  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:56:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4054465653116928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:57:00.015 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4054570569437184  [0;39m 生成今日电子书快照开始
+2022-01-19 22:57:00.018 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4054570569437184  [0;39m 生成今日电子书快照结束，耗时：3毫秒
+2022-01-19 22:57:05.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4054591532568576  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:57:05.013 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4054591532568576  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:57:35.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4054717332328448  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:57:35.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4054717332328448  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:58:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4054822198317056  [0;39m 生成今日电子书快照开始
+2022-01-19 22:58:00.016 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4054822198317056  [0;39m 生成今日电子书快照结束，耗时：8毫秒
+2022-01-19 22:58:05.008 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4054843169837056  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:58:05.008 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4054843169837056  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:58:35.004 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4054968982179840  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:58:35.004 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4054968982179840  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:59:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4055073827196928  [0;39m 生成今日电子书快照开始
+2022-01-19 22:59:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4055073827196928  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-19 22:59:05.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4055094840659968  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:59:05.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4055094840659968  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 22:59:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4055220627836928  [0;39m 更新电子书下的文档数据开始
+2022-01-19 22:59:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4055220627836928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 23:00:00.011 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4055325527379968  [0;39m 生成今日电子书快照开始
+2022-01-19 23:00:00.024 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4055325527379968  [0;39m 生成今日电子书快照结束，耗时：12毫秒
+2022-01-19 23:00:05.016 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4055346519871488  [0;39m 更新电子书下的文档数据开始
+2022-01-19 23:00:05.016 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4055346519871488  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 23:00:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4055472290271232  [0;39m 更新电子书下的文档数据开始
+2022-01-19 23:00:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4055472290271232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-19 23:00:59.671 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-19 23:00:59.673 INFO  com.alibaba.druid.pool.DruidDataSource            :1948 [32m                  [0;39m {dataSource-7} closing ...
+2022-01-19 23:00:59.674 INFO  com.alibaba.druid.pool.DruidDataSource            :2020 [32m                  [0;39m {dataSource-7} closed

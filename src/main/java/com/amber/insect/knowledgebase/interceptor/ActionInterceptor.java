@@ -31,8 +31,9 @@ public class ActionInterceptor implements HandlerInterceptor {
         if("OPTIONS".equals(request.getMethod().toUpperCase())){
             return true;
         }
+        //目前这里先写死后期维护
         TokenUserInfo tokenUserInfo = LoginUserContext.getUser();
-        if ("admin".equals(tokenUserInfo.getUserCode())) {
+        if ("amberliyuze".equals(tokenUserInfo.getUserCode())) {
             // admin用户不拦截
             return true;
         }

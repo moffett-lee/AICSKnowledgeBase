@@ -93,7 +93,7 @@ public class UserServiceImpl implements IUserService {
     @Override
     public UserDto login(UserLoginReq loginReq) {
         UserEntity oneByUserCode = userRepository.findOneByUserCode(loginReq.getUserCode());
-        if (ObjectUtils.isEmpty(oneByUserCode)) {
+        if (oneByUserCode == null) {
             // 用户名不存在
             log.info("用户名不存在, {}", loginReq.getUserCode());
             throw new BusinessException(BusinessExceptionCode.LOGIN_USER_ERROR);
