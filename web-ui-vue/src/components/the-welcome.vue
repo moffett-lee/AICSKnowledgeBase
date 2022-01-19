@@ -10,14 +10,14 @@
                 <a-card style="text-align: center">
                     <a-row>
                         <a-col :span="10">
-                            <a-statistic title="总阅读量" :value="statistic.viewCount">
+                            <a-statistic title="总阅读量" :value="statistic.viewCount == null ? 0 : statistic.viewCount">
                                 <template #suffix>
                                     <UserOutlined/>
                                 </template>
                             </a-statistic>
                         </a-col>
                         <a-col :span="10">
-                            <a-statistic title="总点赞量" :value="statistic.voteCount">
+                            <a-statistic title="总点赞量" :value="statistic.voteCount == null ? 0 : statistic.voteCount">
                                 <template #suffix>
                                     <like-outlined/>
                                 </template>
@@ -30,21 +30,25 @@
                 <a-card style="text-align: center">
                     <a-row>
                         <a-col :span="8">
-                            <a-statistic title="今日阅读" :value="statistic.todayViewCount" style="margin-right: 50px">
+                            <a-statistic title="今日阅读"
+                                         :value="statistic.todayViewCount == null ? 0 : statistic.todayViewCount"
+                                         style="margin-right: 50px">
                                 <template #suffix>
                                     <UserOutlined/>
                                 </template>
                             </a-statistic>
                         </a-col>
                         <a-col :span="8">
-                            <a-statistic title="今日点赞" :value="statistic.todayVoteCount">
+                            <a-statistic title="今日点赞"
+                                         :value="statistic.todayVoteCount == null ? 0 : statistic.todayVoteCount">
                                 <template #suffix>
                                     <like-outlined/>
                                 </template>
                             </a-statistic>
                         </a-col>
                         <a-col :span="8">
-                            <a-statistic title="点赞率" :value="statistic.voteCount / statistic.viewCount * 100"
+                            <a-statistic title="点赞率"
+                                         :value="statistic.voteCount / statistic.viewCount == null || statistic.viewCount == 0 ? 1:statistic.viewCount* 100 "
                                          :precision="2" suffix="%" :value-style="{ color: '#cf1322' }">
                                 <template #suffix>
                                     <like-outlined/>
@@ -61,14 +65,17 @@
                 <a-card style="text-align: center">
                     <a-row>
                         <a-col :span="10">
-                            <a-statistic title="文章总数" :value="statistic.todayViewCount" style="margin-right: 50px">
+                            <a-statistic title="文章总数"
+                                         :value="statistic.todayViewCount == null ? 0 :statistic.todayViewCount"
+                                         style="margin-right: 50px">
                                 <template #suffix>
                                     <UserOutlined/>
                                 </template>
                             </a-statistic>
                         </a-col>
                         <a-col :span="10">
-                            <a-statistic title="标签总数" :value="statistic.todayVoteCount">
+                            <a-statistic title="标签总数"
+                                         :value="statistic.todayVoteCount == null ? 0 :statistic.todayVoteCount">
                                 <template #suffix>
                                     <like-outlined/>
                                 </template>
@@ -81,7 +88,8 @@
                 <a-card style="text-align: center">
                     <a-row>
                         <a-col :span="8">
-                            <a-statistic title="预计今日阅读" :value="statistic.todayViewIncrease"
+                            <a-statistic title="预计今日阅读"
+                                         :value="statistic.todayViewIncrease == null ? 0 : statistic.todayViewIncrease"
                                          :value-style="{ color: '#0000ff' }">
                                 <template #suffix>
                                     <UserOutlined/>
@@ -89,9 +97,11 @@
                             </a-statistic>
                         </a-col>
                         <a-col :span="8">
-                            <a-statistic title="预计今日阅读增长" :value="statistic.todayViewIncreaseRateAbs" :precision="2"
+                            <a-statistic title="预计今日阅读增长"
+                                         :value="statistic.todayViewIncreaseRateAbs == null ? 0 :statistic.todayViewIncreaseRateAbs"
+                                         :precision="2"
                                          suffix="%" class="demo-class"
-                                         :value-style="statistic.todayViewIncreaseRate < 0 ? { color: '#3f8600' } : { color: '#cf1322' }">
+                                         :value-style="statistic.todayViewIncreaseRate < 0 ? { color: '#3f8600' }  : { color: '#cf1322' }">
                                 <template #prefix>
                                     <arrow-down-outlined v-if="statistic.todayViewIncreaseRate < 0"/>
                                     <arrow-up-outlined v-if="statistic.todayViewIncreaseRate >= 0"/>
@@ -99,10 +109,11 @@
                             </a-statistic>
                         </a-col>
                         <a-col :span="8">
-                            <a-statistic title="网站运行时长" :value="statistic.todayViewIncrease"
+                            <a-statistic title="网站运行时长"
+                                         :value="statistic.runTime"
                                          :value-style="{ color: '#ff7f50' }">
                                 <template #suffix>
-                                    <UserOutlined/>
+                                    <HourglassOutlined />
                                 </template>
                             </a-statistic>
                         </a-col>
@@ -159,6 +170,23 @@
                 });
             };
 
+            function showRuntime() {
+                window.setTimeout("showRuntime()", 1000);
+                const X = new
+                Date("12/12/2021 12:12:12");
+                const Y = new Date();
+                const T = (Y.getTime() - X.getTime());
+                const M = 24 * 60 * 60 * 1000;
+                const a = T / M;
+                const A = Math.floor(a);
+                const b = (a - A) * 24;
+                const B = Math.floor(b);
+                const c = (b - B) * 60;
+                const C = Math.floor((b - B) * 60);
+                const D = Math.floor((c - C) * 60);
+                //A + "天" + B + "小时" + C + "分" + D + "秒"
+                statistic.value.runTime = A + "天" + B + "小时" + C + "分";
+            }
             const init30DayEcharts = (list: any) => {
                 // 发布生产后出现问题：切到别的页面，再切回首页，报表显示不出来
                 // 解决方法：把原来的id=main的区域清空，重新初始化
@@ -215,10 +243,10 @@
                         // stack: '总量', 不堆叠
                         data: seriesView,
                         smooth: true,
-                        itemStyle : {
-                            normal : {
-                                lineStyle:{
-                                    color:'#04f2d5'
+                        itemStyle: {
+                            normal: {
+                                lineStyle: {
+                                    color: '#04f2d5'
                                 }
                             }
                         },
@@ -229,10 +257,10 @@
                             // stack: '总量', 不堆叠
                             data: seriesVote,
                             smooth: true,
-                            itemStyle : {
-                                normal : {
-                                    lineStyle:{
-                                        color:'#6356e5'
+                            itemStyle: {
+                                normal: {
+                                    lineStyle: {
+                                        color: '#6356e5'
                                     }
                                 }
                             },
@@ -259,6 +287,7 @@
                 getStatistic();
                 // testEcharts();
                 get30DayStatistic();
+                showRuntime();
             });
 
             return {
