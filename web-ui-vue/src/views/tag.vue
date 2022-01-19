@@ -4,7 +4,7 @@
             <h2 style="margin-bottom: 20px; font-size:1.3rem;text-align: center;">
                 技术成就榜
             </h2>
-            <h3 style="text-align: center;">技多不压身，努力掌握更多的技术栈。</h3>
+            <h3 style="text-align: center;">学历代表过去、能力代表现在、学习能力代表未来。</h3>
             <div class="tag-main">
                 <span v-for="item in tags" :key="item.id">
                 <a-tag :style="{background:item.color}" class="tag-tex" >
