@@ -4,7 +4,6 @@ package com.amber.insect.knowledgebase.service.impl;
 import com.amber.insect.knowledgebase.common.RPage;
 import com.amber.insect.knowledgebase.dto.DocDto;
 import com.amber.insect.knowledgebase.entity.ContentEntity;
-import com.amber.insect.knowledgebase.entity.ContributeEntity;
 import com.amber.insect.knowledgebase.entity.DocEntity;
 import com.amber.insect.knowledgebase.enums.CommonConstants;
 import com.amber.insect.knowledgebase.exception.BusinessException;
@@ -104,12 +103,11 @@ public class DocServiceImpl implements IDocService {
                 contentRepository.save(contentEntity);
             }
         }
-        //增加活跃度
-        ContributeEntity contributeEntity = new ContributeEntity();
-        contributeEntity.setDayDate(LocalDate.now());
-        contributeEntity.setArticleNum(1);
-       // contributeRepository.autoUpdateArticleNum();
-
+        //增加文章活跃度
+        //获得固定日期
+        LocalDate selfLocalDate=LocalDate.of(2020, 04, 01);//2020-04-01
+        LocalDate tenDaysLater = selfLocalDate.plusDays(10);//2020-04-11
+        contributeRepository.autoUpdateArticleNum(LocalDate.now());
     }
 
     @Override

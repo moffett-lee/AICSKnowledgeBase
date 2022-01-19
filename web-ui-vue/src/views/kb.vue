@@ -1,7 +1,7 @@
 <template>
 	<a-layout>
 		<a-layout-content class="kb" :style="{padding: '24px', margin: 0, minHeight: '240px' }">
-			<div id="xxxxx">
+			<div id="content">
 				<div id="main" style="width: 100%;height:300px;"></div>
 			</div>
 		</a-layout-content>
@@ -27,35 +27,20 @@
 		components: {},
 		setup() {
 			const statistic = ref();
-
 			const init30DayEcharts = (list: any) => {
 				// 发布生产后出现问题：切到别的页面，再切回首页，报表显示不出来
 				// 解决方法：把原来的id=main的区域清空，重新初始化
-				const mainDom = document.getElementById('xxxxx');
+				const mainDom = document.getElementById('content');
 				if (mainDom) {
 					mainDom.innerHTML =
-						'<div id="main" style="width: 100%;height:600px; background: #FFF"></div>';
+						'<div id="main" style="width: 100%;height:600px;"></div>';
 				}
 				// 基于准备好的dom，初始化echarts实例
 				const myChart = echarts.init(document.getElementById('main'));
-
-				//const xAxis = [];
-				//const seriesView = [];
-				//const seriesVote = [];
-				//for (let i = 0; i < list.length; i++) {
-				//	const record = list[i];
-				//	xAxis.push(record.date);
-				//	seriesView.push(record.viewIncrease);
-				//	seriesVote.push(record.voteIncrease);
-				//}
-
-
 				const seriesView = [];
-
 				for (let i = 0; i < list.length; i++) {
 					const record = list[i];
-
-					seriesView.push(list);
+					seriesView.push(record);
 					console.log("seriesView", seriesView);
 				}
 				// 指定图表的配置项和数据
@@ -70,11 +55,11 @@
 						text: '代码贡献活跃度'
 					}],
 					tooltip: {
-						position: 'top',
-						formatter: function(p) {
-							const format = echarts.format.formatTime('yyyy-MM-dd', p.data[0]);
-							return format + ': ' + p.data[1];
-						}
+						position: 'top'
+						//formatter: function(p) {
+						//	const format = echarts.format.formatTime('yyyy-MM-dd', p.data[0]);
+						//	return format + ': ' + p.data[1];
+						//}
 					},
 					legend: {
 						show: false
@@ -201,7 +186,6 @@
 			onMounted(() => {
 				handleQueryCategory();
 			});
-
 			return {
 
 				statistic

@@ -2,10 +2,13 @@ package com.amber.insect.knowledgebase.service;
 
 import com.amber.insect.knowledgebase.dto.ContributeDto;
 
-import java.util.List;
+import java.util.Map;
 
 public interface IContributeService {
 
-    List<ContributeDto> getContributeList();
+    Map<String,Object> getContributeList();
 
+    Map<String, Object> aaa();
+
+    void commit(ContributeDto dto);
 }

@@ -3,8 +3,10 @@ package com.amber.insect.knowledgebase.controller;
 
 import com.amber.insect.knowledgebase.common.R;
 import com.amber.insect.knowledgebase.common.RPage;
+import com.amber.insect.knowledgebase.dto.ContributeDto;
 import com.amber.insect.knowledgebase.dto.TagDto;
 import com.amber.insect.knowledgebase.query.TagQuery;
+import com.amber.insect.knowledgebase.service.IContributeService;
 import com.amber.insect.knowledgebase.service.ITagService;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +21,9 @@ public class TagController {
 
     @Resource
     private ITagService tagService;
+
+    @Resource
+    private IContributeService contributeService;
 
     /**
      * @Author Amber.L
@@ -89,6 +94,21 @@ public class TagController {
     public R getDan() {
         Map<String,Object> map =tagService.getDan();
         return R.success(map);
+    }
+
+
+
+    /**
+     * @Author Amber.L
+     * @Description
+     * @Date 2022/1/5 21:50
+     * @Param [dto]
+     * @return com.amber.insect.knowledgebase.common.R
+     **/
+    @PostMapping("/commit")
+    public R commit(@Valid @RequestBody ContributeDto dto) {
+        contributeService.commit(dto);
+        return R.success();
     }
 
 

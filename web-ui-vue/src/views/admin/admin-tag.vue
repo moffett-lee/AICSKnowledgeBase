@@ -13,6 +13,11 @@
 							新增
 						</a-button>
 					</a-form-item>
+					<a-form-item>
+						<a-button type="primary" @click="commit()">
+							提交代码
+						</a-button>
+					</a-form-item>
 				</a-form>
 			</p>
 			<p>
@@ -39,7 +44,7 @@
 		</a-layout-content>
 	</a-layout>
 
-	<a-modal title="分类表单" v-model:visible="modalVisible" :confirm-loading="modalLoading" @ok="handleModalOk">
+	<a-modal title="标签表单" v-model:visible="modalVisible" :confirm-loading="modalLoading" @ok="handleModalOk">
 		<a-form :model="tag" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
 			<a-form-item label="名称">
 				<a-input v-model:value="tag.name" />
@@ -49,6 +54,13 @@
 			</a-form-item>
 			<a-form-item label="颜色">
 				<a-input v-model:value="tag.color" />
+			</a-form-item>
+		</a-form>
+	</a-modal>
+	<a-modal title="代码提交表单" v-model:visible="codeVisible" :confirm-loading="codeLoading" @ok="codeModalOk">
+		<a-form :model="code" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
+			<a-form-item label="代码提交数量">
+				<a-input v-model:value="code.codeNum" />
 			</a-form-item>
 		</a-form>
 	</a-modal>
@@ -181,6 +193,28 @@
 				tag.value = {};
 			};
 
+
+			const codeVisible = ref(false);
+			const codeLoading = ref(false);
+			// -------- commit表单 ---------
+			const code = ref({});
+			const commit = () => {
+				codeVisible.value = true;
+				code.value = {};
+			};
+			const codeModalOk = () => {
+				modalLoading.value = true;
+				axios.post("/tag/commit", code.value).then((response) => {
+					codeLoading.value = false;
+					const data = response.data; // data = commonResp
+					if (data.success) {
+						codeVisible.value = false;
+					} else {
+						message.error(data.msg);
+					}
+				});
+			};
+
 			const handleDelete = (id: number) => {
 				axios.delete("/tag/delete/" + id).then((response) => {
 					const data = response.data; // data = commonResp
@@ -214,12 +248,15 @@
 				handleTableChange,
 				edit,
 				add,
-
+				commit,
 				tag,
+				code,
+				codeVisible,
 				modalVisible,
 				modalLoading,
+				codeLoading,
 				handleModalOk,
-
+				codeModalOk,
 				handleDelete
 			}
 		}
