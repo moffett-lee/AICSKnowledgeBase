@@ -13,14 +13,14 @@
 				</div>
 				<div>
 					<b>昆虫云社区：
-						<a href="https://coding.imooc.com/class/416.html" target="_blank">
+						<a href="https://blog.liyuze.work/" target="_blank">
 							专注于开发者技术交流的社区中心。
 						</a>
 					</b>
 				</div>
 				<div>
 					<b>昆虫云官网：
-						<a href="https://www.imooc.com/learn/1160" target="_blank">
+						<a href="https://blog.liyuze.work/" target="_blank">
 							Sass多租户低代码平台。
 						</a>
 					</b>

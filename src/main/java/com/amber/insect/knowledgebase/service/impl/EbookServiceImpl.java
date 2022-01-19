@@ -11,6 +11,7 @@ import com.amber.insect.knowledgebase.query.EbookQuery;
 import com.amber.insect.knowledgebase.repository.EbookRepository;
 import com.amber.insect.knowledgebase.service.IEbookService;
 import com.amber.insect.knowledgebase.util.CopyUtil;
+import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -37,7 +38,9 @@ public class EbookServiceImpl implements IEbookService {
         Specification<EbookEntity> spec = (root, q, cb) -> {
             List<Predicate> list = new ArrayList<>();
             list.add(cb.equal(root.get("isDel").as(Integer.class), CommonConstants.NORMAL));
-            list.add(cb.equal(root.get("categoryTwoId").as(Long.class),query.getCategoryTwoId()));
+            if (ObjectUtils.isNotEmpty(query.getCategoryTwoId())) {
+                list.add(cb.equal(root.get("categoryTwoId").as(Long.class),query.getCategoryTwoId()));
+            }
             return cb.and(list.toArray(new Predicate[list.size()]));
         };
         RPage page = new RPage();

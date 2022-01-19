@@ -19,7 +19,7 @@
 				</a-menu-item>
 			</a-menu>
 		</a-layout-sider>
-		<a-layout-content class="index_bg" :style="{ background: '', padding: '24px', margin: 0, minHeight: '280px' }">
+		<a-layout-content class="index_bg" :style="{padding: '24px', margin: 0, minHeight: '280px' }">
 			<div class="welcome" v-show="isShowWelcome">
 				<the-welcome></the-welcome>
 			</div>
@@ -28,17 +28,16 @@
 				<template #renderItem="{ item }">
 					<a-list-item key="item.name">
 						<template #actions>
-							<span>
-								<component v-bind:is="'BookOutlined'" style="margin-right: 8px" />
-								{{ item.docCount }}
+							<span class="a-action-split">
+								<component v-bind:is="'BookOutlined'" style="margin-right: 8px" />{{ item.docCount }}
 							</span>
 							<span>
 								<component v-bind:is="'UserOutlined'" style="margin-right: 8px" />
-								{{ item.viewCount }}
+								<span style="">{{ item.viewCount }}</span>
 							</span>
 							<span>
-								<component v-bind:is="'LikeOutlined'" style="margin-right: 8px" />
-								{{ item.voteCount }}
+								<component v-bind:is="'LikeOutlined'" style="margin-right: 8px;" />
+								<span>{{ item.voteCount }}</span>
 							</span>
 						</template>
 						<a-list-item-meta :description="item.description">
@@ -192,15 +191,16 @@
 		margin: 5px 0;
 	}
 
+	.ant-list-item-action em{
+		background-color: #2dcecc!important;
+	}
 	.ant-layout-sider-children span {
 		font-size: 14px !important;
 		font-weight: 600 !important;
 
 
 	}
-
 	.index_bg {
 		background: linear-gradient(87deg, #2dce89, #2dcecc) !important;
-		background-image: linear-gradient(87deg, rgb(45, 206, 137), rgb(45, 206, 204)) !important;
 	}
 </style>
