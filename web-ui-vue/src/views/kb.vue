@@ -27,7 +27,7 @@
 		components: {},
 		setup() {
 			const statistic = ref();
-			const init30DayEcharts = (list: any) => {
+			const init30DayEcharts = (list: any,list2: any) => {
 				// 发布生产后出现问题：切到别的页面，再切回首页，报表显示不出来
 				// 解决方法：把原来的id=main的区域清空，重新初始化
 				const mainDom = document.getElementById('content');
@@ -37,11 +37,17 @@
 				}
 				// 基于准备好的dom，初始化echarts实例
 				const myChart = echarts.init(document.getElementById('main'));
-				const seriesView = [];
+				const articleView = [];
+				const codeView = [];
 				for (let i = 0; i < list.length; i++) {
 					const record = list[i];
-					seriesView.push(record);
-					console.log("seriesView", seriesView);
+					articleView.push(record);
+					console.log("articleView", articleView);
+				}
+				for (let i = 0; i < list2.length; i++) {
+					const record2 = list2[i];
+					codeView.push(record2);
+					console.log("codeView", codeView);
 				}
 				// 指定图表的配置项和数据
 				const option = {
@@ -156,13 +162,13 @@
 							type: 'heatmap',
 							coordinateSystem: 'calendar',
 							calendarIndex: 0,
-							data: seriesView,
+							data: articleView,
 						},
 						{
 							type: 'heatmap',
 							coordinateSystem: 'calendar',
 							calendarIndex: 1,
-							data: seriesView
+							data: codeView
 						}
 					]
 				}
@@ -176,7 +182,7 @@
 				axios.get("/contribute/getContributeList").then((response) => {
 					if (response.data.success) {
 						const statisticList = response.data.data;
-						init30DayEcharts(statisticList)
+						init30DayEcharts(statisticList.articleLists,statisticList.codeLists)
 						console.log("分装结果数据", statisticList);
 					} else {
 						message.error(response.data.msg);
@@ -187,9 +193,7 @@
 				handleQueryCategory();
 			});
 			return {
-
 				statistic
-
 			}
 		}
 	})

@@ -43,7 +43,7 @@ public class ContributeServiceServiceImpl implements IContributeService {
                 article.add(contributeEntity.getDayDate());
                 code.add(contributeEntity.getDayDate());
                 article.add(contributeEntity.getArticleNum());
-                code.add(contributeEntity.getArticleNum());
+                code.add(contributeEntity.getCodeNum());
                 articleLists.add(article);
                 codeLists.add(code);
             }
