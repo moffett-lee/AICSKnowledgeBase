@@ -162,6 +162,7 @@
 				// listData,
 				pagination: {
 					onChange: (page: any) => {
+						console.log(page);
 					},
 					pageSize: 3,
 				},
