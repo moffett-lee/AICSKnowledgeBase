@@ -18,10 +18,8 @@
 --
 -- Table structure for table `tb_category`
 --
+-- `knowledge-base`.tb_category definition
 
-DROP TABLE IF EXISTS `tb_category`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_category` (
   `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `parent_id` bigint DEFAULT NULL,
@@ -37,25 +35,11 @@ CREATE TABLE `tb_category` (
   `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
   `version` int DEFAULT NULL COMMENT '锁版本',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='分类表';
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='分类表';
 
---
--- Dumping data for table `tb_category`
---
 
-LOCK TABLES `tb_category` WRITE;
-/*!40000 ALTER TABLE `tb_category` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_category` ENABLE KEYS */;
-UNLOCK TABLES;
+-- `knowledge-base`.tb_content definition
 
---
--- Table structure for table `tb_content`
---
-
-DROP TABLE IF EXISTS `tb_content`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_content` (
   `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `content` mediumtext,
@@ -69,25 +53,23 @@ CREATE TABLE `tb_content` (
   `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
   `version` int DEFAULT NULL COMMENT '锁版本',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB AUTO_INCREMENT=3200531006885889 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `tb_content`
---
 
-LOCK TABLES `tb_content` WRITE;
-/*!40000 ALTER TABLE `tb_content` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_content` ENABLE KEYS */;
-UNLOCK TABLES;
+-- `knowledge-base`.tb_contribute definition
 
---
--- Table structure for table `tb_doc`
---
+CREATE TABLE `tb_contribute` (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `day_date` date DEFAULT NULL COMMENT '日期',
+  `article_num` int DEFAULT NULL COMMENT '文章更新数量',
+  `code_num` int DEFAULT NULL COMMENT '代码提交数量',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `tb_contribute_day_date_IDX` (`day_date`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='贡献度';
 
-DROP TABLE IF EXISTS `tb_doc`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
+-- `knowledge-base`.tb_doc definition
+
 CREATE TABLE `tb_doc` (
   `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `ebook_id` bigint DEFAULT NULL,
@@ -106,25 +88,11 @@ CREATE TABLE `tb_doc` (
   `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
   `version` int DEFAULT NULL COMMENT '锁版本',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB AUTO_INCREMENT=3200531006885889 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `tb_doc`
---
 
-LOCK TABLES `tb_doc` WRITE;
-/*!40000 ALTER TABLE `tb_doc` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_doc` ENABLE KEYS */;
-UNLOCK TABLES;
+-- `knowledge-base`.tb_ebook definition
 
---
--- Table structure for table `tb_ebook`
---
-
-DROP TABLE IF EXISTS `tb_ebook`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_ebook` (
   `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `name` varchar(100) DEFAULT NULL,
@@ -145,25 +113,11 @@ CREATE TABLE `tb_ebook` (
   `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
   `version` int DEFAULT NULL COMMENT '锁版本',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `tb_ebook`
---
 
-LOCK TABLES `tb_ebook` WRITE;
-/*!40000 ALTER TABLE `tb_ebook` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_ebook` ENABLE KEYS */;
-UNLOCK TABLES;
+-- `knowledge-base`.tb_ebook_snapshot definition
 
---
--- Table structure for table `tb_ebook_snapshot`
---
-
-DROP TABLE IF EXISTS `tb_ebook_snapshot`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_ebook_snapshot` (
   `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `ebook_id` bigint DEFAULT NULL,
@@ -183,42 +137,7 @@ CREATE TABLE `tb_ebook_snapshot` (
   `version` int DEFAULT NULL COMMENT '锁版本',
   `sort` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tb_ebook_snapshot`
---
-
-LOCK TABLES `tb_ebook_snapshot` WRITE;
-/*!40000 ALTER TABLE `tb_ebook_snapshot` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_ebook_snapshot` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tb_user`
---
-
-DROP TABLE IF EXISTS `tb_user`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tb_user` (
-  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
-  `user_code` varchar(100) DEFAULT NULL,
-  `user_name` varchar(100) DEFAULT NULL,
-  `pass_word` varchar(100) DEFAULT NULL,
-  `status` tinyint(1) DEFAULT '0' COMMENT '0-正常，9-锁定',
-  `is_del` tinyint(1) DEFAULT '0' COMMENT '0-正常，1-删除',
-  `flag` tinyint(1) DEFAULT NULL COMMENT '标识',
-  `c_time` datetime DEFAULT NULL COMMENT '创建时间',
-  `upt_time` datetime DEFAULT NULL COMMENT '修改时间',
-  `c_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '创建者',
-  `upt_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '更新人',
-  `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
-  `version` int DEFAULT NULL COMMENT '锁版本',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 -- `knowledge-base`.tb_tag definition
@@ -236,42 +155,25 @@ CREATE TABLE `tb_tag` (
   `c_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '创建者',
   `upt_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '更新人',
   `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
-   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='标签表';
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='标签表';
 
 
+-- `knowledge-base`.tb_user definition
 
--- `knowledge-base`.tb_contribute definition
-
-CREATE TABLE `tb_contribute` (
-  `id` bigint NOT NULL COMMENT '主键id',
-  `day_date` date DEFAULT NULL COMMENT '日期',
-  `article_num` int DEFAULT NULL COMMENT '文章更新数量',
-  `code_num` int DEFAULT NULL COMMENT '代码提交数量'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='贡献度';
-
-
-
---
--- Dumping data for table `tb_user`
---
-
-LOCK TABLES `tb_user` WRITE;
-/*!40000 ALTER TABLE `tb_user` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_user` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Dumping routines for database 'knowledge-base'
---
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2022-01-05 14:15:08
+CREATE TABLE `tb_user` (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `user_code` varchar(100) DEFAULT NULL,
+  `user_name` varchar(100) DEFAULT NULL,
+  `pass_word` varchar(100) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT '0' COMMENT '0-正常，9-锁定',
+  `is_del` tinyint(1) DEFAULT '0' COMMENT '0-正常，1-删除',
+  `flag` tinyint(1) DEFAULT NULL COMMENT '标识',
+  `c_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `upt_time` datetime DEFAULT NULL COMMENT '修改时间',
+  `c_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '创建者',
+  `upt_user` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '更新人',
+  `remark` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '备注',
+  `version` int DEFAULT NULL COMMENT '锁版本',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
