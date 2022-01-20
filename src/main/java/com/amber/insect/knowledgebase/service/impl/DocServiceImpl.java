@@ -136,6 +136,10 @@ public class DocServiceImpl implements IDocService {
     @Override
     @Transactional
     public void vote(Long id) {
+
+        if (id == null) {
+            throw new BusinessException(BusinessExceptionCode.VOTE_REPEAT);
+        }
         // docMapperCust.increaseVoteCount(id);
         // 远程IP+doc.id作为key，24小时内不能重复
         String ip = RequestContext.getRemoteAddr();
@@ -149,5 +153,11 @@ public class DocServiceImpl implements IDocService {
         String logId = MDC.get("LOG_ID");
         wsService.sendInfo("【" + docDb.getName() + "】被点赞！", logId);
         // rocketMQTemplate.convertAndSend("VOTE_TOPIC", "【" + docDb.getName() + "】被点赞！");
+    }
+
+    @Override
+    @Transactional
+    public void updateEbookInfo() {
+        docRepository.updateEbookInfo();
     }
 }

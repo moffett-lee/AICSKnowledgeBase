@@ -14,6 +14,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
@@ -59,11 +60,12 @@ public class CategoryServiceImpl implements ICategoryService {
     }
 
     @Override
+    @Transactional
     public void delete(Long id) {
         CategoryEntity categoryEntity = new CategoryEntity();
         categoryEntity.setId(id);
         categoryEntity.setIsDel(CommonConstants.DEL);
         categoryEntity.setUptTime(LocalDateTime.now());
-        categoryRepository.save(categoryEntity);
+        int i = categoryRepository.delete(id,CommonConstants.DEL);
     }
 }
