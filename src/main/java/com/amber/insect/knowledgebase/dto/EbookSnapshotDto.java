@@ -22,4 +22,5 @@ public class EbookSnapshotDto {
     private Integer viewIncrease;
     private Integer voteIncrease;
     private Long articleCount;
+    private Long tagCount;
 }

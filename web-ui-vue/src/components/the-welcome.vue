@@ -12,7 +12,7 @@
                         <a-col :span="10">
                             <a-statistic title="总阅读量" :value="statistic.viewCount == null ? 0 : statistic.viewCount">
                                 <template #suffix>
-                                    <UserOutlined/>
+                                    <EyeOutlined />
                                 </template>
                             </a-statistic>
                         </a-col>
@@ -34,7 +34,7 @@
                                          :value="statistic.todayViewCount == null ? 0 : statistic.todayViewCount"
                                          style="margin-right: 50px">
                                 <template #suffix>
-                                    <UserOutlined/>
+                                    <EyeOutlined />
                                 </template>
                             </a-statistic>
                         </a-col>
@@ -48,7 +48,7 @@
                         </a-col>
                         <a-col :span="8">
                             <a-statistic title="点赞率"
-                                         :value="statistic.voteCount / statistic.viewCount == null || statistic.viewCount == 0 ? 1:statistic.viewCount* 100 "
+                                         :value="(statistic.voteCount / statistic.viewCount) * 100"
                                          :precision="2" suffix="%" :value-style="{ color: '#cf1322' }">
                                 <template #suffix>
                                     <like-outlined/>
@@ -66,18 +66,18 @@
                     <a-row>
                         <a-col :span="10">
                             <a-statistic title="文章总数"
-                                         :value="statistic.todayViewCount == null ? 0 :statistic.todayViewCount"
+                                         :value="statistic.articleCount == null ? 0 :statistic.articleCount"
                                          style="margin-right: 50px">
                                 <template #suffix>
-                                    <UserOutlined/>
+                                    <HighlightOutlined />
                                 </template>
                             </a-statistic>
                         </a-col>
                         <a-col :span="10">
                             <a-statistic title="标签总数"
-                                         :value="statistic.todayVoteCount == null ? 0 :statistic.todayVoteCount">
+                                         :value="statistic.tagCount == null ? 0 :statistic.tagCount">
                                 <template #suffix>
-                                    <like-outlined/>
+                                    <BookOutlined />
                                 </template>
                             </a-statistic>
                         </a-col>
@@ -152,6 +152,8 @@
                         const statisticResp = data.data;
                         statistic.value.viewCount = statisticResp[0].viewCount;
                         statistic.value.voteCount = statisticResp[0].voteCount;
+                        statistic.value.articleCount = statisticResp[0].articleCount;
+                        statistic.value.tagCount = statisticResp[0].tagCount;
                         statistic.value.todayViewCount = statisticResp[0].viewIncrease;
                         statistic.value.todayVoteCount = statisticResp[0].voteIncrease;
 

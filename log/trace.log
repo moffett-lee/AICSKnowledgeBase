@@ -3488,3 +3488,456 @@ Caused by: java.lang.IllegalStateException: Using named parameters for method pu
 2022-01-19 16:34:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m3958206376316928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
 2022-01-19 16:34:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m3958332209631232  [0;39m 更新电子书下的文档数据开始
 2022-01-19 16:34:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m3958332209631232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:33:13.866 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2022-01-20 19:33:13.881 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on ZB-20210629CYMT with PID 4552 (D:\ext.liyuze\Documents\code\knowledge-base\target\classes started by ext.liyuze in D:\ext.liyuze\Documents\code\knowledge-base)
+2022-01-20 19:33:13.882 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-20 19:33:13.946 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-20 19:33:13.947 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-20 19:33:14.627 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-20 19:33:14.627 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-20 19:33:14.737 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 98 ms. Found 8 JPA repository interfaces.
+2022-01-20 19:33:17.011 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-20 19:33:17.012 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-20 19:33:17.029 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.CategoryRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 19:33:17.029 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 19:33:17.030 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContributeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 19:33:17.030 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.DocRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 19:33:17.031 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 19:33:17.031 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookSnapshotRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 19:33:17.032 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 19:33:17.032 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 19:33:17.032 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-01-20 19:33:17.939 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-20 19:33:17.948 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-20 19:33:17.949 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-20 19:33:17.949 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-20 19:33:18.035 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-20 19:33:18.035 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 4088 ms
+2022-01-20 19:33:18.351 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-20 19:33:18.401 INFO  org.hibernate.Version                             :44   [32m                  [0;39m HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-20 19:33:18.558 INFO  org.hibernate.annotations.common.Version          :56   [32m                  [0;39m HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-20 19:33:18.697 INFO  com.alibaba.druid.pool.DruidDataSource            :1003 [32m                  [0;39m {dataSource-1} inited
+2022-01-20 19:33:21.328 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-20 19:33:22.031 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-20 19:33:22.040 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-20 19:33:25.828 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-20 19:33:27.249 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-01-20 19:33:27.289 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-01-20 19:33:27.309 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-01-20 19:33:27.786 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 14.4 seconds (JVM running for 18.279)
+2022-01-20 19:33:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4365766904385536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:33:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4365766904385536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:34:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4365871757791232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:34:00.052 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4365871757791232  [0;39m 生成今日电子书快照结束，耗时：50毫秒
+2022-01-20 19:34:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4365892725116928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:34:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4365892725116928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:34:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4366018558431232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:34:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4366018558431232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:35:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4366123416031232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:35:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4366123416031232  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 19:35:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4366144383356928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:35:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4366144383356928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:35:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4366270216671232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:35:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4366270216671232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:36:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4366375070076928  [0;39m 生成今日电子书快照开始
+2022-01-20 19:36:00.006 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4366375070076928  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-20 19:36:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4366396045791232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:36:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4366396045791232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:36:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4366521870716928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:36:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4366521870716928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:37:00.003 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4366626736705536  [0;39m 生成今日电子书快照开始
+2022-01-20 19:37:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4366626736705536  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-20 19:37:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4366647704031232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:37:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4366647704031232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:37:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4366773537345536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:37:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4366773537345536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:38:00.003 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4366878394945536  [0;39m 生成今日电子书快照开始
+2022-01-20 19:38:00.010 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4366878394945536  [0;39m 生成今日电子书快照结束，耗时：7毫秒
+2022-01-20 19:38:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4366899358076928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:38:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4366899358076928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:38:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4367025191391232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:38:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4367025191391232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:39:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4367130048991232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:39:00.009 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4367130048991232  [0;39m 生成今日电子书快照结束，耗时：7毫秒
+2022-01-20 19:39:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4367151016316928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:39:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4367151016316928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:39:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4367276849631232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:39:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4367276849631232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:40:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4367381707231232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:40:00.009 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4367381707231232  [0;39m 生成今日电子书快照结束，耗时：7毫秒
+2022-01-20 19:40:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4367402674556928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:40:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4367402674556928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:40:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4367528503676928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:40:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4367528503676928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:41:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4367633365471232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:41:00.010 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4367633365471232  [0;39m 生成今日电子书快照结束，耗时：8毫秒
+2022-01-20 19:41:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4367654332796928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:41:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4367654332796928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:41:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4367780170305536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:41:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4367780170305536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:42:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4367885023711232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:42:00.009 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4367885023711232  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 19:42:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4367905991036928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:42:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4367905991036928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:42:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4368031824351232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:42:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4368031824351232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:43:00.003 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4368136686145536  [0;39m 生成今日电子书快照开始
+2022-01-20 19:43:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4368136686145536  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-20 19:43:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4368157653471232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:43:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4368157653471232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:43:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4368283478396928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:43:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4368283478396928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:44:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4368388335996928  [0;39m 生成今日电子书快照开始
+2022-01-20 19:44:00.039 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4368388335996928  [0;39m 生成今日电子书快照结束，耗时：37毫秒
+2022-01-20 19:44:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4368409311711232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:44:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4368409311711232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:44:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4368535136636928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:44:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4368535136636928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:45:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4368639998431232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:45:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4368639998431232  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 19:45:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4368660965756928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:45:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4368660965756928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:45:35.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4368786790682624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:45:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4368786790682624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:46:00.003 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4368891660865536  [0;39m 生成今日电子书快照开始
+2022-01-20 19:46:00.009 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4368891660865536  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 19:46:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4368912628191232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:46:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4368912628191232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:46:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4369038461505536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:46:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4369038461505536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:47:00.004 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4369143323299840  [0;39m 生成今日电子书快照开始
+2022-01-20 19:47:00.009 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4369143323299840  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-20 19:47:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4369164290625536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:47:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4369164290625536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:47:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4369290119745536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:47:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4369290119745536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:48:00.004 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4369394981539840  [0;39m 生成今日电子书快照开始
+2022-01-20 19:48:00.010 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4369394981539840  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 19:48:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4369415940476928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:48:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4369415940476928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:48:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4369541769596928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:48:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4369541769596928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:49:00.004 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4369646639779840  [0;39m 生成今日电子书快照开始
+2022-01-20 19:49:00.011 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4369646639779840  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 19:49:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4369667607105536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:49:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4369667607105536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:49:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4369793432031232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:49:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4369793432031232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:50:00.003 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4369898293825536  [0;39m 生成今日电子书快照开始
+2022-01-20 19:50:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4369898293825536  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-20 19:50:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4369919265345536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:50:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4369919265345536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:50:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4370045094465536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:50:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4370045094465536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:51:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4370149947871232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:51:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4370149947871232  [0;39m 生成今日电子书快照结束，耗时：4毫秒
+2022-01-20 19:51:05.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4370170911002624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:51:05.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4370170911002624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:51:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4370296752705536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:51:35.004 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4370296752705536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:52:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4370401601916928  [0;39m 生成今日电子书快照开始
+2022-01-20 19:52:00.010 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4370401601916928  [0;39m 生成今日电子书快照结束，耗时：9毫秒
+2022-01-20 19:52:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4370422573436928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:52:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4370422573436928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:52:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4370548410945536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:52:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4370548410945536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:53:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4370653264351232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:53:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4370653264351232  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-20 19:53:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4370674231676928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:53:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4370674231676928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:53:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4370800060796928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:53:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4370800060796928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:54:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4370904922591232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:54:00.016 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4370904922591232  [0;39m 生成今日电子书快照结束，耗时：14毫秒
+2022-01-20 19:54:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4370925889916928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:54:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4370925889916928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:54:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4371051727425536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:54:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4371051727425536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:55:00.003 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4371156585025536  [0;39m 生成今日电子书快照开始
+2022-01-20 19:55:00.015 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4371156585025536  [0;39m 生成今日电子书快照结束，耗时：12毫秒
+2022-01-20 19:55:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4371177552351232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:55:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4371177552351232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:55:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4371303377276928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:55:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4371303377276928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:56:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4371408239071232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:56:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4371408239071232  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 19:56:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4371429210591232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:56:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4371429210591232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:56:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4371555039711232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:56:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4371555039711232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:57:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4371659897311232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:57:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4371659897311232  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-20 19:57:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4371680873025536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:57:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4371680873025536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:57:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4371806693756928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:57:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4371806693756928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:58:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4371911555551232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:58:00.006 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4371911555551232  [0;39m 生成今日电子书快照结束，耗时：4毫秒
+2022-01-20 19:58:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4371932527071232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:58:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4371932527071232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:58:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4372058356191232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:58:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4372058356191232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:59:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4372163213791232  [0;39m 生成今日电子书快照开始
+2022-01-20 19:59:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4372163213791232  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 19:59:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4372184185311232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:59:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4372184185311232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 19:59:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4372310014431232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 19:59:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4372310014431232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:00:00.000 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4372414863642624  [0;39m 生成今日电子书快照开始
+2022-01-20 20:00:00.006 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4372414863642624  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 20:00:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4372435843551232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:00:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4372435843551232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:00:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4372561668476928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:00:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4372561668476928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:01:00.003 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4372666534465536  [0;39m 生成今日电子书快照开始
+2022-01-20 20:01:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4372666534465536  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-20 20:01:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4372687501791232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:01:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4372687501791232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:01:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4372813330911232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:01:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4372813330911232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:02:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4372918188511232  [0;39m 生成今日电子书快照开始
+2022-01-20 20:02:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4372918188511232  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-20 20:02:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4372939155836928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:02:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4372939155836928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:02:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4373064993345536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:02:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4373064993345536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:03:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4373169846751232  [0;39m 生成今日电子书快照开始
+2022-01-20 20:03:00.014 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4373169846751232  [0;39m 生成今日电子书快照结束，耗时：12毫秒
+2022-01-20 20:03:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4373190814076928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:03:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4373190814076928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:03:35.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4373316639002624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:03:35.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4373316639002624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:04:00.000 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4373421496602624  [0;39m 生成今日电子书快照开始
+2022-01-20 20:04:00.006 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4373421496602624  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 20:04:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4373442472316928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:04:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4373442472316928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:04:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4373568301436928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:04:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4373568301436928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:04:59.999 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4373673150648320  [0;39m 生成今日电子书快照开始
+2022-01-20 20:05:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4373673150648320  [0;39m 生成今日电子书快照结束，耗时：9毫秒
+2022-01-20 20:05:05.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4373694126362624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:05:05.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4373694126362624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:05:35.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4373819955482624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:05:35.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4373819955482624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:06:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4373924817276928  [0;39m 生成今日电子书快照开始
+2022-01-20 20:06:00.006 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4373924817276928  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-20 20:06:05.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4373945784602624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:06:05.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4373945784602624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:06:35.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4374071613722624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:06:35.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4374071613722624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:06:38.279 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-20 20:06:38.279 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-01-20 20:06:38.281 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 2 ms
+2022-01-20 20:06:38.347 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:32   [32m                  [0;39m 有新连接：token：G44YZEWAsE，session id：0，当前连接数：1
+2022-01-20 20:06:57.841 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:41   [32m                  [0;39m 连接关闭，token：G44YZEWAsE，session id：0！当前连接数：0
+2022-01-20 20:07:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4374176475516928  [0;39m 生成今日电子书快照开始
+2022-01-20 20:07:00.009 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4374176475516928  [0;39m 生成今日电子书快照结束，耗时：8毫秒
+2022-01-20 20:07:00.061 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:32   [32m                  [0;39m 有新连接：token：9AdXWRsVA9，session id：1，当前连接数：1
+2022-01-20 20:07:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4374197451231232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:07:05.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4374197451231232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:07:35.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4374323271962624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:07:35.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4374323271962624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:08:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4374428137951232  [0;39m 生成今日电子书快照开始
+2022-01-20 20:08:00.010 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4374428137951232  [0;39m 生成今日电子书快照结束，耗时：8毫秒
+2022-01-20 20:08:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4374449105276928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:08:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4374449105276928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:08:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4374574934396928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:08:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4374574934396928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:09:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4374679791996928  [0;39m 生成今日电子书快照开始
+2022-01-20 20:09:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4374679791996928  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 20:09:05.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4374700759322624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:09:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4374700759322624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:09:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4374826596831232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:09:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4374826596831232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:10:00.006 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4374931471208448  [0;39m 生成今日电子书快照开始
+2022-01-20 20:10:00.082 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4374931471208448  [0;39m 生成今日电子书快照结束，耗时：75毫秒
+2022-01-20 20:10:05.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4374952417562624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:10:05.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4374952417562624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:10:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4375078255071232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:10:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4375078255071232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:11:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4375183108476928  [0;39m 生成今日电子书快照开始
+2022-01-20 20:11:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4375183108476928  [0;39m 生成今日电子书快照结束，耗时：7毫秒
+2022-01-20 20:11:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4375204084191232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:11:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4375204084191232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:11:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4375329913311232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:11:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4375329913311232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:12:00.005 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4375434783494144  [0;39m 生成今日电子书快照开始
+2022-01-20 20:12:00.166 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4375434783494144  [0;39m 生成今日电子书快照结束，耗时：155毫秒
+2022-01-20 20:12:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4375455746625536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:12:05.011 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4375455746625536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:12:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4375581571551232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:12:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4375581571551232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:13:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4375686429151232  [0;39m 生成今日电子书快照开始
+2022-01-20 20:13:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4375686429151232  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-20 20:13:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4375707400671232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:13:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4375707400671232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:13:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4375833225596928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:13:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4375833225596928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:14:00.003 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4375938091585536  [0;39m 生成今日电子书快照开始
+2022-01-20 20:14:00.027 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4375938091585536  [0;39m 生成今日电子书快照结束，耗时：22毫秒
+2022-01-20 20:14:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4375959054716928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:14:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4375959054716928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:14:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4376084883836928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:14:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4376084883836928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:15:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4376189741436928  [0;39m 生成今日电子书快照开始
+2022-01-20 20:15:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4376189741436928  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 20:15:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4376210717151232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:15:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4376210717151232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:15:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4376336546271232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:15:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4376336546271232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:16:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4376441395482624  [0;39m 生成今日电子书快照开始
+2022-01-20 20:16:00.320 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4376441395482624  [0;39m 生成今日电子书快照结束，耗时：314毫秒
+2022-01-20 20:16:05.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4376462367002624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:16:05.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4376462367002624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:16:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4376588200316928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:16:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4376588200316928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:17:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4376693062111232  [0;39m 生成今日电子书快照开始
+2022-01-20 20:17:00.022 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4376693062111232  [0;39m 生成今日电子书快照结束，耗时：19毫秒
+2022-01-20 20:17:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4376714033631232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:17:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4376714033631232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:17:31.051 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:41   [32m                  [0;39m 连接关闭，token：9AdXWRsVA9，session id：1！当前连接数：0
+2022-01-20 20:17:34.785 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:32   [32m                  [0;39m 有新连接：token：pXrhp5dvgy，session id：2，当前连接数：1
+2022-01-20 20:17:35.005 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4376839875334144  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:17:35.005 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4376839875334144  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:18:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4376944716156928  [0;39m 生成今日电子书快照开始
+2022-01-20 20:18:00.010 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4376944716156928  [0;39m 生成今日电子书快照结束，耗时：7毫秒
+2022-01-20 20:18:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4376965696065536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:18:05.005 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4376965696065536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:18:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4377091516796928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:18:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4377091516796928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:19:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4377196395368448  [0;39m 生成今日电子书快照开始
+2022-01-20 20:19:00.040 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4377196395368448  [0;39m 生成今日电子书快照结束，耗时：31毫秒
+2022-01-20 20:19:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4377217350111232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:19:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4377217350111232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:19:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4377343179231232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:19:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4377343179231232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:20:00.000 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4377448028442624  [0;39m 生成今日电子书快照开始
+2022-01-20 20:20:00.006 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4377448028442624  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 20:20:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4377469004156928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:20:05.018 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4377469004156928  [0;39m 更新电子书下的文档数据结束，耗时：1毫秒
+2022-01-20 20:20:16.311 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:41   [32m                  [0;39m 连接关闭，token：pXrhp5dvgy，session id：2！当前连接数：0
+2022-01-20 20:20:16.412 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:651  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-20 20:20:16.421 INFO  com.alibaba.druid.pool.DruidDataSource            :1948 [32m                  [0;39m {dataSource-1} closing ...
+2022-01-20 20:20:16.439 INFO  com.alibaba.druid.pool.DruidDataSource            :2020 [32m                  [0;39m {dataSource-1} closed
+2022-01-20 20:20:29.558 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2022-01-20 20:20:29.576 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_291 on ZB-20210629CYMT with PID 13988 (D:\ext.liyuze\Documents\code\knowledge-base\target\classes started by ext.liyuze in D:\ext.liyuze\Documents\code\knowledge-base)
+2022-01-20 20:20:29.581 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-01-20 20:20:31.816 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-20 20:20:31.817 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-20 20:20:32.910 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-20 20:20:32.910 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-20 20:20:33.061 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 135 ms. Found 8 JPA repository interfaces.
+2022-01-20 20:20:33.262 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-20 20:20:33.263 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-20 20:20:33.279 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.CategoryRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 20:20:33.279 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContentRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 20:20:33.280 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.ContributeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 20:20:33.280 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.DocRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 20:20:33.281 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 20:20:33.281 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.EbookSnapshotRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 20:20:33.282 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.TagRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 20:20:33.282 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :349  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.amber.insect.knowledgebase.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-01-20 20:20:33.282 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-01-20 20:20:36.323 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-01-20 20:20:36.331 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-01-20 20:20:36.332 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-01-20 20:20:36.332 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-20 20:20:36.409 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-01-20 20:20:36.409 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 4591 ms
+2022-01-20 20:20:36.678 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-20 20:20:36.720 INFO  org.hibernate.Version                             :44   [32m                  [0;39m HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-20 20:20:36.847 INFO  org.hibernate.annotations.common.Version          :56   [32m                  [0;39m HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-20 20:20:36.964 INFO  com.alibaba.druid.pool.DruidDataSource            :1003 [32m                  [0;39m {dataSource-1} inited
+2022-01-20 20:20:37.501 INFO  org.hibernate.dialect.Dialect                     :175  [32m                  [0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-01-20 20:20:40.269 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:52   [32m                  [0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-20 20:20:40.278 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:437  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-20 20:20:41.781 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-20 20:20:45.299 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-01-20 20:20:45.335 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-01-20 20:20:45.348 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-01-20 20:20:45.359 INFO  c.a.insect.knowledgebase.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 16.558 seconds (JVM running for 20.49)
+2022-01-20 20:20:49.313 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-20 20:20:49.314 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-01-20 20:20:49.316 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 2 ms
+2022-01-20 20:21:00.052 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4377699875426304  [0;39m 生成今日电子书快照开始
+2022-01-20 20:21:00.773 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4377699875426304  [0;39m 生成今日电子书快照结束，耗时：711毫秒
+2022-01-20 20:21:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4377720662396928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:21:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4377720662396928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:21:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4377846495711232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:21:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4377846495711232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:22:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4377951353311232  [0;39m 生成今日电子书快照开始
+2022-01-20 20:22:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4377951353311232  [0;39m 生成今日电子书快照结束，耗时：5毫秒
+2022-01-20 20:22:05.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4377972316442624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:22:05.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4377972316442624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:22:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4378098153951232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:22:35.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4378098153951232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:22:41.130 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:32   [32m                  [0;39m 有新连接：token：YXaiKxR1ke，session id：0，当前连接数：1
+2022-01-20 20:23:00.003 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4378203015745536  [0;39m 生成今日电子书快照开始
+2022-01-20 20:23:00.052 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4378203015745536  [0;39m 生成今日电子书快照结束，耗时：45毫秒
+2022-01-20 20:23:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4378223978876928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:23:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4378223978876928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:23:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4378349807996928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:23:35.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4378349807996928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:23:58.102 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:41   [32m                  [0;39m 连接关闭，token：YXaiKxR1ke，session id：0！当前连接数：0
+2022-01-20 20:24:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4378454669791232  [0;39m 生成今日电子书快照开始
+2022-01-20 20:24:00.009 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4378454669791232  [0;39m 生成今日电子书快照结束，耗时：7毫秒
+2022-01-20 20:24:01.085 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:32   [32m                  [0;39m 有新连接：token：IXyNQ5LuFf，session id：1，当前连接数：1
+2022-01-20 20:24:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4378475637116928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:24:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4378475637116928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:24:35.005 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4378601478819840  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:24:35.028 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4378601478819840  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:24:41.642 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:41   [32m                  [0;39m 连接关闭，token：IXyNQ5LuFf，session id：1！当前连接数：0
+2022-01-20 20:24:45.360 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:32   [32m                  [0;39m 有新连接：token：CgjTlovbHM，session id：2，当前连接数：1
+2022-01-20 20:24:52.621 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:41   [32m                  [0;39m 连接关闭，token：CgjTlovbHM，session id：2！当前连接数：0
+2022-01-20 20:24:54.799 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:32   [32m                  [0;39m 有新连接：token：7AMfvcXOmv，session id：3，当前连接数：1
+2022-01-20 20:25:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4378706323836928  [0;39m 生成今日电子书快照开始
+2022-01-20 20:25:00.051 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4378706323836928  [0;39m 生成今日电子书快照结束，耗时：48毫秒
+2022-01-20 20:25:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4378727299551232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:25:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4378727299551232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:25:14.534 INFO  com.amber.insect.knowledgebase.util.RedisUtil     :31   [32m                  [0;39m key不存在，放入：DOC_VOTE_3199642825265152_null，过期 3000 秒
+2022-01-20 20:25:14.549 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:71   [32m                  [0;39m 推送消息：7AMfvcXOmv，内容：【aaaa】被点赞！
+2022-01-20 20:25:35.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4378853120282624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:25:35.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4378853120282624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:26:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4378957982076928  [0;39m 生成今日电子书快照开始
+2022-01-20 20:26:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4378957982076928  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 20:26:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4378978961985536  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:26:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4378978961985536  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:26:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4379104782716928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:26:35.023 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4379104782716928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:27:00.004 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4379209644511232  [0;39m 生成今日电子书快照开始
+2022-01-20 20:27:00.432 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4379209644511232  [0;39m 生成今日电子书快照结束，耗时：418毫秒
+2022-01-20 20:27:05.006 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4379230632808448  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:27:05.017 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4379230632808448  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:27:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4379356445151232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:27:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4379356445151232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:28:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4379461302751232  [0;39m 生成今日电子书快照开始
+2022-01-20 20:28:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4379461302751232  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 20:28:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4379482274271232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:28:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4379482274271232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:28:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4379608103391232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:28:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4379608103391232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:29:00.001 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4379712956796928  [0;39m 生成今日电子书快照开始
+2022-01-20 20:29:00.008 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4379712956796928  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 20:29:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4379733928316928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:29:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4379733928316928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:29:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4379859761631232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:29:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4379859761631232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:30:00.003 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4379964623425536  [0;39m 生成今日电子书快照开始
+2022-01-20 20:30:00.023 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4379964623425536  [0;39m 生成今日电子书快照结束，耗时：19毫秒
+2022-01-20 20:30:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4379985590751232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:30:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4379985590751232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:30:35.016 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4380111478591488  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:30:35.017 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4380111478591488  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:31:00.002 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4380216277471232  [0;39m 生成今日电子书快照开始
+2022-01-20 20:31:00.006 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4380216277471232  [0;39m 生成今日电子书快照结束，耗时：4毫秒
+2022-01-20 20:31:05.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4380237248991232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:31:05.003 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4380237248991232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:31:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4380363078111232  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:31:35.002 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4380363078111232  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:32:00.000 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :32   [32m4380467927322624  [0;39m 生成今日电子书快照开始
+2022-01-20 20:32:00.007 INFO  c.amber.insect.knowledgebase.job.EbookSnapshotJob :35   [32m4380467927322624  [0;39m 生成今日电子书快照结束，耗时：6毫秒
+2022-01-20 20:32:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4380488903036928  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:32:05.001 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4380488903036928  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒
+2022-01-20 20:32:13.321 INFO  c.a.insect.knowledgebase.websocket.WebSocketServer:41   [32m                  [0;39m 连接关闭，token：7AMfvcXOmv，session id：3！当前连接数：0
+2022-01-20 20:32:35.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :32   [32m4380614727962624  [0;39m 更新电子书下的文档数据开始
+2022-01-20 20:32:35.000 INFO  com.amber.insect.knowledgebase.job.DocJob         :35   [32m4380614727962624  [0;39m 更新电子书下的文档数据结束，耗时：0毫秒

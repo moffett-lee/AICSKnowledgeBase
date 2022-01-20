@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.amber.insect.knowledgebase.dto.EbookSnapshotDto;
 import com.amber.insect.knowledgebase.repository.ContentRepository;
 import com.amber.insect.knowledgebase.repository.EbookSnapshotRepository;
+import com.amber.insect.knowledgebase.repository.TagRepository;
 import com.amber.insect.knowledgebase.service.IEbookSnapshotService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,6 +23,8 @@ public class EbookSnapshotServiceImpl implements IEbookSnapshotService {
 
     @Resource
     private ContentRepository contentRepository;
+    @Resource
+    private TagRepository tagRepository;
 
     @Override
     public List<EbookSnapshotDto> getStatistic() {
@@ -31,7 +34,9 @@ public class EbookSnapshotServiceImpl implements IEbookSnapshotService {
             mapList.forEach(map -> {
                 EbookSnapshotDto o = JSON.parseObject(JSON.toJSONString(map), EbookSnapshotDto.class);
                 long count = contentRepository.count();
+                long count1 = tagRepository.count();
                 o.setArticleCount(count);
+                o.setTagCount(count1);
                 dtos.add(o);
             });
        }
