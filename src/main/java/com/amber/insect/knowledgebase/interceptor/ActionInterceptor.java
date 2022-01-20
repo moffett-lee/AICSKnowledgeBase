@@ -6,10 +6,12 @@ import com.amber.insect.knowledgebase.common.TokenUserInfo;
 import com.amber.insect.knowledgebase.util.LoginUserContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -24,6 +26,8 @@ public class ActionInterceptor implements HandlerInterceptor {
 
     private static final Logger LOG = LoggerFactory.getLogger(ActionInterceptor.class);
 
+    @Resource
+    private RedisTemplate redisTemplate;
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
         // OPTIONS请求不做校验,
@@ -32,6 +36,7 @@ public class ActionInterceptor implements HandlerInterceptor {
             return true;
         }
         TokenUserInfo tokenUserInfo = LoginUserContext.getUser();
+
         if ("admin".equals(tokenUserInfo.getUserCode())) {
             // admin用户不拦截
             return true;

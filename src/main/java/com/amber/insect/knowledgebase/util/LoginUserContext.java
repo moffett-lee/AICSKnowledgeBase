@@ -17,14 +17,16 @@ import java.io.Serializable;
  **/
 public class LoginUserContext implements Serializable {
 
-    private static ThreadLocal<TokenUserInfo> user = new ThreadLocal<>();
+    static ThreadLocal<TokenUserInfo> user = new ThreadLocal<>();
+
+    public static void setUser(TokenUserInfo user) {
+        LoginUserContext.user.set(user);
+    }
 
     public static TokenUserInfo getUser() {
         return user.get();
     }
 
-    public static void setUser(TokenUserInfo user) {
-        LoginUserContext.user.set(user);
-    }
+
 
 }

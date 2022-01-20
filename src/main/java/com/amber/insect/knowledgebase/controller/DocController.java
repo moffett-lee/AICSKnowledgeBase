@@ -110,6 +110,9 @@ public class DocController {
      **/
     @GetMapping("/vote/{id}")
     public R vote(@PathVariable Long id) {
+        if (id == null || id.equals("undefined")) {
+            R.failed("请对有效文章点赞");
+        }
         docService.vote(id);
         return  R.success();
     }

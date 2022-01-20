@@ -27,4 +27,14 @@ public interface DocRepository extends PagingAndSortingRepository<DocEntity, Lon
     @Query("update DocEntity doc set doc.isDel = ?2 where doc.id = ?1")
     void delete(Long aLong, Integer del);
 
+
+    @Modifying
+    @Query(value = "UPDATE tb_ebook t1,\n" +
+            "( SELECT ebook_id, count( 1 ) doc_count, sum( view_count ) view_count, sum( vote_count ) vote_count FROM tb_doc GROUP BY ebook_id ) t2 \n" +
+            "SET t1.doc_count = t2.doc_count,\n" +
+            "t1.view_count = t2.view_count,\n" +
+            "t1.vote_count = t2.vote_count \n" +
+            "WHERE\n" +
+            "\tt1.id = t2.ebook_id",nativeQuery = true)
+    void updateEbookInfo();
 }

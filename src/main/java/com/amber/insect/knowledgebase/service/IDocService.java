@@ -20,4 +20,7 @@ public interface IDocService {
     String findContent(Long id);
 
     void vote(Long id);
+
+    void updateEbookInfo();
+
 }

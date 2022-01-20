@@ -21,4 +21,7 @@ public interface CategoryRepository extends PagingAndSortingRepository<CategoryE
     @Modifying
     Integer update(CategoryEntity ce);
 
+    @Query("update CategoryEntity set isDel = ?2 where id = ?1")
+    @Modifying
+    int delete(Long id, int del);
 }
