@@ -43,7 +43,7 @@
                             return name
                         },
                         validate (msg) {
-                            console.log(msg + '格式')
+                           // console.log(msg + '格式')
                         },
                         // 粘贴图片回显处理，如果有图片加了防盗链，则让后台代理替换成自己的图片
                         linkToImgFormat (files) {

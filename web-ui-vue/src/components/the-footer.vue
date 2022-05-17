@@ -28,20 +28,20 @@
 			let websocket: any;
 			let token: any;
 			const onOpen = () => {
-				console.log('WebSocket连接成功，状态码：', websocket.readyState)
+				//console.log('WebSocket连接成功，状态码：', websocket.readyState)
 			};
 			const onMessage = (event: any) => {
-				console.log('WebSocket收到消息：', event.data);
+				//console.log('WebSocket收到消息：', event.data);
 				notification['info']({
 					message: '收到消息',
 					description: event.data,
 				});
 			};
 			const onError = () => {
-				console.log('WebSocket连接错误，状态码：', websocket.readyState)
+				//console.log('WebSocket连接错误，状态码：', websocket.readyState)
 			};
 			const onClose = () => {
-				console.log('WebSocket连接关闭，状态码：', websocket.readyState)
+				//console.log('WebSocket连接关闭，状态码：', websocket.readyState)
 			};
 			const initWebSocket = () => {
 				// 连接成功

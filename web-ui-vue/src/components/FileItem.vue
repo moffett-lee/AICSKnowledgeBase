@@ -30,7 +30,7 @@ export default {
     tagList: { type: Array }
   },
   mounted () {
-    console.log(this.fileState.state)
+    //console.log(this.fileState.state)
   }
 }
 </script>
