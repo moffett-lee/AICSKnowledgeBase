@@ -1,0 +1,2 @@
+INSERT INTO `knowledge-base`.tb_user (user_code,user_name,pass_word,status,is_del,flag,c_time,upt_time,c_user,upt_user,remark,version) VALUES
+	 ('amberliyuze','李雨泽','7395005cd4342cd4b9fc0b936b9c6f4d',NULL,0,NULL,'2022-01-19 22:25:50','2022-01-19 22:25:50',NULL,NULL,NULL,NULL);
