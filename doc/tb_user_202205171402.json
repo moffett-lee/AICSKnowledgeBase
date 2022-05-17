@@ -1,0 +1,18 @@
+{
+"tb_user": [
+	{
+		"id" : 5,
+		"user_code" : "amberliyuze",
+		"user_name" : "李雨泽",
+		"pass_word" : "7395005cd4342cd4b9fc0b936b9c6f4d",
+		"status" : null,
+		"is_del" : 0,
+		"flag" : null,
+		"c_time" : "2022-01-19 22:25:50",
+		"upt_time" : "2022-01-19 22:25:50",
+		"c_user" : null,
+		"upt_user" : null,
+		"remark" : null,
+		"version" : null
+	}
+]}
